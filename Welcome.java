@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 /**
  * A welcome page
  * @author Liangjie Wang
@@ -31,6 +32,13 @@ public class Welcome extends JFrame
         l3.setFont(new Font("微软雅黑",Font.BOLD,15));        
         JButton btn = new JButton("Hello Airbnb!");
         btn.setBackground(Color.PINK);
+        btn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setRange();
+                dispose();
+            }
+        });
         
         JTextField jt = new JTextField();
         jt.setColumns(20);
@@ -54,8 +62,23 @@ public class Welcome extends JFrame
         southP.add(l3);
         c.add(southP);
         
+        JMenuBar menuBar = new JMenuBar();
+        setJMenuBar(menuBar);
+        
+        JMenu menu = new JMenu("Help");
+        menuBar.add(menu);
+        
+        JMenuItem item = new JMenuItem("???");
+        //item.addActionListener(e -> setRange());
+        
+        menu.add(item);
+
         setVisible(true);
         
     }
-
+    
+    private void setRange(){
+        SetRange st = new SetRange();
+    }
+    
 }
