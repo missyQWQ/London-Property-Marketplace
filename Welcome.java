@@ -1,10 +1,9 @@
 import javax.swing.*;
 import java.awt.*;
 /**
- * 在这里给出对类 Welcome 的描述。
- * 
- * @作者（你的名字）
- * @版本（一个版本号或者一个日期）
+ * A welcome page
+ * @author Liangjie Wang
+ * @Vision 3.3.2020
  */
 public class Welcome extends JFrame
 {
