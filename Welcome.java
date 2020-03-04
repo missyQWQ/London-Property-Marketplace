@@ -27,9 +27,10 @@ public class Welcome extends JFrame
                 
         JLabel l1 = new JLabel("Username"), l2 = new JLabel("Password"),
         l3 = new JLabel("Welcome to London Airbnb app!");
-        l1.setFont(new Font("微软雅黑",Font.BOLD,15));
-        l2.setFont(new Font("微软雅黑",Font.BOLD,15));
-        l3.setFont(new Font("微软雅黑",Font.BOLD,15));        
+        l1.setFont(new Font("Arial",Font.BOLD,15));
+        l2.setFont(new Font("Arial",Font.BOLD,15));
+        l3.setFont(new Font("Lucida Calligraphy",Font.BOLD,15));
+        l3.setForeground(new Color(0,0,128));
         JButton btn = new JButton("Hello Airbnb!");
         btn.setBackground(Color.PINK);
         btn.addActionListener(new ActionListener() {
@@ -58,7 +59,7 @@ public class Welcome extends JFrame
         
         JPanel southP = new JPanel();
         southP.setLayout(new FlowLayout());
-        southP.setBounds(100,310,300,100);
+        southP.setBounds(100,300,300,100);
         southP.add(l3);
         c.add(southP);
         
@@ -78,7 +79,7 @@ public class Welcome extends JFrame
     }
     
     private void setRange(){
-        SetRange st = new SetRange();
+        SetRange.newDialog();
     }
     
 }
