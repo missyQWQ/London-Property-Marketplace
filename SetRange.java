@@ -8,8 +8,8 @@ import java.awt.event.*;
  */
 public class SetRange extends JDialog
 {
-    static int min;
-    static int max;
+    static int min = 0;
+    static int max = 100;
     /**
      * 
      */
@@ -18,57 +18,97 @@ public class SetRange extends JDialog
         super(frame,"Warning!",true);
         setBounds(400,400,400,150);
         Container c = getContentPane();
-        JLabel l = new JLabel("Please enter both min and max.");
+        JLabel l = new JLabel("Please enter the date range.");
         l.setFont(new Font("Arial",Font.BOLD,15));
         c.setLayout(new FlowLayout());
         c.add(l);
     }
     
     public static void newDialog(){
-        JFrame f = new JFrame("Set price range");
-        f.setBounds(200,200,300,200);
+        JFrame f = new JFrame("Welcome to the London Airbnb!");
+        f.setBounds(100,100,1000,700);
         f.setDefaultCloseOperation(HIDE_ON_CLOSE);
         Container c = f.getContentPane();
         c.setLayout(null);
-        JLabel l1 = new JLabel("Min"),l2 = new JLabel("Max"), l3 = new JLabel("Which price range would you expect?");
-        l3.setFont(new Font("Lucida Calligraphy",Font.BOLD,12));
-        JTextField j1 = new JTextField(),j2 = new JTextField();
-        JButton btn = new JButton("Confirm");
+        JLabel l1 = new JLabel("Price range:"),l2 = new JLabel("Minimum no. of nights:"),
+        l3 = new JLabel("Welcome to the London Airbnb App!"),
+        l4 = new JLabel("1.Please select the price range."),
+        l5 = new JLabel("2.Please select the minimum no. of nights to stay."),
+        l6 = new JLabel("3.Finally, click 'Confirm' to view the list.");
+        
+        l1.setForeground(Color.WHITE);
+        l2.setForeground(Color.WHITE);
+        l3.setForeground(Color.WHITE);
+        l4.setForeground(Color.WHITE);
+        l5.setForeground(Color.WHITE);
+        l6.setForeground(Color.WHITE);
+        l1.setFont(new Font("Arial",Font.BOLD,12));
+        l2.setFont(new Font("Arial",Font.BOLD,12));
+        l3.setFont(new Font("Arial",Font.BOLD,20));
+        l4.setFont(new Font("Arial",Font.BOLD,15));
+        l5.setFont(new Font("Arial",Font.BOLD,15));
+        l6.setFont(new Font("Arial",Font.BOLD,15));
 
-        l1.setBounds(30,30,60,20);
-        l2.setBounds(180,30,60,20);
-        l3.setBounds(5,5,300,20);
-        j1.setBounds(30,60,80,30);
-        j2.setBounds(180,60,80,30);
-        btn.setBounds(105,100,80,30);
+        JPanel instructions = new JPanel();
+        instructions.setLayout(new GridLayout(4,1,5,5));
+        instructions.add(l3);
+        instructions.add(l4);
+        instructions.add(l5);
+        instructions.add(l6);
+        instructions.setBackground(Color.DARK_GRAY);
+        instructions.setBounds(100,50,700,300);
+        
+        String priceRanges[] = {"0-100","100-200","200-300","300+"};
+        JComboBox<String> cb1 = new JComboBox<>(priceRanges);
+        cb1.setFocusable(true);
+        
+        JTextField j1 = new JTextField("");
+        cb1.setToolTipText("Select the price per night.");
+        j1.setFocusable(true);
+        j1.setToolTipText("Select the minimum number of nights to stay.");
+        
+        JButton btn = new JButton("Confirm");
         btn.setBackground(Color.PINK);
-        c.add(l3);
-        c.add(l1);
-        c.add(l2);
-        c.add(j1);
-        c.add(j2);
-        c.add(btn);
+        btn.setFocusable(true);
+        btn.setToolTipText("hi");
+        
         btn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                    if(j1.getText().equals("")||j2.getText().equals("")){
+                    if(j1.getText().equals("")){
                         SetRange sr = new SetRange(f);
-			sr.setVisible(true);
+                        sr.setVisible(true);
                     }else{
-                        min = Integer.valueOf(j1.getText()).intValue();
-                        max = Integer.valueOf(j2.getText()).intValue();
-                        if(max < min){
-                            int temp = min;
-                            min = max;
-                            max = temp;
+                        if(cb1.getSelectedIndex() == 1){
+                            min = 100;
+                            max = 200;
+                        }else if(cb1.getSelectedIndex() == 2){
+                            min = 200;
+                            max = 300;
+                        }else if(cb1.getSelectedIndex() == 3){
+                            min = 300;
+                            max = 5000;
                         }
-                        f.dispose();
+                        //f.dispose();
                     }
             }
-        });		
+        }); 
+        
+        JPanel jp = new JPanel();
+        jp.setLayout(new GridLayout(1,5,10,10));
+        jp.add(l1);
+        jp.add(cb1);
+        jp.add(l2);
+        jp.add(j1);
+        jp.add(btn);
+        jp.setBounds(250,5,700,30);
+        jp.setBackground(Color.DARK_GRAY);
+        c.add(jp);
+        c.add(instructions);
+        c.setBackground(Color.DARK_GRAY);
         f.setVisible(true);
     }
-
+    
     public static int min(){
         return min;
     }
