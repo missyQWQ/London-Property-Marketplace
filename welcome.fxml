@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="553.0" prefWidth="928.0" style="-fx-background-color: ;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <HBox prefHeight="56.0" prefWidth="1024.0" spacing="5.0" BorderPane.alignment="TOP_RIGHT">
+         <children>
+            <Label prefHeight="20.0" prefWidth="97.0" text="Price range:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="priceRange" prefHeight="30.0" prefWidth="111.0" />
+            <Label text="Min no. of nights:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="minNights" />
+            <Button fx:id="confirm" mnemonicParsing="false" text="CONFIRM" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="230.0" right="10.0" top="15.0" />
+         </padding>
+      </HBox>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Welcome to the London Airbnb App!">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label text="1.Please select the price range.">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label text="2.Please select the minimum no. of nights to stay.">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label text="3.Finally, click 'Confirm' to view the list.">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="100.0" left="100.0" right="100.0" top="100.0" />
+         </padding>
+      </VBox>
+   </center>
+</BorderPane>
