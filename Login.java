@@ -2,13 +2,13 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 /**
- * A welcome page
+ * A Login page
  * @author Liangjie Wang
  * @Vision 3.3.2020
  */
-public class Welcome extends JFrame
+public class Login extends JFrame
 {
-    public Welcome()
+    public Login()
     {
         setTitle("London Airbnb");
         setBounds(200,200,500,400);
@@ -32,9 +32,10 @@ public class Welcome extends JFrame
         l2.setFont(new Font("Arial",Font.BOLD,15));
         l3.setFont(new Font("Lucida Calligraphy",Font.BOLD,15));
         l3.setForeground(new Color(0,0,128));
-        JButton btn = new JButton("Hello Airbnb!");
-        btn.setBackground(Color.PINK);
-        btn.addActionListener(new ActionListener() 
+        JButton btn1 = new JButton("Hello Airbnb!");
+        JButton btn2 = new JButton("sign up");
+        btn1.setBackground(Color.PINK);
+        btn1.addActionListener(new ActionListener()    
             {
                 @Override
                 public void actionPerformed(ActionEvent e) {
@@ -44,6 +45,9 @@ public class Welcome extends JFrame
             }
 
         );
+        btn2.setBackground(Color.BLUE);
+        //btn2.addActionListener(new ActionListener());
+        
 
         JTextField jt = new JTextField();
         jt.setColumns(20);
@@ -58,7 +62,7 @@ public class Welcome extends JFrame
         eastP.add(jt);
         eastP.add(l2);
         eastP.add(jp);
-        eastP.add(btn);
+        eastP.add(btn1);
         c.add(eastP);
 
         JPanel southP = new JPanel();
