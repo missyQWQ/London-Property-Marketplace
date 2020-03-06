@@ -25,31 +25,42 @@ import java.io.IOException;
 public class WelcomeController
 {
     private ObservableList<String> priceChoices = 
-        FXCollections.observableArrayList("below 50", "50-100","100-150","150-200","over 200");
+        FXCollections.observableArrayList("0", "40","60","90","140","7000");
     
     @FXML
-    private ChoiceBox priceRange;
+    private ChoiceBox priceFrom;
     
     @FXML
-    private TextField minNights;
+    private ChoiceBox priceTo;
     
     @FXML
-    private Button confirm;
+    private Button confirmBtn;
+    
     @FXML
     private void initialize(){
-        priceRange.setItems(priceChoices);
+        priceFrom.setItems(priceChoices);
+        priceTo.setItems(priceChoices);
+        
+        confirmBtn.setDisable(true);
     }
     
     @FXML
-    public void confirmAction(ActionEvent event) throws IOException{
-        if(priceRange.getValue() == null){
+    private void checkIfDisable()
+    {
+        if(priceFrom.getValue() != null && priceTo.getValue() != null) {
+            confirmBtn.setDisable(false);
+        }
+    }
+    
+    @FXML
+    public void confirmBtnAction(ActionEvent event) throws IOException{
+        if(priceFrom.getValue() == null || priceTo.getValue() == null){
             createWarningBox();
         }else{
-            if(minNights.getText().isEmpty()){
+            
                 Parent mapPanel = FXMLLoader.load(getClass().getResource("map.fxml"));
                 Stage mapStage = (Stage)((Node)event.getSource()).getScene().getWindow();
                 mapStage.setScene(new Scene(mapPanel));
-            }
         }
     }
     
