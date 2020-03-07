@@ -2,8 +2,8 @@ import java.net.URL;
 import javafx.fxml.FXMLLoader;
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.stage.Stage;
 import javafx.scene.layout.*;
+import javafx.stage.Stage;
 // import javafx.fxml.FXML;
 // import javafx.collections.FXCollections;
 // import javafx.collections.ObservableList;
@@ -22,11 +22,11 @@ public class Start extends Application
     @Override
     public void start(Stage stage) throws Exception
     {
-        URL url = getClass().getResource("welcome.fxml");
+        URL url = getClass().getResource("./fxml/welcome.fxml");
         Pane root = FXMLLoader.load(url);
         Scene scene = new Scene(root);
         
-        stage.setTitle("welcome");
+        stage.setTitle("Welcome");
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
