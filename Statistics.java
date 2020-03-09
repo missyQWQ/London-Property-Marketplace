@@ -1,58 +1,34 @@
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
-/**
- * 
- *
- * @author (Runlin Zhou)
- * @version (2020.3.6)
- */
-public class Statistics extends JFrame
-{
-    /**
-     * Constructor for objects of class Statics
-     */
-    public Statistics()
-    {
-        setTitle("Statistics");
-        setBounds(300,200,1280,720);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
-        Container c = getContentPane();
-        c.setLayout(null);
+import java.net.URL;
+import javafx.fxml.FXMLLoader;
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.layout.*;
+import javafx.stage.Stage;
+// import javafx.fxml.FXML;
+// import javafx.collections.FXCollections;
+// import javafx.collections.ObservableList;
+// import javafx.event.ActionEvent;
+// import javafx.event.EventHandler;
+// import javafx.scene.control.*;
 
-        JPanel A = new JPanel();
-        A.setLayout(new FlowLayout());
+/**
+ * Write a description of JavaFX class Start here.
+ *
+ * @author (your name)
+ * @version (a version number or a date)
+ */
+public class Statistics extends Application
+{
+    @Override
+    public void start(Stage stage) throws Exception
+    {
+        URL url = getClass().getResource("./fxml/Statistics.fxml");
+        Pane root = FXMLLoader.load(url);
+        Scene scene = new Scene(root);
         
-        
-        A.setBounds(0,0,640,300);
-        A.setBackground(Color.red);
-        c.add(A);
-        
-        JPanel B = new JPanel();
-        B.setLayout(new FlowLayout());
-        
-        
-        B.setBounds(640,0,640,300);
-        B.setBackground(Color.green);
-        c.add(B);
-        
-        JPanel C = new JPanel();
-        C.setLayout(new FlowLayout());
-        
-        
-        C.setBounds(0,300,640,300);
-        C.setBackground(Color.pink);
-        c.add(C);
-        
-        JPanel D = new JPanel();
-        D.setLayout(new FlowLayout());
-        
-        
-        D.setBounds(640,300,640,300);
-        D.setBackground(Color.yellow);
-        c.add(D);
-        
-        
-        setVisible(true);
+        stage.setTitle("Statistics");
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
     }
 }
