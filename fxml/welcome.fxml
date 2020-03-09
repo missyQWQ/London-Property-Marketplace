@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../welcome.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="WelcomeController">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/welcome.jpg" />
+         </image></ImageView>
+      <AnchorPane layoutX="817.0" layoutY="112.0" prefHeight="300.0" prefWidth="280.0" styleClass="inputAnchor">
+         <children>
+            <Label layoutX="70.0" layoutY="31.0" text="Price Range:">
+               <font>
+                  <Font name="Calibri Light" size="28.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="RED" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+            <Label layoutX="117.0" layoutY="76.0" text="from">
+               <font>
+                  <Font name="Calibri Light Italic" size="24.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="priceFrom" layoutX="55.0" layoutY="104.0" onAction="#checkIfDisable" prefHeight="30.0" prefWidth="170.0" styleClass="inputField" />
+            <Label layoutX="130.0" layoutY="150.0" text="to">
+               <font>
+                  <Font name="Calibri Light Italic" size="24.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="priceTo" layoutX="55.0" layoutY="177.0" onAction="#checkIfDisable" prefHeight="30.0" prefWidth="170.0" styleClass="inputField" />
+            <Button fx:id="confirmBtn" alignment="CENTER" layoutX="90.0" layoutY="238.0" mnemonicParsing="false" onAction="#confirmBtnAction" styleClass="confirmButton" text="Confirm" textAlignment="CENTER" />
+         </children>
+         <effect>
+            <DropShadow height="106.99" offsetX="10.0" offsetY="10.0" radius="55.957499999999996" width="118.84" />
+         </effect>
+      </AnchorPane>
+      <Label layoutX="696.0" layoutY="497.0" styleClass="instruction" text="User Instruction:">
+         <font>
+            <Font name="System Italic" size="24.0" />
+         </font></Label>
+      <Label layoutX="737.0" layoutY="558.0" styleClass="instruction" text="1. Select price range.">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font></Label>
+      <Label layoutX="739.0" layoutY="601.0" styleClass="instruction" text="2. Selcet the minimum number of nights.">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font></Label>
+      <Label layoutX="737.0" layoutY="645.0" styleClass="instruction" text="3. Click &quot;confirm&quot; to view the suitable properties.">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font></Label>
+      <Button fx:id="backBtn" alignment="CENTER" layoutX="77.0" layoutY="645.0" mnemonicParsing="false" prefWidth="182.0" styleClass="backNextButton" text="&lt; Back to Statistics" textAlignment="CENTER" />
+   </children>
+</AnchorPane>

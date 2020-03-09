@@ -1,0 +1,61 @@
+.inputField {
+    -fx-background-color: rgba(45, 45, 43, 0.6);
+    -fx-background-radius: 10px;
+    -fx-cursor-color: #ffffff;
+    -fx-text-fill: #ffffff;
+}
+
+.inputAnchor {
+    -fx-background-color: rgba(255, 255, 255, 0.4);
+    -fx-background-radius: 10px;
+}
+
+.inputAnchor:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.7);
+    -fx-background-radius: 10px;
+}
+
+.confirmButton {
+    -fx-pref-width: 100;
+    -fx-pref-height: 30;
+    -fx-background-color: rgb(243, 86, 90);
+    -fx-background-radius: 5px;
+    -fx-text-fill: #ffffff;
+}
+
+.confirmButton:hover {
+    -fx-pref-width: 100;
+    -fx-pref-height: 30;
+    -fx-background-color: rgba(255, 255, 255, 0);
+    -fx-background-radius: 5px;
+    -fx-text-fill: rgb(243, 86, 90);
+    -fx-border-style: solid;
+    -fx-border-width: 3px;
+    -fx-border-color: rgb(243, 86, 90);;
+    -fx-border-radius: 5px;
+}
+
+.backNextButton {
+    -fx-pref-width: 200;
+    -fx-pref-height: 30;
+    -fx-background-color: rgba(255, 255, 255, 0);
+    -fx-background-radius: 5px;
+    -fx-text-fill: rgb(243, 86, 90);
+    -fx-border-style: solid;
+    -fx-border-width: 3px;
+    -fx-border-color: rgb(243, 86, 90);;
+    -fx-border-radius: 5px;
+}
+
+.backNextButton:hover {
+    -fx-pref-width: 200;
+    -fx-pref-height: 30;
+    -fx-background-color: rgb(243, 86, 90);
+    -fx-background-radius: 5px;
+    -fx-text-fill: #ffffff;
+}
+
+.instruction {
+    -fx-background-color: rgba(45, 45, 43, 0.6);
+    -fx-text-fill: #ffffff;
+}
