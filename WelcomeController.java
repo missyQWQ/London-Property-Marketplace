@@ -60,14 +60,14 @@ public class WelcomeController
      * Otherwise, move to next panel.
      */
     @FXML
-    private void confirmBtnAction(ActionEvent event) throws IOException
+    private void confirmBtnAction(ActionEvent e) throws IOException
     {
         if((Integer)priceFrom.getValue() >= (Integer)priceTo.getValue())
             alertWarning();
         else {
             Parent mapPanel = FXMLLoader.load(getClass().getResource("./fxml/map.fxml"));
-            Stage mapStage = (Stage)((Node)event.getSource()).getScene().getWindow();
-            mapStage.setScene(new Scene(mapPanel));
+            Stage stage = (Stage)((Node)e.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(mapPanel));
         }
     }
     
