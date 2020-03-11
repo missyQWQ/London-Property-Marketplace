@@ -22,7 +22,7 @@ public class Statistics extends Application
     @Override
     public void start(Stage stage) throws Exception
     {
-        URL url = getClass().getResource("./fxml/Statistics.fxml");
+        URL url = getClass().getResource("./fxml/statistics.fxml");
         Pane root = FXMLLoader.load(url);
         Scene scene = new Scene(root);
         

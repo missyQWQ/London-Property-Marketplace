@@ -2,18 +2,7 @@ import javafx.fxml.FXML;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.*;
-
-// import javafx.application.Application;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.scene.Node;
-import javafx.scene.Scene;
-import javafx.scene.Parent;
-import javafx.stage.Stage;
-import javafx.stage.Modality;
-// import javafx.scene.layout.*;
-// import java.net.URL;
-import javafx.fxml.FXMLLoader;
 import java.io.IOException;
 
 /**
@@ -22,7 +11,7 @@ import java.io.IOException;
  * @author (your name)
  * @version (a version number or a date)
  */
-public class WelcomeController
+public class WelcomeController extends Controller
 {
     private ObservableList<Integer> priceChoices = 
             FXCollections.observableArrayList(0, 40, 60, 90, 140, 7000);
@@ -35,15 +24,21 @@ public class WelcomeController
     @FXML
     private void initialize()
     {
+        // Initialize the choices of price range.
         priceFrom.setItems(priceChoices);
         priceTo.setItems(priceChoices);
         // Set buttons initially disabled.
         confirmBtn.setDisable(true);
         backBtn.setDisable(true);
+        // Show which price range is currently selected.
+        if(minPrice != -1 && maxPrice != -1) {
+            priceFrom.setValue(minPrice);
+            priceTo.setValue(maxPrice);
+        }
     }
     
     /**
-     * Enable the buttons when both of minimum and maximum prices have been selected.
+     * Enable the buttons when price range has been selected.
      */
     @FXML
     private void checkIfDisable()
@@ -55,33 +50,35 @@ public class WelcomeController
     }
     
     /**
-     * When user click the "confrim" button,
-     * alert user if the price range they selected is invalid.
-     * Otherwise, move to next panel.
+     * Click "Back to Statistics" and move to statistics panel.
      */
     @FXML
-    private void confirmBtnAction(ActionEvent e) throws IOException
+    protected void backBtnAction(ActionEvent e) throws IOException
+    {
+        changePanel(e, "./fxml/statistics.fxml", "Statistics");
+    }
+    
+    /**
+     * Click "Confrim" and move to map panel.
+     * Alert user if the price range they selected is invalid.
+     */
+    @FXML
+    protected void nextBtnAction(ActionEvent e) throws IOException
     {
         if((Integer)priceFrom.getValue() >= (Integer)priceTo.getValue())
             alertWarning();
         else {
-            Parent mapPanel = FXMLLoader.load(getClass().getResource("./fxml/map.fxml"));
-            Stage stage = (Stage)((Node)e.getSource()).getScene().getWindow();
-            stage.setScene(new Scene(mapPanel));
+            setMinPrice((Integer)priceFrom.getValue());
+            setMaxPrice((Integer)priceTo.getValue());
+            changePanel(e, "./fxml/map.fxml", "Map");
         }
     }
     
     /**
-     * Pop up the warning window.
+     * Pop up a warning window.
      */
     private void alertWarning() throws IOException
     {
-        Parent warning = FXMLLoader.load(getClass().getResource("./fxml/warning.fxml"));
-        Stage warningWindow = new Stage();
-        warningWindow.setScene(new Scene(warning));
-        warningWindow.initModality(Modality.APPLICATION_MODAL);
-        warningWindow.setResizable(false);
-        warningWindow.setTitle("Error");
-        warningWindow.show();
+        newWindow("./fxml/warning.fxml", "Warning");
     }
 }

@@ -44,7 +44,7 @@
                </font>
             </Label>
             <ChoiceBox fx:id="priceTo" layoutX="55.0" layoutY="177.0" onAction="#checkIfDisable" prefHeight="30.0" prefWidth="170.0" styleClass="inputField" />
-            <Button fx:id="confirmBtn" alignment="CENTER" layoutX="90.0" layoutY="238.0" mnemonicParsing="false" onAction="#confirmBtnAction" styleClass="confirmButton" text="Confirm" textAlignment="CENTER" />
+            <Button fx:id="confirmBtn" alignment="CENTER" layoutX="90.0" layoutY="238.0" mnemonicParsing="false" onAction="#nextBtnAction" styleClass="confirmButton" text="Confirm" textAlignment="CENTER" />
          </children>
          <effect>
             <DropShadow height="106.99" offsetX="10.0" offsetY="10.0" radius="55.957499999999996" width="118.84" />
@@ -66,6 +66,6 @@
          <font>
             <Font name="System Italic" size="18.0" />
          </font></Label>
-      <Button fx:id="backBtn" alignment="CENTER" layoutX="77.0" layoutY="645.0" mnemonicParsing="false" prefWidth="182.0" styleClass="backNextButton" text="&lt; Back to Statistics" textAlignment="CENTER" />
+      <Button fx:id="backBtn" alignment="CENTER" layoutX="77.0" layoutY="645.0" mnemonicParsing="false" onAction="#backBtnAction" prefWidth="182.0" styleClass="backNextButton" text="&lt; Back to Statistics" textAlignment="CENTER" />
    </children>
 </AnchorPane>

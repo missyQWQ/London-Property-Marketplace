@@ -2,14 +2,9 @@ import java.net.URL;
 import javafx.fxml.FXMLLoader;
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.layout.*;
+import javafx.scene.Parent;
 import javafx.stage.Stage;
-// import javafx.fxml.FXML;
-// import javafx.collections.FXCollections;
-// import javafx.collections.ObservableList;
-// import javafx.event.ActionEvent;
-// import javafx.event.EventHandler;
-// import javafx.scene.control.*;
+import java.io.IOException;
 
 /**
  * Write a description of JavaFX class Start here.
@@ -20,12 +15,11 @@ import javafx.stage.Stage;
 public class Start extends Application
 {
     @Override
-    public void start(Stage stage) throws Exception
+    public void start(Stage stage) throws IOException
     {
         URL url = getClass().getResource("./fxml/welcome.fxml");
-        Pane root = FXMLLoader.load(url);
+        Parent root = FXMLLoader.load(url);
         Scene scene = new Scene(root);
-        
         stage.setTitle("Welcome");
         stage.setScene(scene);
         stage.setResizable(false);

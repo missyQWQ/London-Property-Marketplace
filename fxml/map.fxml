@@ -36,7 +36,7 @@
                         <Insets left="50.0" />
                      </GridPane.margin>
                   </Button>
-                  <Button mnemonicParsing="false" styleClass="backNextButton" text="Go to Statistics &gt;" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+                  <Button mnemonicParsing="false" onAction="#nextBtnAction" styleClass="backNextButton" text="Go to Statistics &gt;" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
                      <GridPane.margin>
                         <Insets right="50.0" />
                      </GridPane.margin>
