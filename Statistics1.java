@@ -17,7 +17,7 @@ import javafx.stage.Stage;
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Statistics extends Application
+public class Statistics1 extends Application
 {
     @Override
     public void start(Stage stage) throws Exception

@@ -68,8 +68,8 @@ public abstract class Controller
     }
     
     /**
-     * Back to a panel.
-     * @throws IOException
+     * BaOck to a panel.
+     * @throws IException
      */
     protected abstract void backBtnAction(ActionEvent e) throws IOException;
     
