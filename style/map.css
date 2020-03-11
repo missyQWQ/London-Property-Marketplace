@@ -17,3 +17,7 @@
     -fx-background-radius: 5px;
     -fx-text-fill: #ffffff;
 }
+
+.label {
+    -fx-background-color: rgba(45, 45, 43, 0.6);
+}

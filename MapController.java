@@ -1,6 +1,7 @@
 import javafx.event.ActionEvent;
 import java.io.IOException;
 import javafx.fxml.FXML;
+import javafx.scene.control.*;
 /**
  * Write a description of JavaFX class MapController here.
  *
@@ -9,6 +10,14 @@ import javafx.fxml.FXML;
  */
 public class MapController extends Controller
 {
+    @FXML private Label selectedPriceRange;
+    
+    @FXML
+    private void initialize()
+    {
+        selectedPriceRange.setText(minPrice + " - " + maxPrice);
+    }
+    
     /**
      * Click "Back to Welcome" and move to welcome panel.
      */
