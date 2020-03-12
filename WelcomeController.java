@@ -55,7 +55,13 @@ public class WelcomeController extends Controller
     @FXML
     protected void backBtnAction(ActionEvent e) throws IOException
     {
-        changePanel(e, "./fxml/statistics.fxml", "Statistics");
+        if((Integer)priceFrom.getValue() >= (Integer)priceTo.getValue())
+            alertWarning();
+        else {
+            setMinPrice((Integer)priceFrom.getValue());
+            setMaxPrice((Integer)priceTo.getValue());
+            changePanel(e, "./fxml/statistics.fxml", "Statistics");
+        }
     }
     
     /**
