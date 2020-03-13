@@ -7,6 +7,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../style/map.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MapController">
@@ -40,6 +41,39 @@
             <DropShadow color="#000000c7" height="116.0" radius="57.5" spread="0.19" width="116.0" />
          </effect>
       </ImageView>
+      <Circle fx:id="eali" fill="#f3565a40" layoutX="420.0" layoutY="353.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Circle fx:id="bren" fill="#f3565a40" layoutX="478.0" layoutY="298.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Circle fx:id="redb" fill="#f3565a40" layoutX="797.0" layoutY="251.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Circle fx:id="walt" fill="#f3565a40" layoutX="710.0" layoutY="238.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Circle fx:id="hrgy" fill="#f3565a40" layoutX="632.0" layoutY="238.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Circle fx:id="houn" fill="#f3565a40" layoutX="382.0" layoutY="424.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Circle fx:id="enfi" fill="#f3565a40" layoutX="652.0" layoutY="154.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Circle fx:id="barn" fill="#f3565a40" layoutX="533.0" layoutY="211.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Circle fx:id="hrrw" fill="#f3565a40" layoutX="401.0" layoutY="237.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Circle fx:id="hill" fill="#f3565a40" layoutX="310.0" layoutY="327.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Circle fx:id="rich" fill="#f3565a40" layoutX="427.0" layoutY="466.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Circle fx:id="king" fill="#f3565a40" layoutX="478.0" layoutY="534.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Circle fx:id="sutt" fill="#f3565a40" layoutX="571.0" layoutY="584.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Circle fx:id="croy" fill="#f3565a40" layoutX="671.0" layoutY="584.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Circle fx:id="brom" fill="#f3565a40" layoutX="797.0" layoutY="559.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Circle fx:id="bexl" fill="#f3565a40" layoutX="866.0" layoutY="433.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Circle fx:id="have" fill="#f3565a40" layoutX="950.0" layoutY="276.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Circle fx:id="bark" fill="#f3565a40" layoutX="855.0" layoutY="310.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Circle fx:id="lews" fill="#f3565a40" layoutX="721.0" layoutY="465.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Circle fx:id="gwch" fill="#f3565a40" layoutX="785.0" layoutY="411.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Circle fx:id="mert" fill="#f3565a40" layoutX="549.0" layoutY="512.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Circle fx:id="wand" fill="#f3565a40" layoutX="549.0" layoutY="452.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Circle fx:id="hamm" fill="#f3565a40" layoutX="516.0" layoutY="378.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Circle fx:id="kens" fill="#f3565a40" layoutX="562.0" layoutY="387.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Circle fx:id="wstm" fill="#f3565a40" layoutX="581.0" layoutY="352.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Circle fx:id="camd" fill="#f3565a40" layoutX="576.0" layoutY="300.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Circle fx:id="isli" fill="#f3565a40" layoutX="627.0" layoutY="300.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Circle fx:id="city" fill="#f3565a40" layoutX="643.0" layoutY="352.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Circle fx:id="hack" fill="#f3565a40" layoutX="677.0" layoutY="300.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Circle fx:id="towh" fill="#f3565a40" layoutX="695.0" layoutY="344.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Circle fx:id="newh" fill="#f3565a40" layoutX="763.0" layoutY="327.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Circle fx:id="sthw" fill="#f3565a40" layoutX="660.0" layoutY="403.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Circle fx:id="lamb" fill="#f3565a40" layoutX="617.0" layoutY="433.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
       <Label layoutX="291.0" layoutY="313.0" styleClass="label_borough" text="HILL" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
