@@ -1,93 +1,49 @@
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
+import java.util.*;
+import java.io.InputStream;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.fxml.JavaFXBuilderFactory;
+import javafx.scene.*;
+import javafx.stage.StageStyle;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+import java.io.IOException;
+
 /**
- * A Login page
- * @author Liangjie Wang
- * @Vision 3.3.2020
+ * 在这里给出对类 Login 的描述。
+ * 
+ * @作者（你的名字）
+ * @版本（一个版本号或者一个日期）
  */
-public class Login extends JFrame
+public class Login
 {
-    public Login()
+    // 实例变量 - 用你自己的变量替换下面的例子
+    private int x;
+    private Stage stage;
+    private final double WIDTH = 400.0;
+    private final double HEIGHT = 250.0;
+    /**
+     * 类 Login 的对象的构造函数
+     */
+    public void StartLogin()
     {
-        setTitle("London Airbnb");
-        setBounds(200,200,500,400);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
-        Container c = getContentPane();
-        c.setLayout(null);
-
-        JPanel westP = new JPanel();
-        westP.setLayout(new FlowLayout());
-        JLabel l = new JLabel("");
-        Icon icon = new ImageIcon("C:/Users/Angela/Desktop/airbnb3.png");
-        l.setIcon(icon);
-        westP.setBounds(0,0,300,300);
-        westP.add(l);
-        c.add(westP);
-
-        JLabel  l1 = new JLabel("Username"), 
-                l2 = new JLabel("Password"),
-                l3 = new JLabel("Welcome to London Airbnb app!");
-        l1.setFont(new Font("Arial",Font.BOLD,15));
-        l2.setFont(new Font("Arial",Font.BOLD,15));
-        l3.setFont(new Font("Lucida Calligraphy",Font.BOLD,15));
-        l3.setForeground(new Color(0,0,128));
-        JButton btn1 = new JButton("Hello Airbnb!");
-        JButton btn2 = new JButton("sign up");
-        btn1.setBackground(Color.PINK);
-        btn1.addActionListener(new ActionListener()    
-            {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    setRange();
-                    dispose();
-                }
-            }
-
-        );
-        btn2.setBackground(Color.BLUE);
-        //btn2.addActionListener(new ActionListener());
         
-
-        JTextField jt = new JTextField();
-        jt.setColumns(20);
-
-        JPasswordField jp = new JPasswordField();
-        jp.setEchoChar('\u2605');
-
-        JPanel eastP = new JPanel();
-        eastP.setLayout(new GridLayout(5,1,10,10));
-        eastP.setBounds(300,60,170,180);
-        eastP.add(l1);
-        eastP.add(jt);
-        eastP.add(l2);
-        eastP.add(jp);
-        eastP.add(btn1);
-        c.add(eastP);
-
-        JPanel southP = new JPanel();
-        southP.setLayout(new FlowLayout());
-        southP.setBounds(100,300,300,100);
-        southP.add(l3);
-        c.add(southP);
-
-        JMenuBar menuBar = new JMenuBar();
-        setJMenuBar(menuBar);
-
-        JMenu menu = new JMenu("Help");
-        menuBar.add(menu);
-
-        JMenuItem item = new JMenuItem("???");
-        //item.addActionListener(e -> setRange());
-
-        menu.add(item);
-
-        setVisible(true);
-
     }
 
-    private void setRange(){
-        SetRange.newDialog();
+    /**
+     * 一个方法的例子 - 使用你自己的说明替代它
+     * 
+     * @参数 y，方法的一个样本参数
+     * @返回 x，y的和 
+     */
+    public int sampleMethod(int y)
+    {
+        // 在这里加入你的代码
+        return x + y;
     }
-
 }

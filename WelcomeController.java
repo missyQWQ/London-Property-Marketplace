@@ -1,3 +1,15 @@
+import javafx.collections.FXCollections;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 import javafx.fxml.FXML;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -20,7 +32,7 @@ public class WelcomeController extends Controller
     @FXML private ChoiceBox priceTo;
     @FXML private Button confirmBtn;
     @FXML private Button backBtn;
-    
+    @FXML private Button infoButton; 
     @FXML
     private void initialize()
     {
@@ -80,6 +92,20 @@ public class WelcomeController extends Controller
         }
     }
     
+    @FXML
+    public void infoButtonAction() throws IOException{
+        createInfoBox();
+    }
+    
+    private void createInfoBox() throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("MsgBox.fxml"));
+        Stage msg = new Stage();
+        msg.setScene(new Scene(root));
+        msg.initModality(Modality.APPLICATION_MODAL);
+        msg.setTitle("About");
+        msg.setResizable(false);   // resize able
+        msg.show();
+    }
     /**
      * Pop up a warning window.
      */
