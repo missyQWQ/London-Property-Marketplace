@@ -57,15 +57,21 @@ public class MapController extends Controller
         
         // Sort the ArrayList "boroInfo" by the number of properties in an ascending order.
         Collections.sort(boroInfo, Comparator.comparing(BoroughInfo::getPropertyNum));
-        // Visual indication of how many properties are available in each borough. A larger circle indicates there are more properties in the borough.
+        
+        // Visual indication of how many properties are available in each borough. 
+        // A larger circle indicates more properties in the borough.
+        // Each borough's full name and the number of properties will be shown in the tooltip.
         int ori_radius = 10;
         int incNum = 0;
         for(BoroughInfo curBoro : boroInfo) {
-            if(curBoro.getPropertyNum() == 0)
+            if(curBoro.getPropertyNum() == 0) {
                 curBoro.getCircle().setVisible(false);
+                curBoro.getLabel().setTooltip(new Tooltip(curBoro.getFullName() + ": no property found."));
+            }
             else {
                 curBoro.getCircle().setRadius(ori_radius + incNum);
                 incNum += 2;
+                curBoro.getLabel().setTooltip(new Tooltip(curBoro.getFullName() + ": " + curBoro.getPropertyNum() + " properties found."));
             }
         }
     }

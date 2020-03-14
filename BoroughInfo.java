@@ -46,6 +46,11 @@ public class BoroughInfo
         return circle;
     }
     
+    public Label getLabel()
+    {
+        return label;
+    }
+    
     private String getFullName(String name)
     {
         switch(name) {
