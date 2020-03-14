@@ -1,4 +1,5 @@
 import javafx.scene.shape.Circle;
+import javafx.scene.control.Label;
 /**
  * Write a description of class BoroughInfo here.
  *
@@ -8,6 +9,7 @@ import javafx.scene.shape.Circle;
 public class BoroughInfo
 {
     private Circle circle;
+    private Label label;
     private String name;
     private String fullName;
     private int propertyNumber;
@@ -15,9 +17,10 @@ public class BoroughInfo
     /**
      * Constructor for objects of class BoroughInfo
      */
-    public BoroughInfo(Circle circle)
+    public BoroughInfo(Circle circle, Label label)
     {
         this.circle = circle;
+        this.label = label;
         name = circle.getId();
         fullName = getFullName(name);
         propertyNumber = 0;
