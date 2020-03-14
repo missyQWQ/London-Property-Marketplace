@@ -38,6 +38,11 @@ public class BoroughInfo
         propertyNumber++;
     }
     
+    public Circle getCircle()
+    {
+        return circle;
+    }
+    
     private String getFullName(String name)
     {
         switch(name) {

@@ -35,8 +35,10 @@ public class MapController extends Controller
                new BoroughInfo(bark), new BoroughInfo(lews), new BoroughInfo(gwch), new BoroughInfo(mert), new BoroughInfo(wand), new BoroughInfo(hamm), 
                new BoroughInfo(kens), new BoroughInfo(wstm), new BoroughInfo(camd), new BoroughInfo(isli), new BoroughInfo(city), new BoroughInfo(hack),
                new BoroughInfo(towh), new BoroughInfo(newh), new BoroughInfo(sthw), new BoroughInfo(lamb)));
+        
         // Filter Airbnb data by the selected price range.
         ArrayList<AirbnbListing> data_filterByPrice = priceRange_filter(getMinPrice(), getMaxPrice());
+        
         // Calculate the number of properties in each borough within the selected price range.
         for(AirbnbListing data : data_filterByPrice) {
             for(BoroughInfo boro : boroInfo) {
@@ -44,8 +46,20 @@ public class MapController extends Controller
                     boro.incPropertyNum();
             }
         }
+        
         // Sort the ArrayList "boroInfo" by the number of properties in an ascending order.
         Collections.sort(boroInfo, Comparator.comparing(BoroughInfo::getPropertyNum));
+        // Visual indication of how many properties are available in each borough. A larger circle indicates there are more properties in the borough.
+        int ori_radius = 10;
+        int incNum = 0;
+        for(BoroughInfo curBoro : boroInfo) {
+            if(curBoro.getPropertyNum() == 0)
+                curBoro.getCircle().setVisible(false);
+            else {
+                curBoro.getCircle().setRadius(ori_radius + incNum);
+                incNum += 2;
+            }
+        }
     }
     
     /**
