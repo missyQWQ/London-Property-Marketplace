@@ -5,6 +5,9 @@ import javafx.scene.control.*;
 import javafx.scene.shape.Circle;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Collections;
+
 /**
  * Write a description of JavaFX class MapController here.
  *
@@ -32,20 +35,17 @@ public class MapController extends Controller
                new BoroughInfo(bark), new BoroughInfo(lews), new BoroughInfo(gwch), new BoroughInfo(mert), new BoroughInfo(wand), new BoroughInfo(hamm), 
                new BoroughInfo(kens), new BoroughInfo(wstm), new BoroughInfo(camd), new BoroughInfo(isli), new BoroughInfo(city), new BoroughInfo(hack),
                new BoroughInfo(towh), new BoroughInfo(newh), new BoroughInfo(sthw), new BoroughInfo(lamb)));
-        
+        // Filter Airbnb data by the selected price range.
         ArrayList<AirbnbListing> data_filterByPrice = priceRange_filter(getMinPrice(), getMaxPrice());
-        
+        // Calculate the number of properties in each borough within the selected price range.
         for(AirbnbListing data : data_filterByPrice) {
             for(BoroughInfo boro : boroInfo) {
                 if(data.getNeighbourhood().equals(boro.getFullName()))
                     boro.incPropertyNum();
             }
         }
-        
-        for(BoroughInfo boro2 : boroInfo) {
-                System.out.println(boro2.getFullName() + " : " + boro2.getPropertyNum());
-            }
-        
+        // Sort the ArrayList "boroInfo" by the number of properties in an ascending order.
+        Collections.sort(boroInfo, Comparator.comparing(BoroughInfo::getPropertyNum));
     }
     
     /**
