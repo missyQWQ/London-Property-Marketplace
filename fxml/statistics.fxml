@@ -49,7 +49,7 @@
                   <Font size="22.0" />
                </font>
             </Label>
-            <Label layoutX="173.0" layoutY="74.0" prefHeight="132.0" prefWidth="195.0" text="Info 1">
+            <Label fx:id="info1" layoutX="173.0" layoutY="74.0" prefHeight="132.0" prefWidth="195.0" text="Info 1">
                <font>
                   <Font size="50.0" />
                </font>
@@ -72,7 +72,7 @@
                   <Font size="22.0" />
                </font>
             </Label>
-            <Label layoutX="173.0" layoutY="79.0" prefHeight="132.0" prefWidth="195.0" text="Info 3">
+            <Label fx:id="info3" layoutX="173.0" layoutY="79.0" prefHeight="132.0" prefWidth="195.0" text="Info 3">
                <font>
                   <Font size="50.0" />
                </font>
@@ -95,7 +95,7 @@
                   <Font size="22.0" />
                </font>
             </Label>
-            <Label layoutX="173.0" layoutY="77.0" prefHeight="132.0" prefWidth="195.0" text="Info 2">
+            <Label fx:id="info2" layoutX="173.0" layoutY="77.0" prefHeight="132.0" prefWidth="195.0" text="Info 2">
                <font>
                   <Font size="50.0" />
                </font>
@@ -118,7 +118,7 @@
                   <Font size="19.0" />
                </font>
             </Label>
-            <Label layoutX="183.0" layoutY="74.0" prefHeight="132.0" prefWidth="195.0" text="Info 4">
+            <Label fx:id="info4" layoutX="183.0" layoutY="74.0" prefHeight="132.0" prefWidth="195.0" text="Info 4">
                <font>
                   <Font size="50.0" />
                </font>

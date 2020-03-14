@@ -66,7 +66,7 @@ public class MapController extends Controller
         changePanel(e, "./fxml/statistics.fxml", "Statistics");
     }
     
-    private ArrayList<AirbnbListing> priceRange_filter(int minPrice, int maxPrice)
+    public ArrayList<AirbnbListing> priceRange_filter(int minPrice, int maxPrice)
     {
         ArrayList<AirbnbListing> totalData = new AirbnbDataLoader().load();
         ArrayList<AirbnbListing> data = new ArrayList<>();
