@@ -16,8 +16,8 @@ import java.io.IOException;
 public abstract class Controller
 {
     // Set default as -1 indicating no price range has been selected yet.
-    public static int minPrice = -1;
-    public static int maxPrice = -1;
+    private static int minPrice = -1;
+    private static int maxPrice = -1;
 
     /**
      * Move to another panel.
@@ -51,20 +51,24 @@ public abstract class Controller
         window.show();
     }
     
-    /**
-     * Set minimum price.
-     */
     protected void setMinPrice(int minPrice)
     {
         this.minPrice = minPrice;
     }
     
-    /**
-     * Set maximum price.
-     */
+    protected int getMinPrice()
+    {
+        return minPrice;
+    }
+    
     protected void setMaxPrice(int maxPrice)
     {
         this.maxPrice = maxPrice;
+    }
+    
+    protected int getMaxPrice()
+    {
+        return maxPrice;
     }
     
     /**

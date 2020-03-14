@@ -43,9 +43,9 @@ public class WelcomeController extends Controller
         confirmBtn.setDisable(true);
         backBtn.setDisable(true);
         // Show which price range is currently selected.
-        if(minPrice != -1 && maxPrice != -1) {
-            priceFrom.setValue(minPrice);
-            priceTo.setValue(maxPrice);
+        if(getMinPrice() != -1 && getMaxPrice() != -1) {
+            priceFrom.setValue(getMinPrice());
+            priceTo.setValue(getMaxPrice());
         }
     }
     
