@@ -41,40 +41,40 @@
             <DropShadow color="#000000c7" height="116.0" radius="57.5" spread="0.19" width="116.0" />
          </effect>
       </ImageView>
-      <Circle fx:id="eali" fill="#f3565a40" layoutX="420.0" layoutY="353.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-      <Circle fx:id="bren" fill="#f3565a40" layoutX="478.0" layoutY="298.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-      <Circle fx:id="redb" fill="#f3565a40" layoutX="797.0" layoutY="251.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-      <Circle fx:id="walt" fill="#f3565a40" layoutX="710.0" layoutY="238.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-      <Circle fx:id="hrgy" fill="#f3565a40" layoutX="632.0" layoutY="238.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-      <Circle fx:id="houn" fill="#f3565a40" layoutX="382.0" layoutY="424.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-      <Circle fx:id="enfi" fill="#f3565a40" layoutX="652.0" layoutY="154.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-      <Circle fx:id="barn" fill="#f3565a40" layoutX="533.0" layoutY="211.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-      <Circle fx:id="hrrw" fill="#f3565a40" layoutX="401.0" layoutY="237.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-      <Circle fx:id="hill" fill="#f3565a40" layoutX="310.0" layoutY="327.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-      <Circle fx:id="rich" fill="#f3565a40" layoutX="427.0" layoutY="466.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-      <Circle fx:id="king" fill="#f3565a40" layoutX="478.0" layoutY="534.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-      <Circle fx:id="sutt" fill="#f3565a40" layoutX="571.0" layoutY="584.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-      <Circle fx:id="croy" fill="#f3565a40" layoutX="671.0" layoutY="584.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-      <Circle fx:id="brom" fill="#f3565a40" layoutX="797.0" layoutY="559.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-      <Circle fx:id="bexl" fill="#f3565a40" layoutX="866.0" layoutY="433.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-      <Circle fx:id="have" fill="#f3565a40" layoutX="950.0" layoutY="276.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-      <Circle fx:id="bark" fill="#f3565a40" layoutX="855.0" layoutY="310.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-      <Circle fx:id="lews" fill="#f3565a40" layoutX="721.0" layoutY="465.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-      <Circle fx:id="gwch" fill="#f3565a40" layoutX="785.0" layoutY="411.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-      <Circle fx:id="mert" fill="#f3565a40" layoutX="549.0" layoutY="512.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-      <Circle fx:id="wand" fill="#f3565a40" layoutX="549.0" layoutY="452.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-      <Circle fx:id="hamm" fill="#f3565a40" layoutX="516.0" layoutY="378.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-      <Circle fx:id="kens" fill="#f3565a40" layoutX="562.0" layoutY="387.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-      <Circle fx:id="wstm" fill="#f3565a40" layoutX="581.0" layoutY="352.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-      <Circle fx:id="camd" fill="#f3565a40" layoutX="576.0" layoutY="300.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-      <Circle fx:id="isli" fill="#f3565a40" layoutX="627.0" layoutY="300.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-      <Circle fx:id="city" fill="#f3565a40" layoutX="643.0" layoutY="352.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-      <Circle fx:id="hack" fill="#f3565a40" layoutX="677.0" layoutY="300.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-      <Circle fx:id="towh" fill="#f3565a40" layoutX="695.0" layoutY="344.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-      <Circle fx:id="newh" fill="#f3565a40" layoutX="763.0" layoutY="327.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-      <Circle fx:id="sthw" fill="#f3565a40" layoutX="660.0" layoutY="403.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-      <Circle fx:id="lamb" fill="#f3565a40" layoutX="617.0" layoutY="433.0" radius="20.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-      <Label layoutX="291.0" layoutY="313.0" styleClass="label_borough" text="HILL" textFill="WHITE">
+      <Circle fx:id="eali" fill="#f0565b59" layoutX="420.0" layoutY="353.0" radius="10.0" stroke="#c90007" strokeType="INSIDE" />
+      <Circle fx:id="bren" fill="#f0565b59" layoutX="478.0" layoutY="298.0" radius="10.0" stroke="#c90007" strokeType="INSIDE" />
+      <Circle fx:id="redb" fill="#f0565b59" layoutX="797.0" layoutY="251.0" radius="10.0" stroke="#c90007" strokeType="INSIDE" />
+      <Circle fx:id="walt" fill="#f0565b59" layoutX="710.0" layoutY="238.0" radius="10.0" stroke="#c90007" strokeType="INSIDE" />
+      <Circle fx:id="hrgy" fill="#f0565b59" layoutX="632.0" layoutY="238.0" radius="10.0" stroke="#c90007" strokeType="INSIDE" />
+      <Circle fx:id="houn" fill="#f0565b59" layoutX="382.0" layoutY="424.0" radius="10.0" stroke="#c90007" strokeType="INSIDE" />
+      <Circle fx:id="enfi" fill="#f0565b59" layoutX="652.0" layoutY="154.0" radius="10.0" stroke="#c90007" strokeType="INSIDE" />
+      <Circle fx:id="barn" fill="#f0565b59" layoutX="533.0" layoutY="211.0" radius="10.0" stroke="#c90007" strokeType="INSIDE" />
+      <Circle fx:id="hrrw" fill="#f0565b59" layoutX="401.0" layoutY="237.0" radius="10.0" stroke="#c90007" strokeType="INSIDE" />
+      <Circle fx:id="hill" fill="#f0565b59" layoutX="310.0" layoutY="327.0" radius="10.0" stroke="#c90007" strokeType="INSIDE" />
+      <Circle fx:id="rich" fill="#f0565b59" layoutX="427.0" layoutY="466.0" radius="10.0" stroke="#c90007" strokeType="INSIDE" />
+      <Circle fx:id="king" fill="#f0565b59" layoutX="478.0" layoutY="534.0" radius="10.0" stroke="#c90007" strokeType="INSIDE" />
+      <Circle fx:id="sutt" fill="#f0565b59" layoutX="571.0" layoutY="584.0" radius="10.0" stroke="#c90007" strokeType="INSIDE" />
+      <Circle fx:id="croy" fill="#f0565b59" layoutX="671.0" layoutY="584.0" radius="10.0" stroke="#c90007" strokeType="INSIDE" />
+      <Circle fx:id="brom" fill="#f0565b59" layoutX="797.0" layoutY="559.0" radius="10.0" stroke="#c90007" strokeType="INSIDE" />
+      <Circle fx:id="bexl" fill="#f0565b59" layoutX="866.0" layoutY="433.0" radius="10.0" stroke="#c90007" strokeType="INSIDE" />
+      <Circle fx:id="have" fill="#f0565b59" layoutX="950.0" layoutY="276.0" radius="10.0" stroke="#c90007" strokeType="INSIDE" />
+      <Circle fx:id="bark" fill="#f0565b59" layoutX="855.0" layoutY="310.0" radius="10.0" stroke="#c90007" strokeType="INSIDE" />
+      <Circle fx:id="lews" fill="#f0565b59" layoutX="721.0" layoutY="465.0" radius="10.0" stroke="#c90007" strokeType="INSIDE" />
+      <Circle fx:id="gwch" fill="#f0565b59" layoutX="785.0" layoutY="411.0" radius="10.0" stroke="#c90007" strokeType="INSIDE" />
+      <Circle fx:id="mert" fill="#f0565b59" layoutX="549.0" layoutY="512.0" radius="10.0" stroke="#c90007" strokeType="INSIDE" />
+      <Circle fx:id="wand" fill="#f0565b59" layoutX="549.0" layoutY="452.0" radius="10.0" stroke="#c90007" strokeType="INSIDE" />
+      <Circle fx:id="hamm" fill="#f0565b59" layoutX="516.0" layoutY="378.0" radius="10.0" stroke="#c90007" strokeType="INSIDE" />
+      <Circle fx:id="kens" fill="#f0565b59" layoutX="562.0" layoutY="387.0" radius="10.0" stroke="#c90007" strokeType="INSIDE" />
+      <Circle fx:id="wstm" fill="#f0565b59" layoutX="581.0" layoutY="352.0" radius="10.0" stroke="#c90007" strokeType="INSIDE" />
+      <Circle fx:id="camd" fill="#f0565b59" layoutX="576.0" layoutY="300.0" radius="10.0" stroke="#c90007" strokeType="INSIDE" />
+      <Circle fx:id="isli" fill="#f0565b59" layoutX="627.0" layoutY="300.0" radius="10.0" stroke="#c90007" strokeType="INSIDE" />
+      <Circle fx:id="city" fill="#f0565b59" layoutX="643.0" layoutY="352.0" radius="10.0" stroke="#c90007" strokeType="INSIDE" />
+      <Circle fx:id="hack" fill="#f0565b59" layoutX="677.0" layoutY="300.0" radius="10.0" stroke="#c90007" strokeType="INSIDE" />
+      <Circle fx:id="towh" fill="#f0565b59" layoutX="695.0" layoutY="344.0" radius="10.0" stroke="#c90007" strokeType="INSIDE" />
+      <Circle fx:id="newh" fill="#f0565b59" layoutX="763.0" layoutY="327.0" radius="10.0" stroke="#c90007" strokeType="INSIDE" />
+      <Circle fx:id="sthw" fill="#f0565b59" layoutX="660.0" layoutY="403.0" radius="10.0" stroke="#c90007" strokeType="INSIDE" />
+      <Circle fx:id="lamb" fill="#f0565b59" layoutX="617.0" layoutY="433.0" radius="10.0" stroke="#c90007" strokeType="INSIDE" />
+      <Label fx:id="hill_l" layoutX="291.0" layoutY="313.0" styleClass="label_borough" text="HILL" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -82,7 +82,7 @@
             <DropShadow />
          </effect>
       </Label>
-      <Label layoutX="377.0" layoutY="225.0" styleClass="label_borough" text="HRRW" textFill="WHITE">
+      <Label fx:id="hrrw_l" layoutX="377.0" layoutY="225.0" styleClass="label_borough" text="HRRW" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
@@ -90,7 +90,7 @@
             <DropShadow />
          </effect>
       </Label>
-      <Label layoutX="401.0" layoutY="339.0" styleClass="label_borough" text="EALI" textFill="WHITE">
+      <Label fx:id="eali_l" layoutX="401.0" layoutY="339.0" styleClass="label_borough" text="EALI" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -98,7 +98,7 @@
             <DropShadow />
          </effect>
       </Label>
-      <Label layoutX="357.0" layoutY="411.0" styleClass="label_borough" text="HOUN" textFill="WHITE">
+      <Label fx:id="houn_l" layoutX="357.0" layoutY="411.0" styleClass="label_borough" text="HOUN" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
@@ -106,7 +106,7 @@
             <DropShadow />
          </effect>
       </Label>
-      <Label layoutX="457.0" layoutY="287.0" styleClass="label_borough" text="BREN" textFill="WHITE">
+      <Label fx:id="bren_l" layoutX="457.0" layoutY="287.0" styleClass="label_borough" text="BREN" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
@@ -114,7 +114,7 @@
             <DropShadow />
          </effect>
       </Label>
-      <Label layoutX="508.0" layoutY="197.0" styleClass="label_borough" text="BARN" textFill="WHITE">
+      <Label fx:id="barn_l" layoutX="508.0" layoutY="197.0" styleClass="label_borough" text="BARN" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -122,7 +122,7 @@
             <DropShadow />
          </effect>
       </Label>
-      <Label layoutX="632.0" layoutY="140.0" styleClass="label_borough" text="ENFI" textFill="WHITE">
+      <Label fx:id="enfi_l" layoutX="632.0" layoutY="140.0" styleClass="label_borough" text="ENFI" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -130,7 +130,7 @@
             <DropShadow />
          </effect>
       </Label>
-      <Label layoutX="610.0" layoutY="225.0" styleClass="label_borough" text="HRGY" textFill="WHITE">
+      <Label fx:id="hrgy_l" layoutX="610.0" layoutY="225.0" styleClass="label_borough" text="HRGY" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
@@ -138,7 +138,7 @@
             <DropShadow />
          </effect>
       </Label>
-      <Label layoutX="687.0" layoutY="225.0" styleClass="label_borough" text="WALT" textFill="WHITE">
+      <Label fx:id="walt_l" layoutX="687.0" layoutY="225.0" styleClass="label_borough" text="WALT" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
@@ -146,7 +146,7 @@
             <DropShadow />
          </effect>
       </Label>
-      <Label layoutX="773.0" layoutY="237.0" styleClass="label_borough" text="REDB" textFill="WHITE">
+      <Label fx:id="redb_l" layoutX="773.0" layoutY="237.0" styleClass="label_borough" text="REDB" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -154,7 +154,7 @@
             <DropShadow />
          </effect>
       </Label>
-      <Label layoutX="925.0" layoutY="263.0" styleClass="label_borough" text="HAVE" textFill="WHITE">
+      <Label fx:id="have_l" layoutX="925.0" layoutY="263.0" styleClass="label_borough" text="HAVE" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -162,7 +162,7 @@
             <DropShadow />
          </effect>
       </Label>
-      <Label layoutX="458.0" layoutY="521.0" styleClass="label_borough" text="KING" textFill="WHITE">
+      <Label fx:id="king_l" layoutX="458.0" layoutY="521.0" styleClass="label_borough" text="KING" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
@@ -170,7 +170,7 @@
             <DropShadow />
          </effect>
       </Label>
-      <Label layoutX="549.0" layoutY="570.0" styleClass="label_borough" text="SUTT" textFill="WHITE">
+      <Label fx:id="sutt_l" layoutX="549.0" layoutY="570.0" styleClass="label_borough" text="SUTT" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -178,7 +178,7 @@
             <DropShadow />
          </effect>
       </Label>
-      <Label layoutX="527.0" layoutY="499.0" styleClass="label_borough" text="MERT" textFill="WHITE">
+      <Label fx:id="mert_l" layoutX="527.0" layoutY="499.0" styleClass="label_borough" text="MERT" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
@@ -186,7 +186,7 @@
             <DropShadow />
          </effect>
       </Label>
-      <Label layoutX="647.0" layoutY="570.0" styleClass="label_borough" text="CROY" textFill="WHITE">
+      <Label fx:id="croy_l" layoutX="647.0" layoutY="570.0" styleClass="label_borough" text="CROY" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -194,7 +194,7 @@
             <DropShadow />
          </effect>
       </Label>
-      <Label layoutX="769.0" layoutY="546.0" styleClass="label_borough" text="BROM" textFill="WHITE">
+      <Label fx:id="brom_l" layoutX="769.0" layoutY="546.0" styleClass="label_borough" text="BROM" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -202,7 +202,7 @@
             <DropShadow />
          </effect>
       </Label>
-      <Label layoutX="844.0" layoutY="419.0" styleClass="label_borough" text="BEXL" textFill="WHITE">
+      <Label fx:id="bexl_l" layoutX="844.0" layoutY="419.0" styleClass="label_borough" text="BEXL" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -210,7 +210,7 @@
             <DropShadow />
          </effect>
       </Label>
-      <Label layoutX="833.0" layoutY="298.0" styleClass="label_borough" text="BARK" textFill="WHITE">
+      <Label fx:id="bark_l" layoutX="833.0" layoutY="298.0" styleClass="label_borough" text="BARK" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
@@ -218,7 +218,7 @@
             <DropShadow />
          </effect>
       </Label>
-      <Label layoutX="763.0" layoutY="401.0" styleClass="label_borough" text="GWCH" textFill="WHITE">
+      <Label fx:id="gwch_l" layoutX="763.0" layoutY="401.0" styleClass="label_borough" text="GWCH" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -226,7 +226,7 @@
             <DropShadow />
          </effect>
       </Label>
-      <Label layoutX="738.0" layoutY="314.0" styleClass="label_borough" text="NEWH" textFill="WHITE">
+      <Label fx:id="newh_l" layoutX="738.0" layoutY="314.0" styleClass="label_borough" text="NEWH" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
@@ -234,7 +234,7 @@
             <DropShadow />
          </effect>
       </Label>
-      <Label layoutX="700.0" layoutY="453.0" styleClass="label_borough" text="LEWS" textFill="WHITE">
+      <Label fx:id="lews_l" layoutX="700.0" layoutY="453.0" styleClass="label_borough" text="LEWS" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
@@ -242,7 +242,7 @@
             <DropShadow />
          </effect>
       </Label>
-      <Label layoutX="523.0" layoutY="440.0" styleClass="label_borough" text="WAND" textFill="WHITE">
+      <Label fx:id="wand_l" layoutX="523.0" layoutY="440.0" styleClass="label_borough" text="WAND" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
@@ -250,7 +250,7 @@
             <DropShadow />
          </effect>
       </Label>
-      <Label layoutX="600.0" layoutY="424.0" styleClass="label_borough" text="LAMB" textFill="WHITE">
+      <Label fx:id="lamb_l" layoutX="600.0" layoutY="424.0" styleClass="label_borough" text="LAMB" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
@@ -258,7 +258,7 @@
             <DropShadow />
          </effect>
       </Label>
-      <Label layoutX="642.0" layoutY="394.0" styleClass="label_borough" text="STHW" textFill="WHITE">
+      <Label fx:id="sthw_l" layoutX="642.0" layoutY="394.0" styleClass="label_borough" text="STHW" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
@@ -266,7 +266,7 @@
             <DropShadow />
          </effect>
       </Label>
-      <Label layoutX="673.0" layoutY="334.0" styleClass="label_borough" text="TOWH" textFill="WHITE">
+      <Label fx:id="towh_l" layoutX="673.0" layoutY="334.0" styleClass="label_borough" text="TOWH" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -274,7 +274,7 @@
             <DropShadow />
          </effect>
       </Label>
-      <Label layoutX="658.0" layoutY="290.0" styleClass="label_borough" text="HACK" textFill="WHITE">
+      <Label fx:id="hack_l" layoutX="658.0" layoutY="290.0" styleClass="label_borough" text="HACK" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -282,7 +282,7 @@
             <DropShadow />
          </effect>
       </Label>
-      <Label layoutX="617.0" layoutY="290.0" styleClass="label_borough" text="ISLI" textFill="WHITE">
+      <Label fx:id="isli_l" layoutX="617.0" layoutY="290.0" styleClass="label_borough" text="ISLI" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -290,7 +290,7 @@
             <DropShadow />
          </effect>
       </Label>
-      <Label layoutX="554.0" layoutY="290.0" styleClass="label_borough" text="CAMD" textFill="WHITE">
+      <Label fx:id="camd_l" layoutX="554.0" layoutY="290.0" styleClass="label_borough" text="CAMD" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -298,7 +298,7 @@
             <DropShadow />
          </effect>
       </Label>
-      <Label layoutX="559.0" layoutY="343.0" styleClass="label_borough" text="WSTM" textFill="WHITE">
+      <Label fx:id="wstm_l" layoutX="559.0" layoutY="343.0" styleClass="label_borough" text="WSTM" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -306,7 +306,7 @@
             <DropShadow />
          </effect>
       </Label>
-      <Label layoutX="549.0" layoutY="379.0" styleClass="label_borough" text="KENS" textFill="WHITE">
+      <Label fx:id="kens_l" layoutX="549.0" layoutY="379.0" styleClass="label_borough" text="KENS" textFill="WHITE">
          <font>
             <Font name="System Bold" size="10.0" />
          </font>
@@ -314,7 +314,7 @@
             <DropShadow />
          </effect>
       </Label>
-      <Label layoutX="499.0" layoutY="371.0" styleClass="label_borough" text="HAMM" textFill="WHITE">
+      <Label fx:id="hamm_l" layoutX="499.0" layoutY="371.0" styleClass="label_borough" text="HAMM" textFill="WHITE">
          <font>
             <Font name="System Bold" size="10.0" />
          </font>
@@ -322,7 +322,7 @@
             <DropShadow />
          </effect>
       </Label>
-      <Label layoutX="406.0" layoutY="452.0" styleClass="label_borough" text="RICH" textFill="WHITE">
+      <Label fx:id="rich_l" layoutX="406.0" layoutY="452.0" styleClass="label_borough" text="RICH" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -330,7 +330,7 @@
             <DropShadow />
          </effect>
       </Label>
-      <Label layoutX="635.0" layoutY="347.0" styleClass="label_borough" text="CITY" textFill="WHITE">
+      <Label fx:id="city_l" layoutX="635.0" layoutY="347.0" styleClass="label_borough" text="CITY" textFill="WHITE">
          <font>
             <Font name="System Bold" size="7.0" />
          </font>
