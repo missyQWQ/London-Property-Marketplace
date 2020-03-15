@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="370.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SignupControl">
+   <children>
+      <Button layoutX="67.0" layoutY="337.0" mnemonicParsing="false" onAction="#Finish" prefHeight="28.0" prefWidth="90.0" text="Continue">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Pane layoutX="5.0" layoutY="1.0" prefHeight="114.0" prefWidth="360.0">
+         <children>
+            <Label layoutX="140.0" layoutY="43.0" text="Sign Up" textOverrun="WORD_ELLIPSIS">
+               <effect>
+                  <Reflection fraction="0.73" topOpacity="0.19" />
+               </effect>
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow blurType="ONE_PASS_BOX" />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </Pane>
+      <GridPane layoutX="23.0" layoutY="143.0" maxHeight="500.0" maxWidth="500.0" prefHeight="194.0" prefWidth="325.0">
+         <children>
+            <Label text="Username:" textOverrun="CENTER_WORD_ELLIPSIS">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <GridPane.margin>
+                  <Insets bottom="20.0" />
+               </GridPane.margin></Label>
+            <Label text="Password:" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="20.0" />
+               </GridPane.margin></Label>
+            <TextField fx:id="Password" prefHeight="30.0" prefWidth="202.0" promptText="your password" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <GridPane.margin>
+                  <Insets bottom="20.0" />
+               </GridPane.margin>
+               <effect>
+                  <Reflection />
+               </effect>
+            </TextField>
+            <TextField fx:id="username" prefHeight="30.0" prefWidth="219.0" promptText="your username" GridPane.columnIndex="1">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <GridPane.margin>
+                  <Insets bottom="20.0" />
+               </GridPane.margin>
+               <effect>
+                  <Reflection />
+               </effect>
+            </TextField>
+            <Label fx:id="Mail" prefHeight="20.0" prefWidth="176.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets top="40.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="User" prefHeight="20.0" prefWidth="176.0" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets top="40.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="Pass" prefHeight="20.0" prefWidth="176.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets top="40.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Email:" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="20.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="Email" prefHeight="30.0" prefWidth="202.0" promptText="your email address" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <GridPane.margin>
+                  <Insets bottom="20.0" />
+               </GridPane.margin>
+               <effect>
+                  <Reflection />
+               </effect>
+            </TextField>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="91.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="248.0" minWidth="10.0" prefWidth="235.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="151.0" minWidth="0.0" prefWidth="0.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Box />
+      <Line endX="270.0" layoutX="100.0" layoutY="115.0" startX="-100.0" />
+      <Button fx:id="Back" layoutX="233.0" layoutY="337.0" mnemonicParsing="false" onAction="#Goback" prefHeight="28.0" prefWidth="90.0" text="Back">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+   </children>
+   <effect>
+      <ColorAdjust brightness="0.33" contrast="-0.02" hue="0.07" />
+   </effect>
+</AnchorPane>
