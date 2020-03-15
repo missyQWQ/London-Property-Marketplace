@@ -53,14 +53,16 @@ public class StatisticsController extends Controller
     private boolean[] isDisplayed = new boolean[8];
     // An array to show 4 information which are shown on the panel now
     private int[] boxIndex = new int[4];
-
+    private int titleIndex;
+    public int numberOfPorperty = 99;
     @FXML
     private void initialize()
     {
         for (int i = 0; i < 8; i++){
             isDisplayed[i] = false;
         }
-        title[0] = "00";
+        //numberOfPorperty = findAvailableProperty();
+        title[0] = "Number of avalible property";
         title[1] = "11";
         title[2] = "22";
         title[3] = "33";
@@ -69,7 +71,7 @@ public class StatisticsController extends Controller
         title[6] = "66";
         title[7] = "77";
 
-        information[0] = "0";
+        information[0] = Integer.toString(numberOfPorperty);
         information[1] = "1";
         information[2] = "2";
         information[3] = "3";
@@ -109,19 +111,19 @@ public class StatisticsController extends Controller
         source = source.substring(source.indexOf('=') + 1, source.indexOf(','));
         switch (source){
             case "n1" : info1.setText(information[getNextStat(0, isDisplayed)]); 
-                        title1.setText(title[getNextStat(0, isDisplayed)]);
+                        title1.setText(title[titleIndex]);
             break;
             
             case "n2" : info2.setText(information[getNextStat(1, isDisplayed)]);
-                        title2.setText(title[getNextStat(1, isDisplayed)]);
+                        title2.setText(title[titleIndex]);
             break;
             
             case "n3" : info3.setText(information[getNextStat(2, isDisplayed)]);
-                        title3.setText(title[getNextStat(2, isDisplayed)]);
+                        title3.setText(title[titleIndex]);
             break;
             
             case "n4" : info4.setText(information[getNextStat(3, isDisplayed)]);
-                        title4.setText(title[getNextStat(3, isDisplayed)]);
+                        title4.setText(title[titleIndex]);
             break;
         }
     }
@@ -136,19 +138,19 @@ public class StatisticsController extends Controller
         source = source.substring(source.indexOf('=') + 1, source.indexOf(','));
         switch (source){
             case "p1" : info1.setText(information[getPrevStat(0, isDisplayed)]);
-                        title1.setText(title[getPrevStat(0, isDisplayed)]);
+                        title1.setText(title[titleIndex]);
             break;
             
             case "p2" : info2.setText(information[getPrevStat(1, isDisplayed)]);
-                        title2.setText(title[getPrevStat(1, isDisplayed)]);
+                        title2.setText(title[titleIndex]);
             break;
             
             case "p3" : info3.setText(information[getPrevStat(2, isDisplayed)]);
-                        title3.setText(title[getPrevStat(2, isDisplayed)]);
+                        title3.setText(title[titleIndex]);
             break;
             
             case "p4" : info4.setText(information[getPrevStat(3, isDisplayed)]);
-                        title4.setText(title[getPrevStat(3, isDisplayed)]);
+                        title4.setText(title[titleIndex]);
             break;
         }
     }
@@ -162,7 +164,7 @@ public class StatisticsController extends Controller
      * @return statIndex The index of the suitable information.
      */
     public int getNextStat(int boxNumber, boolean[] isDisplayed){
-        int statIndex = boxIndex[boxNumber];
+        int statIndex = boxIndex[boxNumber];  
         isDisplayed[statIndex] = false;
         statIndex = (statIndex + 1) % 8;
         while(isDisplayed[statIndex]){
@@ -170,9 +172,10 @@ public class StatisticsController extends Controller
         }
         boxIndex[boxNumber] = statIndex;
         isDisplayed[statIndex] = true;
+        this.titleIndex = statIndex;
         return statIndex;
     }
-
+    
     /**
      * Return the index of the information which has not been displayed
      * on the panel as the new information.
@@ -198,6 +201,7 @@ public class StatisticsController extends Controller
         }
         boxIndex[statBoxNumber] = statIndex;
         isDisplayed[statIndex] = true;
+        this.titleIndex = statIndex;
         return statIndex;
     }
 
