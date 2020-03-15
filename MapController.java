@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Collections;
-
+import javafx.scene.input.MouseEvent;
 /**
  * Write a description of JavaFX class MapController here.
  *
@@ -92,6 +92,15 @@ public class MapController extends Controller
     protected void nextBtnAction(ActionEvent e) throws IOException
     {
         changePanel(e, "./fxml/statistics.fxml", "Statistics");
+    }
+    
+    /**
+     *  Click borough's label to see more about the properties in that speciﬁc borough.
+     */
+    @FXML
+    private void presentInfo(MouseEvent e) throws IOException
+    {
+        newWindow("./fxml/propertiesList.fxml", "Properties List");
     }
     
     private ArrayList<AirbnbListing> priceRange_filter(int minPrice, int maxPrice)
