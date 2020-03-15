@@ -28,6 +28,14 @@ public class StatisticsController extends Controller
 {
 
     private MapController mapData;
+    // Label for the first title box.
+    @FXML private Label title1;
+    // Label for the second title box.
+    @FXML private Label title2;
+    // Label for the third title box.
+    @FXML private Label title3;
+    // Label for the fourth title box.
+    @FXML private Label title4;
     // Label for the first information box.
     @FXML private Label info1;
     // Label for the second information box.
@@ -36,6 +44,9 @@ public class StatisticsController extends Controller
     @FXML private Label info3;
     // Label for the fourth information box.
     @FXML private Label info4;
+    
+    // An array of 8 title to show the properties
+    private String[] tiele = new String[8];
     // An array of 8 information to show the properties
     private String[] information = new String[8];
     // An array of boolean to show shich information are being displayed
