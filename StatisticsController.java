@@ -46,7 +46,7 @@ public class StatisticsController extends Controller
     @FXML private Label info4;
     
     // An array of 8 title to show the properties
-    private String[] tiele = new String[8];
+    private String[] title = new String[8];
     // An array of 8 information to show the properties
     private String[] information = new String[8];
     // An array of boolean to show shich information are being displayed
@@ -60,7 +60,15 @@ public class StatisticsController extends Controller
         for (int i = 0; i < 8; i++){
             isDisplayed[i] = false;
         }
-
+        title[0] = "0";
+        title[1] = "1";
+        title[2] = "2";
+        title[3] = "3";
+        title[4] = "4";
+        title[5] = "5";
+        title[6] = "6";
+        title[7] = "7";
+        
         information[0] = "0";
         information[1] = "1";
         information[2] = "2";
@@ -69,16 +77,24 @@ public class StatisticsController extends Controller
         information[5] = "5";
         information[6] = "6";
         information[7] = "7";
-
+        
+        
+        title1.setText(title[0]);
         info1.setText(information[0]);
         boxIndex[0] = 0;
         isDisplayed[0] = true;
+        
+        title2.setText(title[1]);
         info2.setText(information[1]);
         isDisplayed[1] = true;
         boxIndex[1] = 1;
+        
+        title3.setText(title[2]);
         info3.setText(information[2]);
         isDisplayed[2] = true;
         boxIndex[2] = 2;
+        
+        title4.setText(title[3]);
         info4.setText(information[3]);
         isDisplayed[3] = true;
         boxIndex[3] = 3;
