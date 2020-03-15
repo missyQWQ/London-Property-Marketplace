@@ -103,7 +103,7 @@ public class MapController extends Controller
         newWindow("./fxml/propertiesList.fxml", "Properties List");
     }
     
-    private ArrayList<AirbnbListing> priceRange_filter(int minPrice, int maxPrice)
+    public ArrayList<AirbnbListing> priceRange_filter(int minPrice, int maxPrice)
     {
         ArrayList<AirbnbListing> totalData = new AirbnbDataLoader().load();
         ArrayList<AirbnbListing> data = new ArrayList<>();
