@@ -95,8 +95,8 @@ public class Login extends Application
      */
     public void Continue(HashMap info)
     {
-        boolean success = SendMail.send(signup.getEmail(),"(PLEASE DO NOT REPLY)","Congratulation!\r\nYou have successfully created an account for London Property Marketplace!\r\n"
-                +"                                        Team Avocado :)");
+        boolean success = SendMail.send(signup.getEmail(),"Non-relay","Congratulation!\r\nYou have successfully created an account for London Property Marketplace!\r\n"
+                +"                                        ");
          if(success){
             Validity.Store_Info(info);
             Alert alert = new Alert(AlertType.INFORMATION);
