@@ -80,4 +80,14 @@ public class AirbnbDataLoader {
         return -1;
     }
 
+    public ArrayList<AirbnbListing> priceRange_filter(int minPrice, int maxPrice)
+    {
+        ArrayList<AirbnbListing> totalData = load();
+        ArrayList<AirbnbListing> data = new ArrayList<>();
+        for(AirbnbListing list : totalData) {
+            if(list.getPrice() >= minPrice && list.getPrice() <= maxPrice)
+                data.add(list);
+        }
+        return data;
+    }
 }

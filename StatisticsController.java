@@ -26,8 +26,6 @@ import java.util.ArrayList;
 
 public class StatisticsController extends Controller
 {
-
-    private MapController mapData;
     // Label for the first title box.
     @FXML private Label title1;
     // Label for the second title box.
@@ -224,7 +222,7 @@ public class StatisticsController extends Controller
     }
 
     public int findAvailableProperty(){
-        ArrayList<AirbnbListing> properties = mapData.priceRange_filter(getMinPrice(), getMaxPrice());
+        ArrayList<AirbnbListing> properties = new AirbnbDataLoader().priceRange_filter(getMinPrice(), getMaxPrice());
         return properties.size();  
     }
 }

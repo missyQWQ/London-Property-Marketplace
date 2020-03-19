@@ -45,7 +45,7 @@ public class MapController extends Controller
             new BoroughInfo(sthw, sthw_l), new BoroughInfo(lamb, lamb_l)));
         
         // Filter Airbnb data by the selected price range.
-        ArrayList<AirbnbListing> data_filterByPrice = priceRange_filter(getMinPrice(), getMaxPrice());
+        ArrayList<AirbnbListing> data_filterByPrice = new AirbnbDataLoader().priceRange_filter(getMinPrice(), getMaxPrice());
         
         // Calculate the number of properties in each borough within the selected price range.
         for(AirbnbListing data : data_filterByPrice) {
@@ -103,14 +103,5 @@ public class MapController extends Controller
         newWindow("./fxml/propertiesList.fxml", "Properties List");
     }
     
-    public ArrayList<AirbnbListing> priceRange_filter(int minPrice, int maxPrice)
-    {
-        ArrayList<AirbnbListing> totalData = new AirbnbDataLoader().load();
-        ArrayList<AirbnbListing> data = new ArrayList<>();
-        for(AirbnbListing list : totalData) {
-            if(list.getPrice() >= minPrice && list.getPrice() <= maxPrice)
-                data.add(list);
-        }
-        return data;
-    }
+    
 }
