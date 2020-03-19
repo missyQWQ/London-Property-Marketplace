@@ -18,6 +18,7 @@ public abstract class Controller
     // Set default as -1 indicating no price range has been selected yet.
     private static int minPrice = -1;
     private static int maxPrice = -1;
+    private static String selectedBorough = null;
 
     /**
      * Move to another panel.
@@ -71,15 +72,13 @@ public abstract class Controller
         return maxPrice;
     }
     
-    /**
-     * BaOck to a panel.
-     * @throws IException
-     */
-    protected abstract void backBtnAction(ActionEvent e) throws IOException;
+    protected void setSelectedBorough(String selectedBorough)
+    {
+        this.selectedBorough = selectedBorough;
+    }
     
-    /**
-     * Go to a panel.
-     * @throws IOException
-     */
-    protected abstract void nextBtnAction(ActionEvent e) throws IOException;
+    protected String getSelectedBorough()
+    {
+        return selectedBorough;
+    }
 }

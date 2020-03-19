@@ -3,6 +3,7 @@ import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.shape.Circle;
+import javafx.scene.Node;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
@@ -100,8 +101,48 @@ public class MapController extends Controller
     @FXML
     private void presentInfo(MouseEvent e) throws IOException
     {
-        newWindow("./fxml/propertiesList.fxml", "Properties List");
+        String selectedBorough = getLabelName(((Node)e.getSource()).getId());
+        setSelectedBorough(selectedBorough);
+        newWindow("./fxml/propertiesList.fxml", selectedBorough);
     }
     
-    
+    private String getLabelName(String name)
+    {
+        switch(name) {
+            case "eali_l": return "Ealing";
+            case "bren_l": return "Brent";
+            case "redb_l": return "Redbridge";
+            case "walt_l": return "Waltham Forest";
+            case "hrgy_l": return "Haringey";
+            case "houn_l": return "Hounslow";
+            case "enfi_l": return "Enfield";
+            case "barn_l": return "Barnet";
+            case "hrrw_l": return "Harrow";
+            case "hill_l": return "Hillingdon";
+            case "rich_l": return "Richmond upon Thames";
+            case "king_l": return "Kingston upon Thames";
+            case "sutt_l": return "Sutton";
+            case "croy_l": return "Croydon";
+            case "brom_l": return "Bromley";
+            case "bexl_l": return "Bexley";
+            case "have_l": return "Havering";
+            case "bark_l": return "Barking and Dagenham";
+            case "lews_l": return "Lewisham";
+            case "gwch_l": return "Greenwich";
+            case "mert_l": return "Merton";
+            case "wand_l": return "Wandsworth";
+            case "hamm_l": return "Hammersmith and Fulham";
+            case "kens_l": return "Kensington and Chelsea";
+            case "wstm_l": return "Westminster";
+            case "camd_l": return "Camden";
+            case "isli_l": return "Islington";
+            case "city_l": return "City of London";
+            case "hack_l": return "Hackney";
+            case "towh_l": return "Tower Hamlets";
+            case "newh_l": return "Newham";
+            case "sthw_l": return "Southwark";
+            case "lamb_l": return "Lambeth";
+            default: return null;
+        }
+    }
 }
