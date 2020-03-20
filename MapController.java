@@ -51,7 +51,7 @@ public class MapController extends Controller
         // Calculate the number of properties in each borough within the selected price range.
         for(AirbnbListing data : data_filterByPrice) {
             for(BoroughInfo boro : boroInfo) {
-                if(data.getNeighbourhood().equals(boro.getFullName()))
+                if(data.getNeighbourhood().equals(getFullName(boro.getCircleName())))
                     boro.incPropertyNum();
             }
         }
@@ -67,12 +67,12 @@ public class MapController extends Controller
         for(BoroughInfo curBoro : boroInfo) {
             if(curBoro.getPropertyNum() == 0) {
                 curBoro.getCircle().setVisible(false);
-                curBoro.getLabel().setTooltip(new Tooltip(curBoro.getFullName() + ": no property found."));
+                curBoro.getLabel().setTooltip(new Tooltip(getFullName(curBoro.getCircleName()) + ": no property found."));
             }
             else {
                 curBoro.getCircle().setRadius(ori_radius + incNum);
                 incNum += 2;
-                curBoro.getLabel().setTooltip(new Tooltip(curBoro.getFullName() + ": " + curBoro.getPropertyNum() + " properties found."));
+                curBoro.getLabel().setTooltip(new Tooltip(getFullName(curBoro.getCircleName()) + ": " + curBoro.getPropertyNum() + " properties found."));
             }
         }
     }
@@ -101,47 +101,47 @@ public class MapController extends Controller
     @FXML
     private void presentInfo(MouseEvent e) throws IOException
     {
-        String selectedBorough = getLabelName(((Node)e.getSource()).getId());
+        String selectedBorough = getFullName(((Node)e.getSource()).getId());
         setSelectedBorough(selectedBorough);
         newWindow("./fxml/propertiesList.fxml", selectedBorough);
     }
     
-    private String getLabelName(String name)
+    private String getFullName(String name)
     {
         switch(name) {
-            case "eali_l": return "Ealing";
-            case "bren_l": return "Brent";
-            case "redb_l": return "Redbridge";
-            case "walt_l": return "Waltham Forest";
-            case "hrgy_l": return "Haringey";
-            case "houn_l": return "Hounslow";
-            case "enfi_l": return "Enfield";
-            case "barn_l": return "Barnet";
-            case "hrrw_l": return "Harrow";
-            case "hill_l": return "Hillingdon";
-            case "rich_l": return "Richmond upon Thames";
-            case "king_l": return "Kingston upon Thames";
-            case "sutt_l": return "Sutton";
-            case "croy_l": return "Croydon";
-            case "brom_l": return "Bromley";
-            case "bexl_l": return "Bexley";
-            case "have_l": return "Havering";
-            case "bark_l": return "Barking and Dagenham";
-            case "lews_l": return "Lewisham";
-            case "gwch_l": return "Greenwich";
-            case "mert_l": return "Merton";
-            case "wand_l": return "Wandsworth";
-            case "hamm_l": return "Hammersmith and Fulham";
-            case "kens_l": return "Kensington and Chelsea";
-            case "wstm_l": return "Westminster";
-            case "camd_l": return "Camden";
-            case "isli_l": return "Islington";
-            case "city_l": return "City of London";
-            case "hack_l": return "Hackney";
-            case "towh_l": return "Tower Hamlets";
-            case "newh_l": return "Newham";
-            case "sthw_l": return "Southwark";
-            case "lamb_l": return "Lambeth";
+            case "eali_l": case "eali": return "Ealing";
+            case "bren_l": case "bren": return "Brent";
+            case "redb_l": case "redb": return "Redbridge";
+            case "walt_l": case "walt": return "Waltham Forest";
+            case "hrgy_l": case "hrgy": return "Haringey";
+            case "houn_l": case "houn": return "Hounslow";
+            case "enfi_l": case "enfi": return "Enfield";
+            case "barn_l": case "barn": return "Barnet";
+            case "hrrw_l": case "hrrw": return "Harrow";
+            case "hill_l": case "hill": return "Hillingdon";
+            case "rich_l": case "rich": return "Richmond upon Thames";
+            case "king_l": case "king": return "Kingston upon Thames";
+            case "sutt_l": case "sutt": return "Sutton";
+            case "croy_l": case "croy": return "Croydon";
+            case "brom_l": case "brom": return "Bromley";
+            case "bexl_l": case "bexl": return "Bexley";
+            case "have_l": case "have": return "Havering";
+            case "bark_l": case "bark": return "Barking and Dagenham";
+            case "lews_l": case "lews": return "Lewisham";
+            case "gwch_l": case "gwch": return "Greenwich";
+            case "mert_l": case "mert": return "Merton";
+            case "wand_l": case "wand": return "Wandsworth";
+            case "hamm_l": case "hamm": return "Hammersmith and Fulham";
+            case "kens_l": case "kens": return "Kensington and Chelsea";
+            case "wstm_l": case "wstm": return "Westminster";
+            case "camd_l": case "camd": return "Camden";
+            case "isli_l": case "isli": return "Islington";
+            case "city_l": case "city": return "City of London";
+            case "hack_l": case "hack": return "Hackney";
+            case "towh_l": case "towh": return "Tower Hamlets";
+            case "newh_l": case "newh": return "Newham";
+            case "sthw_l": case "sthw": return "Southwark";
+            case "lamb_l": case "lamb": return "Lambeth";
             default: return null;
         }
     }
