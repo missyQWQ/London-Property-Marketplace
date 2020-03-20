@@ -3,7 +3,6 @@ import java.util.List;
 import java.util.HashMap;
 /**
  * This class is mainly used to check the validity of user account in this software.
- * @author Yicheng Zhan
  */
 public class Validity {
     private static List<HashMap> accounts = new ArrayList();

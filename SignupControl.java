@@ -42,7 +42,6 @@ public class SignupControl implements Initializable
     @FXML
     private void Finish(ActionEvent event)
     {
-
         HashMap<String,String> Info = new HashMap<String,String>();
         if(username.getText().length()==0)
         {

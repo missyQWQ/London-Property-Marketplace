@@ -16,9 +16,7 @@ import java.io.IOException;
 
 /**
  * This is the login class.
- * End user can signup a account and login to the account.
- * 
- * 
+ * End user can signup a account and login to the account. 
  */
 public class Login extends Application
 {
@@ -70,7 +68,7 @@ public class Login extends Application
      */
     public void StartFindPassword(){
         try {
-            forget = (ForgetControl) initializeScene("res/Forget.fxml");
+            forget = (ForgetControl) initializeScene("./fxml/Forget.fxml");
             forget.setApp(this);
         } catch(Exception ex){
             System.out.println("Doesn't find the directory and resource");
@@ -82,7 +80,7 @@ public class Login extends Application
      */
     public void Startsignup(){
         try {
-            signup = (SignupControl) initializeScene("res/Signup.fxml");
+            signup = (SignupControl) initializeScene("./fxml/Signup.fxml");
             signup.setApp(this);
         } catch(Exception ex){
             System.out.println("Doesn't find the directory and resource");
@@ -90,7 +88,7 @@ public class Login extends Application
     }
 
     /**
-     * Used when the account has been registerd.
+     * Used when the account has been registered.
      * Back to the log in page.
      */
     public void Continue(HashMap info)
@@ -101,7 +99,7 @@ public class Login extends Application
             Validity.Store_Info(info);
             Alert alert = new Alert(AlertType.INFORMATION);
             alert.titleProperty().set("INFORMATION");
-            alert.headerTextProperty().set("An email has been sent to your address!\r\n"+"If you didn`t receive the email.\r\n"
+            alert.headerTextProperty().set("An email has been sent to your address!\r\n"+"If you didn't receive the email.\r\n"
                 +"The system might considers it as a spam.\r\n"+"Please check your filter!");
             alert.showAndWait();
             Startlogin();}
@@ -193,13 +191,13 @@ public class Login extends Application
             System.out.println("Doesn't find the directory and resource");
         }
 
-        if(fxml=="res/login.fxml"){ 
+        if(fxml=="./fxml/login.fxml"){ 
             Scene scene = new Scene(Log, WIDTH, HEIGHT);
             stage.setScene(scene);
             stage.setResizable(false);
             stage.sizeToScene();
         }
-        else if(fxml=="res/Forget.fxml"){ 
+        else if(fxml=="./fxml/Forget.fxml"){ 
             Scene scene = new Scene(Log, 490, 210);
             stage.setScene(scene);
             stage.setResizable(false);

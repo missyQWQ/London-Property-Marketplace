@@ -34,7 +34,7 @@ public class LoginControl implements Initializable
     public void setApp(Login login){
         this.login = login;
     }
-     /**
+    /**
      * jump to the forgetpassword panel.
      */
     @FXML void ForgetPass(ActionEvent event){

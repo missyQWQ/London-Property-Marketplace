@@ -12,7 +12,6 @@ import javafx.scene.paint.Color;
 import javafx.animation.*;
 /**
  * This  is the controller of forgetpassword panel.
-
  */
 public class ForgetControl implements Initializable
 {
