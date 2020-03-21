@@ -21,9 +21,9 @@
       </ImageView>
       <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1024.0" stylesheets="@../style/propertiesList.css">
          <top>
-            <AnchorPane prefHeight="50.0" prefWidth="1024.0" styleClass="infoBar" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="23.0" prefWidth="1024.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label fx:id="boroughName" alignment="CENTER" layoutX="238.0" prefHeight="50.0" prefWidth="549.0" styleClass="borough_name" text="borough name" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="238.0" AnchorPane.rightAnchor="237.0" AnchorPane.topAnchor="0.0">
+                  <Label fx:id="boroughName" alignment="CENTER" contentDisplay="CENTER" layoutX="304.0" layoutY="5.0" prefHeight="43.0" prefWidth="417.0" styleClass="borough_name" text="borough name" textFill="WHITE">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -41,16 +41,16 @@
             </AnchorPane>
          </top>
          <center>
-            <TableView fx:id="propertiesTable" prefHeight="526.0" prefWidth="1024.0">
+            <TableView fx:id="propertiesTable" prefHeight="524.0" prefWidth="1020.0">
               <columns>
-                  <TableColumn fx:id="propertyName" prefWidth="354.0" text="PROPERTY NAME" />
+                  <TableColumn fx:id="propertyName" prefWidth="410.0" text="PROPERTY NAME" />
                 <TableColumn fx:id="hostName" prefWidth="200.0" text="HOST NAME" />
-                <TableColumn fx:id="price" prefWidth="130.0" text="PRICE" />
-                  <TableColumn fx:id="numOfReviews" prefWidth="130.0" text="NUMBER OF REVIEWS" />
-                  <TableColumn fx:id="minNights" prefWidth="130.0" text="MINIMUM NIGHTS" />
+                <TableColumn fx:id="price" prefWidth="125.0" text="PRICE" />
+                  <TableColumn fx:id="numOfReviews" prefWidth="137.0" text="NUMBER OF REVIEWS" />
+                  <TableColumn fx:id="minNights" prefWidth="131.0" text="MINIMUM NIGHTS" />
               </columns>
                <BorderPane.margin>
-                  <Insets bottom="30.0" left="40.0" right="40.0" top="30.0" />
+                  <Insets bottom="15.0" left="10.0" right="10.0" />
                </BorderPane.margin>
             </TableView>
          </center>
