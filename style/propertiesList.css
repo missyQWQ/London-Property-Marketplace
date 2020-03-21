@@ -1,0 +1,7 @@
+.infoBar {
+    -fx-background-color: rgba(45, 45, 43, 0.6);
+}
+
+.borough_name {
+    -fx-text-fill: rgb(243, 86, 90);
+}
