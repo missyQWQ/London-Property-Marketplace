@@ -41,21 +41,18 @@
             </AnchorPane>
          </top>
          <center>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-               <children>
-                  <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="397.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/airbnblogo.png" />
-                     </image>
-                  </ImageView>
-                  <TableView prefHeight="526.0" prefWidth="1024.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                    <columns>
-                      <TableColumn prefWidth="75.0" text="C1" />
-                      <TableColumn prefWidth="75.0" text="C2" />
-                    </columns>
-                  </TableView>
-               </children>
-            </AnchorPane>
+            <TableView fx:id="propertiesTable" prefHeight="526.0" prefWidth="1024.0">
+              <columns>
+                  <TableColumn fx:id="propertyName" prefWidth="354.0" text="PROPERTY NAME" />
+                <TableColumn fx:id="hostName" prefWidth="200.0" text="HOST NAME" />
+                <TableColumn fx:id="price" prefWidth="130.0" text="PRICE" />
+                  <TableColumn fx:id="numOfReviews" prefWidth="130.0" text="NUMBER OF REVIEWS" />
+                  <TableColumn fx:id="minNights" prefWidth="130.0" text="MINIMUM NIGHTS" />
+              </columns>
+               <BorderPane.margin>
+                  <Insets bottom="30.0" left="40.0" right="40.0" top="30.0" />
+               </BorderPane.margin>
+            </TableView>
          </center>
       </BorderPane>
    </children>
