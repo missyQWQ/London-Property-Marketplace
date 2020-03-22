@@ -1,6 +1,8 @@
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.Collections;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -15,6 +17,7 @@ public class PropertiesListController extends Controller
     private ObservableList<String> sortChoices = 
             FXCollections.observableArrayList("Number of reviews (ascending)", "Number of reviews (descending)", 
             "Price (ascending)", "Price (descending)", "Host name (a-z)", "Host name (z-a)");
+    private ObservableList<AirbnbListing> properties;
     
     @FXML private Label boroughName;
     @FXML private ChoiceBox sortBy;
@@ -36,7 +39,7 @@ public class PropertiesListController extends Controller
         
         // Prepare data which need to be shown in table.
         ArrayList<AirbnbListing> data_filterByPriceAndBorough = new AirbnbDataLoader().priceAndBorough_filter(getMinPrice(), getMaxPrice(), getSelectedBorough());
-        ObservableList<AirbnbListing> properties = FXCollections.observableArrayList(data_filterByPriceAndBorough);
+        properties = FXCollections.observableArrayList(data_filterByPriceAndBorough);
         
         propertyName.setCellValueFactory(new PropertyValueFactory<AirbnbListing, String>("name"));
         hostName.setCellValueFactory(new PropertyValueFactory<AirbnbListing, String>("host_name"));
@@ -44,6 +47,42 @@ public class PropertiesListController extends Controller
         numOfReviews.setCellValueFactory(new PropertyValueFactory<AirbnbListing, String>("numberOfReviews"));
         minNights.setCellValueFactory(new PropertyValueFactory<AirbnbListing, String>("minimumNights"));
         
+        propertiesTable.setItems(properties);
+    }
+    
+    /**
+     *  Sort the properties list when making a selection from the choice box.
+     */
+    @FXML
+    private void sortList()
+    {
+        if(sortBy.getValue() != null) {
+            switch(sortBy.getValue().toString()) {
+                case "Number of reviews (ascending)": 
+                    Collections.sort(properties, Comparator.comparing(AirbnbListing::getNumberOfReviews)); 
+                    break;
+                case "Number of reviews (descending)":
+                    Collections.sort(properties, Comparator.comparing(AirbnbListing::getNumberOfReviews));
+                    Collections.reverse(properties);
+                    break;
+                case "Price (ascending)":
+                    Collections.sort(properties, Comparator.comparing(AirbnbListing::getPrice)); 
+                    break;
+                case "Price (descending)":
+                    Collections.sort(properties, Comparator.comparing(AirbnbListing::getPrice));
+                    Collections.reverse(properties);
+                    break;
+                case "Host name (a-z)":
+                    Collections.sort(properties, Comparator.comparing(AirbnbListing::getHost_name)); 
+                    break;
+                case "Host name (z-a)":
+                    Collections.sort(properties, Comparator.comparing(AirbnbListing::getHost_name));
+                    Collections.reverse(properties);
+                    break;
+                default:
+                    System.out.println("Invalid sorting method.");
+            }
+        }
         propertiesTable.setItems(properties);
     }
 }
