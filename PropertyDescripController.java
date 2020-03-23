@@ -1,6 +1,11 @@
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.web.WebView;
+import javafx.scene.web.WebEngine;
+import javafx.event.ActionEvent;
+import java.awt.Desktop;
+import java.net.URI;
+import java.net.URISyntaxException;
 /**
  * Write a description of class PropertyDescrip here.
  *
@@ -20,7 +25,6 @@ public class PropertyDescripController extends Controller
     @FXML Label minNights;
     @FXML Label reviewsNum;
     @FXML WebView propertyLocation;
-    @FXML WebView propertyStreetView;
     
     @FXML
     private void initialize()
@@ -35,5 +39,21 @@ public class PropertyDescripController extends Controller
         roomType.setText(getSelectedProperty().getRoom_type());
         minNights.setText(Integer.toString(getSelectedProperty().getMinimumNights()));
         reviewsNum.setText(Integer.toString(getSelectedProperty().getNumberOfReviews()));
+        
+        WebEngine locEngine = propertyLocation.getEngine();
+        String locURL = "https://www.google.com/maps/place/" + getSelectedProperty().getLatitude() + "," + getSelectedProperty().getLongitude();
+        locEngine.load(locURL);
+    }
+    
+    /**
+     * Opens default browser to show the street view of current location.
+     */
+    @FXML
+    private void streetView(ActionEvent e) throws Exception
+    {
+       URI uri = new URI("https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=" + 
+                                getSelectedProperty().getLatitude() + "," + getSelectedProperty().getLongitude() + 
+                                "&heading=-45&pitch=0&fov=50");
+       java.awt.Desktop.getDesktop().browse(uri);
     }
 }
