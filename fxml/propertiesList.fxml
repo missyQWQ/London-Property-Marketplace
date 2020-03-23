@@ -35,12 +35,12 @@
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <ChoiceBox fx:id="sortBy" onAction="#sortList" layoutX="813.0" layoutY="21.0" prefHeight="25.0" prefWidth="190.0" />
+                  <ChoiceBox fx:id="sortBy" layoutX="813.0" layoutY="21.0" onAction="#sortList" prefHeight="25.0" prefWidth="190.0" />
                </children>
             </AnchorPane>
          </top>
          <center>
-            <TableView fx:id="propertiesTable" prefHeight="524.0" prefWidth="1020.0">
+            <TableView fx:id="propertiesTable" onMouseClicked="#showProperty" prefHeight="524.0" prefWidth="1020.0">
               <columns>
                   <TableColumn fx:id="propertyName" prefWidth="410.0" text="PROPERTY NAME" />
                 <TableColumn fx:id="hostName" prefWidth="200.0" text="HOST NAME" />

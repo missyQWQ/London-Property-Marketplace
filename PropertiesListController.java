@@ -6,6 +6,8 @@ import java.util.Collections;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.cell.PropertyValueFactory;
+import java.io.IOException;
+import javafx.scene.input.MouseEvent;
 /**
  * Write a description of class PropertiesListController here.
  *
@@ -84,5 +86,15 @@ public class PropertiesListController extends Controller
             }
         }
         propertiesTable.setItems(properties);
+    }
+    
+    /**
+     * Showing description of the property in a new window when one of the properties is clicked.
+     */
+    @FXML
+    private void showProperty(MouseEvent e) throws IOException
+    {
+        setSelectedProperty((AirbnbListing)(propertiesTable.getSelectionModel().getSelectedItem()));
+        newWindow("./fxml/propertyDescrip.fxml", "Property Description");
     }
 }

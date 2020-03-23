@@ -19,6 +19,7 @@ public abstract class Controller
     private static int minPrice = -1;
     private static int maxPrice = -1;
     private static String selectedBorough = null;
+    private static AirbnbListing selectedProperty = null;
 
     /**
      * Move to another panel.
@@ -80,5 +81,15 @@ public abstract class Controller
     protected String getSelectedBorough()
     {
         return selectedBorough;
+    }
+    
+    protected void setSelectedProperty(AirbnbListing selectedProperty)
+    {
+        this.selectedProperty = selectedProperty;
+    }
+    
+    protected AirbnbListing getSelectedProperty()
+    {
+        return selectedProperty;
     }
 }

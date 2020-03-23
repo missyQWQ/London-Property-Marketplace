@@ -1,0 +1,14 @@
+.property_name {
+    -fx-background-color: linear-gradient(#131313 0%, #424141 100%);
+    -fx-background-radius: 30px;
+    -fx-text-fill: white;
+}
+
+.description_items {
+    -fx-background-color: rgba(45, 45, 43, 0.6);
+    -fx-text-fill: #ffffff;
+}
+
+.description_content {
+    -fx-text-fill: rgb(243, 86, 90);
+}
