@@ -10,7 +10,7 @@
 <?import javafx.scene.web.WebView?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1024.0" stylesheets="@../style/propertyDescrip.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1024.0" stylesheets="@../style/propertyDescrip.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PropertyDescripController">
    <children>
       <ImageView fitHeight="576.0" fitWidth="1024.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -31,7 +31,7 @@
                         <Font size="24.0" />
                      </font>
                   </Label>
-                  <Label layoutX="25.0" layoutY="58.0" styleClass="description_items" text=" Property ID: ">
+                  <Label layoutX="25.0" layoutY="58.0" styleClass="description_items" text=" Property Name: ">
                      <font>
                         <Font name="System Italic" size="18.0" />
                      </font>
@@ -45,12 +45,12 @@
          <left>
             <AnchorPane prefHeight="524.0" prefWidth="512.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label fx:id="propertyId" layoutX="25.0" styleClass="description_content" text="property id">
+                  <Label fx:id="propertyName" layoutX="25.0" styleClass="description_content" text="property name">
                      <font>
-                        <Font name="System Italic" size="16.0" />
+                        <Font name="System Bold Italic" size="16.0" />
                      </font>
                   </Label>
-                  <Label layoutX="25.0" layoutY="38.0" styleClass="description_items" text=" Property Name: ">
+                  <Label layoutX="25.0" layoutY="38.0" styleClass="description_items" text=" Property ID: ">
                      <font>
                         <Font name="System Italic" size="18.0" />
                      </font>
@@ -96,44 +96,44 @@
                      </font>
                   </Label>
                   <WebView fx:id="propertyLocation" layoutX="115.0" layoutY="320.0" prefHeight="161.0" prefWidth="385.0" />
-                  <Label fx:id="propertyName" layoutX="25.0" layoutY="65.0" styleClass="description_content" text="property name">
+                  <Label fx:id="propertyId" layoutX="25.0" layoutY="65.0" styleClass="description_content" text="property id">
                      <font>
-                        <Font name="System Italic" size="16.0" />
+                        <Font name="System Bold Italic" size="16.0" />
                      </font>
                   </Label>
                   <Label fx:id="hostName" layoutX="25.0" layoutY="196.0" styleClass="description_content" text="host name">
                      <font>
-                        <Font name="System Italic" size="16.0" />
+                        <Font name="System Bold Italic" size="16.0" />
                      </font>
                   </Label>
                   <Label fx:id="hostId" layoutX="25.0" layoutY="133.0" styleClass="description_content" text="host id">
                      <font>
-                        <Font name="System Italic" size="16.0" />
+                        <Font name="System Bold Italic" size="16.0" />
                      </font>
                   </Label>
                   <Label fx:id="neighbourhood" layoutX="25.0" layoutY="271.0" styleClass="description_content" text="neighbourhood">
                      <font>
-                        <Font name="System Italic" size="16.0" />
+                        <Font name="System Bold Italic" size="16.0" />
                      </font>
                   </Label>
                   <Label fx:id="price" layoutX="265.0" layoutY="65.0" styleClass="description_content" text="price">
                      <font>
-                        <Font name="System Italic" size="16.0" />
+                        <Font name="System Bold Italic" size="16.0" />
                      </font>
                   </Label>
                   <Label fx:id="roomType" layoutX="265.0" layoutY="133.0" styleClass="description_content" text="room type">
                      <font>
-                        <Font name="System Italic" size="16.0" />
+                        <Font name="System Bold Italic" size="16.0" />
                      </font>
                   </Label>
                   <Label fx:id="minNights" layoutX="265.0" layoutY="196.0" styleClass="description_content" text="minimum nights">
                      <font>
-                        <Font name="System Italic" size="16.0" />
+                        <Font name="System Bold Italic" size="16.0" />
                      </font>
                   </Label>
                   <Label fx:id="reviewsNum" layoutX="265.0" layoutY="271.0" styleClass="description_content" text="reviews">
                      <font>
-                        <Font name="System Italic" size="16.0" />
+                        <Font name="System Bold Italic" size="16.0" />
                      </font>
                   </Label>
                </children>

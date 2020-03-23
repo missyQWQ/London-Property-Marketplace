@@ -21,4 +21,19 @@ public class PropertyDescripController extends Controller
     @FXML Label reviewsNum;
     @FXML WebView propertyLocation;
     @FXML WebView propertyStreetView;
+    
+    @FXML
+    private void initialize()
+    {
+        propertyTitle.setText(getSelectedProperty().getName());
+        propertyId.setText(getSelectedProperty().getId());
+        propertyName.setText(getSelectedProperty().getName());
+        hostId.setText(getSelectedProperty().getHost_id());
+        hostName.setText(getSelectedProperty().getHost_name());
+        neighbourhood.setText(getSelectedProperty().getNeighbourhood());
+        price.setText(Integer.toString(getSelectedProperty().getPrice()));
+        roomType.setText(getSelectedProperty().getRoom_type());
+        minNights.setText(Integer.toString(getSelectedProperty().getMinimumNights()));
+        reviewsNum.setText(Integer.toString(getSelectedProperty().getNumberOfReviews()));
+    }
 }

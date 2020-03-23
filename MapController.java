@@ -103,7 +103,7 @@ public class MapController extends Controller
     {
         String selectedBorough = getFullName(((Node)e.getSource()).getId());
         setSelectedBorough(selectedBorough);
-        newWindow("./fxml/propertiesList.fxml", selectedBorough);
+        newWindow("./fxml/propertiesList.fxml", getSelectedBorough());
     }
     
     private String getFullName(String name)
