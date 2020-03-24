@@ -52,18 +52,19 @@ public class StatisticsController extends Controller
     // An array to show 4 information which are shown on the panel now
     private int[] boxIndex = new int[4];
     private int titleIndex;
-    public int numberOfPorperty = 99;
+    public int numberOfPorperty = 0 ;
     @FXML
     private void initialize()
     {
         for (int i = 0; i < 8; i++){
             isDisplayed[i] = false;
         }
-        //numberOfPorperty = findAvailableProperty();
+        numberOfPorperty = findAvailableProperty();
+        
         title[0] = "Number of avalible property";
-        title[1] = "11";
-        title[2] = "22";
-        title[3] = "33";
+        title[1] = "Average number of reviews";
+        title[2] = "The number of entire home";
+        title[3] = "The most expensive borough";
         title[4] = "44";
         title[5] = "55";
         title[6] = "66";
@@ -223,6 +224,6 @@ public class StatisticsController extends Controller
 
     public int findAvailableProperty(){
         ArrayList<AirbnbListing> properties = new AirbnbDataLoader().priceRange_filter(getMinPrice(), getMaxPrice());
-        return properties.size();  
+        return properties.size();
     }
 }
