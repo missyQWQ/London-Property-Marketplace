@@ -61,6 +61,7 @@ public class StatisticsController extends Controller
             isDisplayed[i] = false;
         }
         int numberOfPorperty = findAvailableProperty();
+        int entiredHome = getNumberOfEntireHomesApartments();
         double averageReviews = getAverageReviews();
         title[0] = "Number of avalible property";
         title[1] = "Average number of reviews";
@@ -73,15 +74,15 @@ public class StatisticsController extends Controller
 
         information[0] = Integer.toString(numberOfPorperty);
         information[1] = Double.toString(averageReviews);
-        information[2] = "2";
-        information[3] = "3";
+        information[2] = Integer.toString(entiredHome);
+        information[3] = getMostExpensiveEntireHomes();
         information[4] = "4";
         information[5] = "5";
         information[6] = "6";
         information[7] = "7";
 
         title1.setText(title[0]);
-        info1.setText(information[0]);
+        info1.setText(information[0]);  
         boxIndex[0] = 0;
         isDisplayed[0] = true;
 
@@ -231,6 +232,22 @@ public class StatisticsController extends Controller
     public double getAverageReviews() {     
         ArrayList<AirbnbListing> listings = new AirbnbDataLoader().priceRange_filter(getMinPrice(), getMaxPrice());
         OptionalDouble result = listings.stream().mapToInt(AirbnbListing::getNumberOfReviews).average();
+
         return result.getAsDouble();
+    }
+    
+        public String getMostExpensiveEntireHomes() {
+        ArrayList<AirbnbListing> properties = new AirbnbDataLoader().priceRange_filter(getMinPrice(), getMaxPrice());
+        String highestPricedHome = "null";
+        int highestPrice = 0;
+        for (AirbnbListing property : properties) {
+            if (property.getPrice() > highestPrice) {
+                highestPricedHome = property.getName();
+            }
+        }
+        return highestPricedHome;
+    }
+        public int getNumberOfEntireHomesApartments() {
+        return new AirbnbDataLoader().priceRange_filter(getMinPrice(), getMaxPrice()).size();
     }
 }
