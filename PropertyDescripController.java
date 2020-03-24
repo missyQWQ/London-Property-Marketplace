@@ -25,10 +25,13 @@ public class PropertyDescripController extends Controller
     @FXML Label minNights;
     @FXML Label reviewsNum;
     @FXML WebView propertyLocation;
+    @FXML Button addToFavBtn;
     
     @FXML
     private void initialize()
     {
+        addToFavBtn.setText(getIsFavouriteString());
+        
         propertyTitle.setText(getSelectedProperty().getName());
         propertyId.setText(getSelectedProperty().getId());
         propertyName.setText(getSelectedProperty().getName());
@@ -55,5 +58,20 @@ public class PropertyDescripController extends Controller
                                 getSelectedProperty().getLatitude() + "," + getSelectedProperty().getLongitude() + 
                                 "&heading=-45&pitch=0&fov=50");
        java.awt.Desktop.getDesktop().browse(uri);
+    }
+    
+    @FXML
+    private void addToFavourites(ActionEvent e)
+    {
+        getSelectedProperty().toggleFavourite();
+        addToFavBtn.setText(getIsFavouriteString());
+    }
+    
+    private String getIsFavouriteString()
+    {
+        if(getSelectedProperty().getIsFavourite())
+            return "Cancel Favourite";
+        else
+            return "Add to Favourites !";
     }
 }

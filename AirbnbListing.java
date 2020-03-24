@@ -61,6 +61,8 @@ public class AirbnbListing {
      */
     private int availability365;
 
+    public static boolean isFavourite = false;
+    
     public AirbnbListing(String id, String name, String host_id,
                          String host_name, String neighbourhood, double latitude,
                          double longitude, String room_type, int price,
@@ -142,7 +144,16 @@ public class AirbnbListing {
     public int getAvailability365() {
         return availability365;
     }
-
+    
+    public boolean getIsFavourite() {
+        return isFavourite;
+    }
+    
+    public void toggleFavourite()
+    {
+        isFavourite = !isFavourite;
+    }
+    
     @Override
     public String toString() {
         return "AirbnbListing{" +

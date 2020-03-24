@@ -10,7 +10,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.web.WebView?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../style/propertyDescrip.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PropertyDescripController">
    <children>
       <ImageView fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
@@ -20,19 +19,19 @@
       </ImageView>
       <BorderPane layoutX="437.0" layoutY="238.0" prefHeight="576.0" prefWidth="1024.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
-            <AnchorPane prefHeight="85.0" prefWidth="1024.0" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="106.0" prefWidth="1281.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label layoutX="512.0" layoutY="58.0" styleClass="description_items" text=" Location: ">
+                  <Label layoutX="512.0" layoutY="79.0" styleClass="description_items" text=" Location: ">
                      <font>
                         <Font name="System Italic" size="18.0" />
                      </font>
                   </Label>
-                  <Label fx:id="propertyTitle" alignment="CENTER" layoutX="289.0" layoutY="6.0" prefHeight="43.0" prefWidth="702.0" styleClass="property_name" text="Property Name">
+                  <Label fx:id="propertyTitle" alignment="CENTER" layoutX="290.0" layoutY="10.0" prefHeight="43.0" prefWidth="702.0" styleClass="property_name" text="Property Name">
                      <font>
                         <Font size="24.0" />
                      </font>
                   </Label>
-                  <Label layoutX="25.0" layoutY="58.0" styleClass="description_items" text=" Property Name: ">
+                  <Label layoutX="32.0" layoutY="79.0" styleClass="description_items" text=" Property Name: ">
                      <font>
                         <Font name="System Italic" size="18.0" />
                      </font>
@@ -46,114 +45,142 @@
          <left>
             <AnchorPane prefHeight="632.0" prefWidth="513.0" BorderPane.alignment="CENTER">
                <children>
-                  <ImageView fitHeight="507.0" fitWidth="538.0" layoutX="6.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="507.0" fitWidth="538.0" layoutX="4.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/airbnblogo.png" />
                      </image>
                   </ImageView>
-                  <Label fx:id="propertyName" layoutX="25.0" styleClass="description_content" text="property name">
+                  <Label fx:id="propertyName" layoutX="32.0" layoutY="2.0" styleClass="description_content" text="property name">
                      <font>
                         <Font name="System Bold Italic" size="16.0" />
                      </font>
                   </Label>
-                  <Label layoutX="25.0" layoutY="52.0" styleClass="description_items" text=" Property ID: ">
+                  <Label layoutX="32.0" layoutY="66.0" styleClass="description_items" text=" Property ID: ">
                      <font>
                         <Font name="System Italic" size="18.0" />
                      </font>
                   </Label>
-                  <Label layoutX="295.0" layoutY="52.0" styleClass="description_items" text=" Host ID: ">
+                  <Label layoutX="298.0" layoutY="66.0" styleClass="description_items" text=" Host ID: ">
                      <font>
                         <Font name="System Italic" size="18.0" />
                      </font>
                   </Label>
-                  <Label layoutX="295.0" layoutY="143.0" styleClass="description_items" text=" Host Name: ">
+                  <Label layoutX="298.0" layoutY="157.0" styleClass="description_items" text=" Host Name: ">
                      <font>
                         <Font name="System Italic" size="18.0" />
                      </font>
                   </Label>
-                  <Label layoutX="25.0" layoutY="143.0" styleClass="description_items" text=" Neighbourhood: ">
+                  <Label layoutX="32.0" layoutY="157.0" styleClass="description_items" text=" Neighbourhood: ">
                      <font>
                         <Font name="System Italic" size="18.0" />
                      </font>
                   </Label>
-                  <Label layoutX="25.0" layoutY="236.0" styleClass="description_items" text=" Room Type: ">
+                  <Label layoutX="32.0" layoutY="249.0" styleClass="description_items" text=" Room Type: ">
                      <font>
                         <Font name="System Italic" size="18.0" />
                      </font>
                   </Label>
-                  <Label layoutX="295.0" layoutY="236.0" styleClass="description_items" text=" Price (per night): ">
+                  <Label layoutX="298.0" layoutY="249.0" styleClass="description_items" text=" Price (per night): ">
                      <font>
                         <Font name="System Italic" size="18.0" />
                      </font>
                   </Label>
-                  <Label layoutX="25.0" layoutY="333.0" styleClass="description_items" text=" Minimum Number of Nights: ">
+                  <Label layoutX="32.0" layoutY="342.0" styleClass="description_items" text=" Minimum Number of Nights: ">
                      <font>
                         <Font name="System Italic" size="18.0" />
                      </font>
                   </Label>
-                  <Label layoutX="25.0" layoutY="425.0" styleClass="description_items" text=" Number of Reviews: ">
+                  <Label layoutX="298.0" layoutY="342.0" styleClass="description_items" text=" Number of Reviews: ">
                      <font>
                         <Font name="System Italic" size="18.0" />
                      </font>
                   </Label>
-                  <Label fx:id="propertyId" layoutX="25.0" layoutY="79.0" styleClass="description_content" text="property id">
+                  <Label fx:id="propertyId" layoutX="32.0" layoutY="93.0" styleClass="description_content" text="property id">
                      <font>
                         <Font name="System Bold Italic" size="16.0" />
                      </font>
                   </Label>
-                  <Label fx:id="hostName" layoutX="295.0" layoutY="170.0" styleClass="description_content" text="host name">
+                  <Label fx:id="hostName" layoutX="298.0" layoutY="184.0" styleClass="description_content" text="host name">
                      <font>
                         <Font name="System Bold Italic" size="16.0" />
                      </font>
                   </Label>
-                  <Label fx:id="hostId" layoutX="295.0" layoutY="79.0" styleClass="description_content" text="host id">
+                  <Label fx:id="hostId" layoutX="298.0" layoutY="93.0" styleClass="description_content" text="host id">
                      <font>
                         <Font name="System Bold Italic" size="16.0" />
                      </font>
                   </Label>
-                  <Label fx:id="neighbourhood" layoutX="25.0" layoutY="170.0" styleClass="description_content" text="neighbourhood">
+                  <Label fx:id="neighbourhood" layoutX="32.0" layoutY="184.0" styleClass="description_content" text="neighbourhood">
                      <font>
                         <Font name="System Bold Italic" size="16.0" />
                      </font>
                   </Label>
-                  <Label fx:id="price" layoutX="295.0" layoutY="263.0" styleClass="description_content" text="price">
+                  <Label fx:id="price" layoutX="298.0" layoutY="276.0" styleClass="description_content" text="price">
                      <font>
                         <Font name="System Bold Italic" size="16.0" />
                      </font>
                   </Label>
-                  <Label fx:id="roomType" layoutX="25.0" layoutY="263.0" styleClass="description_content" text="room type">
+                  <Label fx:id="roomType" layoutX="32.0" layoutY="276.0" styleClass="description_content" text="room type">
                      <font>
                         <Font name="System Bold Italic" size="16.0" />
                      </font>
                   </Label>
-                  <Label fx:id="minNights" layoutX="25.0" layoutY="360.0" styleClass="description_content" text="minimum nights">
+                  <Label fx:id="minNights" layoutX="32.0" layoutY="369.0" styleClass="description_content" text="minimum nights">
                      <font>
                         <Font name="System Bold Italic" size="16.0" />
                      </font>
                   </Label>
-                  <Label fx:id="reviewsNum" layoutX="25.0" layoutY="452.0" styleClass="description_content" text="reviews">
+                  <Label fx:id="reviewsNum" layoutX="298.0" layoutY="369.0" styleClass="description_content" text="reviews">
                      <font>
                         <Font name="System Bold Italic" size="16.0" />
                      </font>
                   </Label>
-                  <Button layoutX="207.0" layoutY="549.0" mnemonicParsing="false" onAction="#streetView" styleClass="streetViewButton" text="Click!" />
-                  <ImageView fitHeight="79.0" fitWidth="80.0" layoutX="37.0" layoutY="517.0" pickOnBounds="true" preserveRatio="true">
+                  <Button layoutX="177.0" layoutY="456.0" mnemonicParsing="false" onAction="#streetView" prefWidth="146.0" styleClass="streetViewButton" text="Street View !">
+                     <font>
+                        <Font size="13.0" />
+                     </font></Button>
+                  <ImageView fitHeight="68.0" fitWidth="69.0" layoutX="32.0" layoutY="422.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/streetView_icon.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="93.0" layoutY="517.0" text="&gt; Click me to have a look at this property in street view!">
+                  <Label layoutX="88.0" layoutY="428.0" text="&gt; Want to find more? Have a look in                         !">
                      <font>
                         <Font name="Calibri Bold" size="16.0" />
                      </font>
                   </Label>
+                  <ImageView fitHeight="61.0" fitWidth="70.0" layoutX="387.0" layoutY="493.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/addToFavorites_icon.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="333.0" layoutY="425.0" text="street view" textFill="#da0510">
+                     <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="100.0" layoutY="514.0" text="Like this property? Add to                       !  &lt;">
+                     <font>
+                        <Font name="Calibri Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="277.0" layoutY="511.0" text="favourites" textFill="#da0510">
+                     <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="addToFavBtn" layoutX="176.0" layoutY="542.0" mnemonicParsing="false" onAction="#addToFavourites" prefWidth="146.0" styleClass="streetViewButton" text="Add to Favourties !">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
                </children>
             </AnchorPane>
          </left>
          <right>
-            <WebView fx:id="propertyLocation" prefHeight="625.0" prefWidth="768.0" BorderPane.alignment="CENTER">
+            <WebView fx:id="propertyLocation" prefHeight="599.0" prefWidth="768.0" BorderPane.alignment="CENTER">
                <BorderPane.margin>
-                  <Insets bottom="7.0" />
+                  <Insets />
                </BorderPane.margin>
             </WebView>
          </right>
