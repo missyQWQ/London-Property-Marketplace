@@ -17,6 +17,7 @@ import javafx.scene.control.*;
 import javafx.event.ActionEvent;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.OptionalDouble;
 /**
  * Write a description of JavaFX class MapController here.
  *
@@ -52,15 +53,15 @@ public class StatisticsController extends Controller
     // An array to show 4 information which are shown on the panel now
     private int[] boxIndex = new int[4];
     private int titleIndex;
-    public int numberOfPorperty = 0 ;
+    
     @FXML
     private void initialize()
     {
         for (int i = 0; i < 8; i++){
             isDisplayed[i] = false;
         }
-        numberOfPorperty = findAvailableProperty();
-        
+        int numberOfPorperty = findAvailableProperty();
+        double averageReviews = getAverageReviews();
         title[0] = "Number of avalible property";
         title[1] = "Average number of reviews";
         title[2] = "The number of entire home";
@@ -71,7 +72,7 @@ public class StatisticsController extends Controller
         title[7] = "77";
 
         information[0] = Integer.toString(numberOfPorperty);
-        information[1] = "1";
+        information[1] = Double.toString(averageReviews);
         information[2] = "2";
         information[3] = "3";
         information[4] = "4";
@@ -225,5 +226,11 @@ public class StatisticsController extends Controller
     public int findAvailableProperty(){
         ArrayList<AirbnbListing> properties = new AirbnbDataLoader().priceRange_filter(getMinPrice(), getMaxPrice());
         return properties.size();
+    }
+    
+    public double getAverageReviews() {     
+        ArrayList<AirbnbListing> listings = new AirbnbDataLoader().priceRange_filter(getMinPrice(), getMaxPrice());
+        OptionalDouble result = listings.stream().mapToInt(AirbnbListing::getNumberOfReviews).average();
+        return result.getAsDouble();
     }
 }
