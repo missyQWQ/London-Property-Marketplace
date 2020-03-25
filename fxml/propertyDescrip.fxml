@@ -135,7 +135,7 @@
                         <Font name="System Bold Italic" size="16.0" />
                      </font>
                   </Label>
-                  <Button layoutX="177.0" layoutY="456.0" mnemonicParsing="false" onAction="#streetView" prefWidth="146.0" styleClass="streetViewButton" text="Street View !">
+                  <Button layoutX="177.0" layoutY="456.0" mnemonicParsing="false" onAction="#streetView" prefWidth="146.0" styleClass="buttons" text="Street View !">
                      <font>
                         <Font size="13.0" />
                      </font></Button>
@@ -169,7 +169,7 @@
                         <Font name="Calibri Bold" size="18.0" />
                      </font>
                   </Label>
-                  <Button fx:id="addToFavBtn" layoutX="176.0" layoutY="542.0" mnemonicParsing="false" onAction="#addToFavourites" prefWidth="146.0" styleClass="streetViewButton" text="Add to Favourties !">
+                  <Button fx:id="addToFavBtn" layoutX="176.0" layoutY="542.0" mnemonicParsing="false" onAction="#addToFavourites" prefWidth="146.0" styleClass="buttons" text="Add to Favourties !">
                      <font>
                         <Font size="13.0" />
                      </font>

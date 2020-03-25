@@ -210,18 +210,18 @@ public class StatisticsController extends Controller
      * Click "Back to Map" and move to map panel.
      */
     @FXML
-    protected void backBtnAction(ActionEvent e) throws IOException
+    private void backBtnAction(ActionEvent e) throws IOException
     {
         changePanel(e, "./fxml/map.fxml", "Map");
     }
 
     /**
-     * Click "Go to Welcome" and move to welcome panel.
+     * Click "Go to My Favourites" and move to favourites panel.
      */
     @FXML
-    protected void nextBtnAction(ActionEvent e) throws IOException
+    private void nextBtnAction(ActionEvent e) throws IOException
     {
-        changePanel(e, "./fxml/welcome.fxml", "Welcome");
+        changePanel(e, "./fxml/favourites.fxml", "My Favourites");
     }
 
     public int findAvailableProperty(){

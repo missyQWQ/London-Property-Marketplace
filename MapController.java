@@ -81,7 +81,7 @@ public class MapController extends Controller
      * Click "Back to Welcome" and move to welcome panel.
      */
     @FXML
-    protected void backBtnAction(ActionEvent e) throws IOException
+    private void backBtnAction(ActionEvent e) throws IOException
     {
         changePanel(e, "./fxml/welcome.fxml", "Welcome");
     }
@@ -90,7 +90,7 @@ public class MapController extends Controller
      * Click "Go to Statistics" and move to statistics panel.
      */
     @FXML
-    protected void nextBtnAction(ActionEvent e) throws IOException
+    private void nextBtnAction(ActionEvent e) throws IOException
     {
         changePanel(e, "./fxml/statistics.fxml", "Statistics");
     }

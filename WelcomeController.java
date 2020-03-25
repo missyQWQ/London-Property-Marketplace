@@ -62,17 +62,18 @@ public class WelcomeController extends Controller
     }
     
     /**
-     * Click "Back to Statistics" and move to statistics panel.
+     * Click "Back to My Favourites" and move to favourites panel.
+     * Alert user if the price range they selected is invalid.
      */
     @FXML
-    protected void backBtnAction(ActionEvent e) throws IOException
+    private void backBtnAction(ActionEvent e) throws IOException
     {
         if((Integer)priceFrom.getValue() >= (Integer)priceTo.getValue())
             alertWarning();
         else {
             setMinPrice((Integer)priceFrom.getValue());
             setMaxPrice((Integer)priceTo.getValue());
-            changePanel(e, "./fxml/statistics.fxml", "Statistics");
+            changePanel(e, "./fxml/favourites.fxml", "My Favourites");
         }
     }
     
@@ -81,7 +82,7 @@ public class WelcomeController extends Controller
      * Alert user if the price range they selected is invalid.
      */
     @FXML
-    protected void nextBtnAction(ActionEvent e) throws IOException
+    private void nextBtnAction(ActionEvent e) throws IOException
     {
         if((Integer)priceFrom.getValue() >= (Integer)priceTo.getValue())
             alertWarning();

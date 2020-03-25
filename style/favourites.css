@@ -1,0 +1,59 @@
+.title-bg {
+    -fx-background-color: rgba(45, 45, 43, 0.6);
+}
+
+.backNextButton {
+    -fx-pref-width: 200;
+    -fx-pref-height: 30;
+    -fx-background-color: rgba(255, 255, 255, 0);
+    -fx-background-radius: 5px;
+    -fx-text-fill: rgb(243, 86, 90);
+    -fx-border-style: solid;
+    -fx-border-width: 3px;
+    -fx-border-color: rgb(243, 86, 90);;
+    -fx-border-radius: 5px;
+}
+
+.backNextButton:hover {
+    -fx-pref-width: 200;
+    -fx-pref-height: 30;
+    -fx-background-color: rgb(243, 86, 90);
+    -fx-background-radius: 5px;
+    -fx-text-fill: #ffffff;
+}
+
+.introPane {
+    -fx-background-color: rgba(255, 255, 255, 0.4);
+    -fx-background-radius: 10px;
+}
+
+.introPane:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.7);
+    -fx-background-radius: 10px;
+}
+
+.intro {
+    -fx-background-color: rgba(45, 45, 43, 0.6);
+    -fx-background-radius: 10px;
+    -fx-text-fill: #ffffff;
+}
+
+.detailBtn {
+    -fx-pref-width: 160;
+    -fx-pref-height: 35;
+    -fx-background-color: rgb(243, 86, 90);
+    -fx-background-radius: 5px;
+    -fx-text-fill: #ffffff;
+}
+
+.detailBtn:hover {
+    -fx-pref-width: 160;
+    -fx-pref-height: 35;
+    -fx-background-color: rgba(255, 255, 255, 0);
+    -fx-background-radius: 5px;
+    -fx-text-fill: rgb(243, 86, 90);
+    -fx-border-style: solid;
+    -fx-border-width: 3px;
+    -fx-border-color: rgb(243, 86, 90);;
+    -fx-border-radius: 5px;
+}
