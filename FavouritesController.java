@@ -6,6 +6,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import java.util.ArrayList;
 import javafx.scene.input.MouseEvent;
+
 /**
  * Write a description of class FavouritesController here.
  *
@@ -47,22 +48,36 @@ public class FavouritesController extends Controller
     }
     
     @FXML
+    private void refresh(ActionEvent e) throws IOException
+    {
+        changePanel(e, "./fxml/favourites.fxml", "My Favourites");
+    }
+    
+    @FXML
     private void displaySelected(MouseEvent e)
     {
         String selectedFav = (String)(favouritesList.getSelectionModel().getSelectedItem());
         if(selectedFav != null && !selectedFav.isEmpty()) {
             AirbnbListing selectedProperty = FavouritesListing.getProperty(selectedFav);
-            hostName.setText(selectedProperty.getHost_name());
-            neighbourhood.setText(selectedProperty.getNeighbourhood());
-            roomType.setText(selectedProperty.getRoom_type());
-            price.setText(Integer.toString(selectedProperty.getPrice()));
+            if(selectedProperty != null) {
+                System.out.println(selectedProperty);
+                hostName.setText(selectedProperty.getHost_name());
+                neighbourhood.setText(selectedProperty.getNeighbourhood());
+                roomType.setText(selectedProperty.getRoom_type());
+                price.setText(Integer.toString(selectedProperty.getPrice()));
+            }
         }
     }
     
     @FXML
-    private void presentDetailBtn(ActionEvent e)
+    private void presentDetailBtn(ActionEvent e) throws IOException
     {
-    
+        String selectedFav = (String)(favouritesList.getSelectionModel().getSelectedItem());
+        AirbnbListing selectedProperty = FavouritesListing.getProperty(selectedFav);
+        if(selectedProperty != null) {
+            setSelectedProperty(FavouritesListing.getProperty(selectedFav));
+            newWindow("./fxml/propertyDescrip.fxml", "Property Description");
+        }
     }
     
     private void loadFavListView()

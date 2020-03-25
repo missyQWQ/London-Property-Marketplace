@@ -10,16 +10,14 @@ public class FavouritesListing
 {
     private static HashMap<String, AirbnbListing> favourites = new HashMap<>();
     
-    public static void addToFav(AirbnbListing property)
+    public static void addToFav(AirbnbListing property) 
     {
         favourites.put(property.getName(), property);
-        System.out.println("after add: "+favourites.entrySet());
     }
     
-    public static void removeFromFav(AirbnbListing property)
+    public static void removeFromFav(AirbnbListing property) 
     {
         favourites.remove(property.getName());
-        System.out.println("after delete: "+favourites.entrySet());
     }
     
     public static Set<String> getFavList()

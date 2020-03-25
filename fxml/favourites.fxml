@@ -90,5 +90,6 @@
             <DropShadow />
          </effect>
       </AnchorPane>
+      <Button layoutX="560.0" layoutY="654.0" mnemonicParsing="false" onAction="#refresh" styleClass="detailBtn" text="Refresh" />
    </children>
 </AnchorPane>
