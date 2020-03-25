@@ -63,13 +63,13 @@ public class PropertyDescripController extends Controller
     @FXML
     private void addToFavourites(ActionEvent e)
     {
-        getSelectedProperty().toggleFavourite();
+        FavouritesListing.toggleFavourite(getSelectedProperty());
         addToFavBtn.setText(getIsFavouriteString());
     }
     
     private String getIsFavouriteString()
     {
-        if(getSelectedProperty().getIsFavourite())
+        if(FavouritesListing.isFavourite(getSelectedProperty()))
             return "Cancel Favourite";
         else
             return "Add to Favourites !";

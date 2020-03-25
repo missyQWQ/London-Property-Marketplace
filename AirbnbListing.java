@@ -60,8 +60,6 @@ public class AirbnbListing {
      * The total number of days in the year that the property is available for
      */
     private int availability365;
-
-    public static boolean isFavourite = false;
     
     public AirbnbListing(String id, String name, String host_id,
                          String host_name, String neighbourhood, double latitude,
@@ -143,15 +141,6 @@ public class AirbnbListing {
 
     public int getAvailability365() {
         return availability365;
-    }
-    
-    public boolean getIsFavourite() {
-        return isFavourite;
-    }
-    
-    public void toggleFavourite()
-    {
-        isFavourite = !isFavourite;
     }
     
     @Override
