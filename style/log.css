@@ -1,0 +1,33 @@
+.bgAnchor {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+}
+
+.button {
+    -fx-pref-width: 100;
+    -fx-pref-height: 30;
+    -fx-background-color: rgb(243, 86, 90);
+    -fx-background-radius: 5px;
+    -fx-text-fill: #ffffff;
+}
+
+.button:hover {
+    -fx-pref-width: 100;
+    -fx-pref-height: 30;
+    -fx-background-color: rgba(255, 255, 255, 0);
+    -fx-background-radius: 5px;
+    -fx-text-fill: rgb(243, 86, 90);
+    -fx-border-style: solid;
+    -fx-border-width: 3px;
+    -fx-border-color: rgb(243, 86, 90);;
+    -fx-border-radius: 5px;
+}
+
+.inputField {
+    -fx-background-color: rgba(45, 45, 43, 0.7);
+    -fx-cursor-color: #ffffff;
+    -fx-text-fill: #ffffff;
+}
+
+.link {
+    -fx-text-fill: #ffffff;
+}
