@@ -25,8 +25,8 @@ public class Login extends Application
     private ForgetControl forget;
     private Stage stage;
     //width and height
-    private final double WIDTH = 400.0;
-    private final double HEIGHT = 260.0;
+    private final double WIDTH = 380.0;
+    private final double HEIGHT = 400.0;
     public static void main(String[] args) {
         launch(args);
     }
@@ -198,13 +198,13 @@ public class Login extends Application
             stage.sizeToScene();
         }
         else if(fxml=="./fxml/Forget.fxml"){ 
-            Scene scene = new Scene(Log, 490, 210);
+            Scene scene = new Scene(Log, 380, 400);
             stage.setScene(scene);
             stage.setResizable(false);
             stage.sizeToScene();
         }
         else{
-            Scene scene = new Scene(Log, 370, 500);
+            Scene scene = new Scene(Log, 380, 400);
             stage.setScene(scene);
             stage.setResizable(false);
             stage.sizeToScene();

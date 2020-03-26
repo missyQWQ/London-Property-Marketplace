@@ -26,8 +26,8 @@ import java.io.IOException;
 public class WelcomeController extends Controller
 {
     private ObservableList<Integer> priceChoices = 
-            FXCollections.observableArrayList(0, 40, 60, 90, 140, 7000);
-    
+        FXCollections.observableArrayList(0, 40, 60, 90, 140, 7000);
+
     @FXML private ChoiceBox priceFrom;
     @FXML private ChoiceBox priceTo;
     @FXML private Button confirmBtn;
@@ -48,7 +48,7 @@ public class WelcomeController extends Controller
             priceTo.setValue(getMaxPrice());
         }
     }
-    
+
     /**
      * Enable the buttons when price range has been selected.
      */
@@ -60,7 +60,7 @@ public class WelcomeController extends Controller
             backBtn.setDisable(false);
         }
     }
-    
+
     /**
      * Click "Back to My Favourites" and move to favourites panel.
      * Alert user if the price range they selected is invalid.
@@ -76,7 +76,7 @@ public class WelcomeController extends Controller
             changePanel(e, "./fxml/favourites.fxml", "My Favourites");
         }
     }
-    
+
     /**
      * Click "Confrim" and move to map panel.
      * Alert user if the price range they selected is invalid.
@@ -92,12 +92,12 @@ public class WelcomeController extends Controller
             changePanel(e, "./fxml/map.fxml", "Map");
         }
     }
-    
+
     @FXML
     public void infoButtonAction() throws IOException{
         createInfoBox();
     }
-    
+
     private void createInfoBox() throws IOException{
         Parent root = FXMLLoader.load(getClass().getResource("MsgBox.fxml"));
         Stage msg = new Stage();
@@ -107,6 +107,7 @@ public class WelcomeController extends Controller
         msg.setResizable(false);   // resize able
         msg.show();
     }
+
     /**
      * Pop up a warning window.
      */
