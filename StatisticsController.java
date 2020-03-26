@@ -70,7 +70,7 @@ public class StatisticsController extends Controller
         title[4] = "The number of private room";
         title[5] = "The cheapest property";
         title[6] = "The most expensive borough";
-        title[7] = "77";
+        title[7] = "The most available room";
 
         information[0] = Integer.toString(numberOfPorperty);
         information[1] = getAverageReviews();
@@ -79,7 +79,7 @@ public class StatisticsController extends Controller
         information[4] = Integer.toString(privateRoom);
         information[5] = getCheapestProperty();
         information[6] = "6";
-        information[7] = "7";
+        information[7] = getMostAvailability();
 
         title1.setText(title[0]);
         info1.setText(information[0]);  
@@ -263,6 +263,19 @@ public class StatisticsController extends Controller
         return CheapestProperty;
     }
 
+        public String getMostAvailability() {
+        ArrayList<AirbnbListing> properties = new AirbnbDataLoader().priceRange_filter(getMinPrice(), getMaxPrice());
+        String mostAvailability = null;
+        int a = 0;
+        for (AirbnbListing property : properties) {
+            if (property.getAvailability365() > a) {
+                mostAvailability = property.getName();
+                a = property.getAvailability365();
+            }
+        }
+        return mostAvailability;
+    }
+    
     public int getNumberOfEntireHome() {
         ArrayList<AirbnbListing> properties = new AirbnbDataLoader().priceRangeAndRoomType_filter(getMinPrice(), getMaxPrice(),"Entire home/apt");
         return properties.size();
