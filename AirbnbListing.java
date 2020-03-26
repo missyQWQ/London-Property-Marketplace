@@ -33,7 +33,7 @@ public class AirbnbListing {
     /**
      * The type of property, either "Private room" or "Entire Home/apt".
      */
-    private String room_type;
+    public String room_type;
 
     /**
      * The price per night's stay

@@ -53,7 +53,7 @@ public class StatisticsController extends Controller
     // An array to show 4 information which are shown on the panel now
     private int[] boxIndex = new int[4];
     private int titleIndex;
-    
+
     @FXML
     private void initialize()
     {
@@ -61,23 +61,23 @@ public class StatisticsController extends Controller
             isDisplayed[i] = false;
         }
         int numberOfPorperty = findAvailableProperty();
-        int entiredHome = getNumberOfEntireHomesApartments();
-        double averageReviews = getAverageReviews();
+        int entiredHome = getNumberOfEntireHome();
+        int privateRoom = getNumberOfPrivateRome();
         title[0] = "Number of avalible property";
         title[1] = "Average number of reviews";
-        title[2] = "The number of entire home";
-        title[3] = "The most expensive borough";
-        title[4] = "44";
-        title[5] = "55";
-        title[6] = "66";
+        title[2] = "The number of entire home and apartments";
+        title[3] = "The most expensive property";
+        title[4] = "The number of private room";
+        title[5] = "The cheapest property";
+        title[6] = "The most expensive borough";
         title[7] = "77";
 
         information[0] = Integer.toString(numberOfPorperty);
-        information[1] = Double.toString(averageReviews);
+        information[1] = getAverageReviews();
         information[2] = Integer.toString(entiredHome);
-        information[3] = getMostExpensiveEntireHomes();
-        information[4] = "4";
-        information[5] = "5";
+        information[3] = getMostExpensiveProperty();
+        information[4] = Integer.toString(privateRoom);
+        information[5] = getCheapestProperty();
         information[6] = "6";
         information[7] = "7";
 
@@ -112,19 +112,19 @@ public class StatisticsController extends Controller
         source = source.substring(source.indexOf('=') + 1, source.indexOf(','));
         switch (source){
             case "n1" : info1.setText(information[getNextStat(0, isDisplayed)]); 
-                        title1.setText(title[titleIndex]);
+            title1.setText(title[titleIndex]);
             break;
-            
+
             case "n2" : info2.setText(information[getNextStat(1, isDisplayed)]);
-                        title2.setText(title[titleIndex]);
+            title2.setText(title[titleIndex]);
             break;
-            
+
             case "n3" : info3.setText(information[getNextStat(2, isDisplayed)]);
-                        title3.setText(title[titleIndex]);
+            title3.setText(title[titleIndex]);
             break;
-            
+
             case "n4" : info4.setText(information[getNextStat(3, isDisplayed)]);
-                        title4.setText(title[titleIndex]);
+            title4.setText(title[titleIndex]);
             break;
         }
     }
@@ -139,19 +139,19 @@ public class StatisticsController extends Controller
         source = source.substring(source.indexOf('=') + 1, source.indexOf(','));
         switch (source){
             case "p1" : info1.setText(information[getPrevStat(0, isDisplayed)]);
-                        title1.setText(title[titleIndex]);
+            title1.setText(title[titleIndex]);
             break;
-            
+
             case "p2" : info2.setText(information[getPrevStat(1, isDisplayed)]);
-                        title2.setText(title[titleIndex]);
+            title2.setText(title[titleIndex]);
             break;
-            
+
             case "p3" : info3.setText(information[getPrevStat(2, isDisplayed)]);
-                        title3.setText(title[titleIndex]);
+            title3.setText(title[titleIndex]);
             break;
-            
+
             case "p4" : info4.setText(information[getPrevStat(3, isDisplayed)]);
-                        title4.setText(title[titleIndex]);
+            title4.setText(title[titleIndex]);
             break;
         }
     }
@@ -176,7 +176,7 @@ public class StatisticsController extends Controller
         this.titleIndex = statIndex;
         return statIndex;
     }
-    
+
     /**
      * Return the index of the information which has not been displayed
      * on the panel as the new information.
@@ -228,26 +228,53 @@ public class StatisticsController extends Controller
         ArrayList<AirbnbListing> properties = new AirbnbDataLoader().priceRange_filter(getMinPrice(), getMaxPrice());
         return properties.size();
     }
-    
-    public double getAverageReviews() {     
-        ArrayList<AirbnbListing> listings = new AirbnbDataLoader().priceRange_filter(getMinPrice(), getMaxPrice());
-        OptionalDouble result = listings.stream().mapToInt(AirbnbListing::getNumberOfReviews).average();
 
-        return result.getAsDouble();
+    public String getAverageReviews() {     
+        ArrayList<AirbnbListing> listings = new AirbnbDataLoader().priceRange_filter(getMinPrice(), getMaxPrice());
+        OptionalDouble result = listings.stream().mapToInt(AirbnbListing::getNumberOfReviews).average();    
+        double a = result.getAsDouble();
+
+        return String.format("%.2f", a);
     }
-    
-        public String getMostExpensiveEntireHomes() {
+
+    public String getMostExpensiveProperty() {
         ArrayList<AirbnbListing> properties = new AirbnbDataLoader().priceRange_filter(getMinPrice(), getMaxPrice());
-        String highestPricedHome = "null";
+        String highestPricedProperty = null;
         int highestPrice = 0;
         for (AirbnbListing property : properties) {
             if (property.getPrice() > highestPrice) {
-                highestPricedHome = property.getName();
+                highestPricedProperty = property.getName();
+                highestPrice = property.getPrice();
             }
         }
-        return highestPricedHome;
+        return highestPricedProperty;
     }
-        public int getNumberOfEntireHomesApartments() {
-        return new AirbnbDataLoader().priceRange_filter(getMinPrice(), getMaxPrice()).size();
+
+    public String getCheapestProperty() {
+        ArrayList<AirbnbListing> properties = new AirbnbDataLoader().priceRange_filter(getMinPrice(), getMaxPrice());
+        String CheapestProperty = null;
+        int highestPrice = 10000;
+        for (AirbnbListing property : properties) {
+            if (property.getPrice() < highestPrice) {
+                CheapestProperty = property.getName();
+                highestPrice = property.getPrice();
+            }
+        }
+        return CheapestProperty;
+    }
+
+    public int getNumberOfEntireHome() {
+        ArrayList<AirbnbListing> properties = new AirbnbDataLoader().priceRangeAndRoomType_filter(getMinPrice(), getMaxPrice(),"Entire home/apt");
+        return properties.size();
+    }
+
+    public int getNumberOfPrivateRome() {
+        ArrayList<AirbnbListing> properties = new AirbnbDataLoader().priceRangeAndRoomType_filter(getMinPrice(), getMaxPrice(),"Private room");
+        return properties.size();
+    }
+    
+    public String theMostExpensiveBorough() {
+        ArrayList<AirbnbListing> properties = new AirbnbDataLoader().priceRange_filter(getMinPrice(), getMaxPrice());
+        return null;
     }
 }
