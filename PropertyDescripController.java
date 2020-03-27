@@ -7,10 +7,13 @@ import java.awt.Desktop;
 import java.net.URI;
 import java.net.URISyntaxException;
 /**
- * Write a description of class PropertyDescrip here.
+ * A panel to show all the information of the selected
+ * property from the list of properties. It can also show 
+ * the map view of the location on painted view or the 
+ * real street view, and add to favourites if you like it.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @Runlin Zhou, Liangjie Wang, Yichun Zhang, Zejin Deng
+ * @27.03.2020
  */
 public class PropertyDescripController extends Controller
 {
@@ -50,6 +53,7 @@ public class PropertyDescripController extends Controller
     
     /**
      * Opens default browser to show the street view of current location.
+     * @param e Action event.
      */
     @FXML
     private void streetView(ActionEvent e) throws Exception
@@ -60,6 +64,11 @@ public class PropertyDescripController extends Controller
        java.awt.Desktop.getDesktop().browse(uri);
     }
     
+    /**
+     * Click 'Add to Favourites !' button and add the clicked 
+     * property to the facourites list.
+     * @param e Action event.
+     */
     @FXML
     private void addToFavourites(ActionEvent e)
     {
@@ -67,6 +76,10 @@ public class PropertyDescripController extends Controller
         addToFavBtn.setText(getIsFavouriteString());
     }
     
+    /**
+     * The string on the button will change to 'Cancel Favourite',
+     * if the selected property is already the user's favourite.
+     */
     private String getIsFavouriteString()
     {
         if(FavouritesListing.isFavourite(getSelectedProperty()))

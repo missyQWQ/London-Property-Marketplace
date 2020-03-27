@@ -9,11 +9,14 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Collections;
 import javafx.scene.input.MouseEvent;
+
 /**
- * Write a description of JavaFX class MapController here.
+ * The map panel to show the geographical view of boroughs 
+ * and the number of matched properties they have by using 
+ * different size of circles over the boroughs.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @Runlin Zhou, Liangjie Wang, Yichun Zhang, Zejin Deng
+ * @27.03.2020
  */
 public class MapController extends Controller
 {
@@ -79,6 +82,7 @@ public class MapController extends Controller
 
     /**
      * Click "Back to Welcome" and move to welcome panel.
+     * @param e Action event.
      */
     @FXML
     private void backBtnAction(ActionEvent e) throws IOException
@@ -88,6 +92,7 @@ public class MapController extends Controller
 
     /**
      * Click "Go to Statistics" and move to statistics panel.
+     * @param e Action event.
      */
     @FXML
     private void nextBtnAction(ActionEvent e) throws IOException
@@ -96,7 +101,9 @@ public class MapController extends Controller
     }
 
     /**
-     *  Click borough's label to see more about the properties in that speciﬁc borough.
+     *  Click borough's label to see more about the properties in 
+     *  that speciﬁc borough.
+     *  @param e Mouse event.
      */
     @FXML
     private void presentInfo(MouseEvent e) throws IOException
@@ -105,7 +112,12 @@ public class MapController extends Controller
         setSelectedBorough(selectedBorough);
         newWindow("./fxml/propertiesList.fxml", getSelectedBorough());
     }
-
+    
+    /**
+     *  For different boroughs, return different full name.
+     *  @param name The abbreviation of selected borough.
+     *  @return The full name of selected borough or null if default.
+     */
     private String getFullName(String name)
     {
         switch(name) {

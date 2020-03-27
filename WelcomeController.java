@@ -18,10 +18,11 @@ import javafx.event.ActionEvent;
 import java.io.IOException;
 
 /**
- * Write a description of JavaFX class Welcome here.
+ * The panel to welcome the user gives instructions and 
+ * choices.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @Runlin Zhou, Liangjie Wang, Yichun Zhang, Zejin Deng
+ * @27.03.2020
  */
 public class WelcomeController extends Controller
 {
@@ -64,6 +65,7 @@ public class WelcomeController extends Controller
     /**
      * Click "Back to My Favourites" and move to favourites panel.
      * Alert user if the price range they selected is invalid.
+     * @param e Action event.
      */
     @FXML
     private void backBtnAction(ActionEvent e) throws IOException
@@ -80,6 +82,7 @@ public class WelcomeController extends Controller
     /**
      * Click "Confrim" and move to map panel.
      * Alert user if the price range they selected is invalid.
+     * @param e Action event.
      */
     @FXML
     private void nextBtnAction(ActionEvent e) throws IOException
@@ -93,11 +96,18 @@ public class WelcomeController extends Controller
         }
     }
 
+    /**
+     * Click info button to create an info box.
+     */
     @FXML
     public void infoButtonAction() throws IOException{
         createInfoBox();
     }
 
+    /**
+     * The method to get more information of this app 
+     * by showing a new fxml.
+     */
     private void createInfoBox() throws IOException{
         Parent root = FXMLLoader.load(getClass().getResource("MsgBox.fxml"));
         Stage msg = new Stage();

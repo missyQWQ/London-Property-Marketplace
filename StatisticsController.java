@@ -1,4 +1,3 @@
-
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -20,11 +19,13 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.OptionalDouble;
+
 /**
- * Write a description of JavaFX class MapController here.
+ * A panel to show the statistics for the selected price
+ * range.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @Runlin Zhou, Liangjie Wang, Yichun Zhang, Zejin Deng
+ * @27.03.2020
  */
 
 public class StatisticsController extends Controller
@@ -106,12 +107,12 @@ public class StatisticsController extends Controller
     }
 
     /**
-     * Action for the previous button on every of the information box.
-     * @param event The action event to trigger the action.
+     * Action for the previous button on every information box.
+     * @param e Action event.
      */
     @FXML
-    public void nextButtonAction(ActionEvent event){
-        String source = event.getSource().toString();
+    public void nextButtonAction(ActionEvent e){
+        String source = e.getSource().toString();
         source = source.substring(source.indexOf('=') + 1, source.indexOf(','));
         switch (source){
             case "n1" : info1.setText(information[getNextStat(0, isDisplayed)]); 
@@ -133,12 +134,12 @@ public class StatisticsController extends Controller
     }
 
     /**
-     * Action for the previous button on every of the information box.
-     * @param event The action event to trigger the action.
+     * Action for the previous button on every information box.
+     * @param e Action event.
      */
     @FXML
-    public void previousButtonAction(ActionEvent event){
-        String source = event.getSource().toString();
+    public void previousButtonAction(ActionEvent e){
+        String source = e.getSource().toString();
         source = source.substring(source.indexOf('=') + 1, source.indexOf(','));
         switch (source){
             case "p1" : info1.setText(information[getPrevStat(0, isDisplayed)]);
@@ -211,6 +212,7 @@ public class StatisticsController extends Controller
 
     /**
      * Click "Back to Map" and move to map panel.
+     * @param e Action event.
      */
     @FXML
     private void backBtnAction(ActionEvent e) throws IOException
@@ -220,6 +222,7 @@ public class StatisticsController extends Controller
 
     /**
      * Click "Go to My Favourites" and move to favourites panel.
+     * @param e Action event.
      */
     @FXML
     private void nextBtnAction(ActionEvent e) throws IOException
@@ -227,19 +230,30 @@ public class StatisticsController extends Controller
         changePanel(e, "./fxml/favourites.fxml", "My Favourites");
     }
 
+    /**
+     * Get the number of available properties.
+     * @return The number of available properties.
+     */
     public int findAvailableProperty(){
         ArrayList<AirbnbListing> properties = new AirbnbDataLoader().priceRange_filter(getMinPrice(), getMaxPrice());
         return properties.size();
     }
 
+    /**
+     * Get the average reviews.
+     * @return The average reviews.
+     */
     public String getAverageReviews() {     
         ArrayList<AirbnbListing> listings = new AirbnbDataLoader().priceRange_filter(getMinPrice(), getMaxPrice());
         OptionalDouble result = listings.stream().mapToInt(AirbnbListing::getNumberOfReviews).average();    
         double a = result.getAsDouble();
-
         return String.format("%.2f", a);
     }
 
+    /**
+     * Get the most expensive property.
+     * @return highestPricedProperty
+     */
     public String getMostExpensiveProperty() {
         ArrayList<AirbnbListing> properties = new AirbnbDataLoader().priceRange_filter(getMinPrice(), getMaxPrice());
         String highestPricedProperty = null;
@@ -253,19 +267,27 @@ public class StatisticsController extends Controller
         return highestPricedProperty;
     }
 
+    /**
+     * Get the cheapest property.
+     * @return cheapestProperty
+     */
     public String getCheapestProperty() {
         ArrayList<AirbnbListing> properties = new AirbnbDataLoader().priceRange_filter(getMinPrice(), getMaxPrice());
-        String CheapestProperty = null;
+        String cheapestProperty = null;
         int highestPrice = 10000;
         for (AirbnbListing property : properties) {
             if (property.getPrice() < highestPrice) {
-                CheapestProperty = property.getName();
+                cheapestProperty = property.getName();
                 highestPrice = property.getPrice();
             }
         }
-        return CheapestProperty;
+        return cheapestProperty;
     }
 
+    /**
+     * Get the property with the most availability.
+     * @return mostAvailability
+     */
     public String getMostAvailability() {
         ArrayList<AirbnbListing> properties = new AirbnbDataLoader().priceRange_filter(getMinPrice(), getMaxPrice());
         String mostAvailability = null;
@@ -279,16 +301,28 @@ public class StatisticsController extends Controller
         return mostAvailability;
     }
 
+    /**
+     * Get the number of entire home.
+     * @return The number of entire home.
+     */
     public int getNumberOfEntireHome() {
         ArrayList<AirbnbListing> properties = new AirbnbDataLoader().priceRangeAndRoomType_filter(getMinPrice(), getMaxPrice(),"Entire home/apt");
         return properties.size();
     }
 
+    /**
+     * Get the number of private home.
+     * @return The number of private home.
+     */
     public int getNumberOfPrivateRome() {
         ArrayList<AirbnbListing> properties = new AirbnbDataLoader().priceRangeAndRoomType_filter(getMinPrice(), getMaxPrice(),"Private room");
         return properties.size();
     }
 
+    /**
+     * Get the most expensive borough.
+     * @return mostExpensiveBoroughName
+     */
     public String getMostExpensiveBorough() {
         ArrayList<String> boroughName = new ArrayList<String>();
         boroughName.addAll(Arrays.asList(new String("Kingston upon Thames"),new String("Croydon"),new String("Bromley"),

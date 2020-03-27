@@ -8,10 +8,11 @@ import javafx.scene.Scene;
 import java.io.IOException;
 
 /**
- * Write a description of class Controller here.
+ * Give methods to be used or implemented in the subclasses 
+ * of controller.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @Runlin Zhou, Liangjie Wang, Yichun Zhang, Zejin Deng
+ * @27.03.2020
  */
 public abstract class Controller
 {
@@ -53,41 +54,73 @@ public abstract class Controller
         window.show();
     }
     
+    /**
+     * Set min price.
+     * @param minPrice The min price.
+     */
     protected void setMinPrice(int minPrice)
     {
         this.minPrice = minPrice;
     }
     
+    /**
+     * Get min price.
+     * @return minPrice
+     */
     protected int getMinPrice()
     {
         return minPrice;
     }
     
+    /**
+     * Set max price.
+     * @param maxPrice The max price.
+     */
     protected void setMaxPrice(int maxPrice)
     {
         this.maxPrice = maxPrice;
     }
     
+    /**
+     * Get max price.
+     * @return maxPrice
+     */
     protected int getMaxPrice()
     {
         return maxPrice;
     }
     
+    /**
+     * Set selected borough.
+     * @param selectedBorough The selected borough.
+     */
     protected void setSelectedBorough(String selectedBorough)
     {
         this.selectedBorough = selectedBorough;
     }
     
+    /**
+     * Get selected borough.
+     * @return selectedBorough
+     */
     protected String getSelectedBorough()
     {
         return selectedBorough;
     }
     
+    /**
+     * Set selected property.
+     * @param selectedProperty The selected property.
+     */
     protected void setSelectedProperty(AirbnbListing selectedProperty)
     {
         this.selectedProperty = selectedProperty;
     }
     
+    /**
+     * Get selected property.
+     * @return selectedProperty
+     */
     protected AirbnbListing getSelectedProperty()
     {
         return selectedProperty;

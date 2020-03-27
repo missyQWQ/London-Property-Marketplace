@@ -8,11 +8,13 @@ import javafx.collections.ObservableList;
 import javafx.scene.control.cell.PropertyValueFactory;
 import java.io.IOException;
 import javafx.scene.input.MouseEvent;
+
 /**
- * Write a description of class PropertiesListController here.
+ * A panel to show some information of all the properties 
+ * from the selected borough.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @Runlin Zhou, Liangjie Wang, Yichun Zhang, Zejin Deng
+ * @27.03.2020
  */
 public class PropertiesListController extends Controller
 {
@@ -89,7 +91,9 @@ public class PropertiesListController extends Controller
     }
     
     /**
-     * Showing description of the property in a new window when one of the properties is clicked.
+     * Showing description of the property in a new window when one of 
+     * the properties is clicked.
+     * @param e Mouse event.
      */
     @FXML
     private void showProperty(MouseEvent e) throws IOException
