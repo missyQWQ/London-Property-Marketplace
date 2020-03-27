@@ -86,8 +86,8 @@ public class StatisticsController extends Controller
 
         title1.setText(title[0]);
         info1.setText(information[0]);  
-        boxIndex[0] = 0;
         isDisplayed[0] = true;
+        boxIndex[0] = 0;
 
         title2.setText(title[1]);
         info2.setText(information[1]);
@@ -290,8 +290,6 @@ public class StatisticsController extends Controller
     }
 
     public String getMostExpensiveBorough() {
-        ArrayList<AirbnbListing> properties = new AirbnbDataLoader().priceRange_filter(getMinPrice(), getMaxPrice());
-
         ArrayList<String> boroughName = new ArrayList<String>();
         boroughName.addAll(Arrays.asList(new String("Kingston upon Thames"),new String("Croydon"),new String("Bromley"),
                 new String("Hounslow"),new String("Ealing"),new String("Havering"),new String("Hillingdon"),new String("Harrow"),
@@ -303,15 +301,36 @@ public class StatisticsController extends Controller
                 new String("Haringey"),new String("Newham"),new String("Barking and Dagenham")));
 
         ArrayList<Integer> totalPriceOfBorough = new ArrayList<Integer>();
-
+        
         String mostExpensiveBoroughName = "null";
-        /*int mostExpensiveBoroughPrice = 0;
+        int mostExpensiveBoroughPrice = 0;
         int counter = 0;
-        int index2 = 0;
-        int index = 0;
-        int tmp = 0;
-        while(counter == boroughName.size()){
-            for(int index3 = 0; index3 < totalPriceOfBorough.size(); index3++){          
+        int totalPrice = 0;
+        ArrayList<AirbnbListing> properties = new AirbnbDataLoader().priceRange_filter(getMinPrice(), getMaxPrice());
+
+        for (int i = 0; i < boroughName.size(); i++){
+            for (AirbnbListing property : properties) {
+                if(property.getNeighbourhood().equals(boroughName.get(i))){
+                    int singleRoomPrice = property.getPrice()*property.getMinimumNights();
+                    totalPrice += singleRoomPrice;
+                    totalPriceOfBorough.add(totalPrice);
+                }
+                else{
+                    totalPriceOfBorough.add(0);
+                }
+            }
+            counter++;
+        }
+        
+        for(int i = 0; i < boroughName.size(); i++){          
+            if(totalPriceOfBorough.get(i) > mostExpensiveBoroughPrice) {
+                mostExpensiveBoroughName = boroughName.get(i);
+                mostExpensiveBoroughPrice += totalPriceOfBorough.get(i);
+            }
+        } 
+        /*
+         * while(counter == boroughName.size()-1){
+            for(int i = 0; i < totalPriceOfBorough.size(); i++){          
                 if(totalPriceOfBorough.get(index2) > mostExpensiveBoroughPrice) {
                     mostExpensiveBoroughName = boroughName.get(index2);
                     mostExpensiveBoroughPrice = mostExpensiveBoroughPrice + totalPriceOfBorough.get(index2);
@@ -324,7 +343,7 @@ public class StatisticsController extends Controller
         }
         for (int i = 0; i < boroughName.size(); i++){
             for (AirbnbListing property : properties) {
-                if(property.getNeighbourhood() == boroughName.get(i)){
+                if(property.getNeighbourhood().equals(boroughName.get(i))){
                     int singleRoomPrice = property.getPrice()*property.getMinimumNights();
                     tmp = tmp + singleRoomPrice;
                     totalPriceOfBorough.add(index,tmp);
@@ -336,7 +355,8 @@ public class StatisticsController extends Controller
             }
             counter++;
         }
-        */
+         */
+        
         return mostExpensiveBoroughName;
     }
 }
