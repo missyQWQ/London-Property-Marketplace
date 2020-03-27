@@ -63,10 +63,9 @@
 
          </children>
       </GridPane>
-      <Line endX="300.0" layoutX="101.0" layoutY="77.0" startX="-100.0" />
-      <ImageView fitHeight="59.0" fitWidth="233.0" layoutX="148.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="135.0" fitWidth="147.0" layoutX="265.0" layoutY="-15.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Airbnb.jpg" />
+            <Image url="@../images/airbnblogo.png" />
          </image>
       </ImageView>
    </children>
