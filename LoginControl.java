@@ -1,4 +1,3 @@
-import java.util.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -7,16 +6,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.Hyperlink;
-import javafx.scene.paint.Color;
-import javafx.animation.*;
 
 /**
  * This is the controller of login.fxml.
- * 
- * @Runlin Zhou, Liangjie Wang, Yichun Zhang, Zejin Deng
- * @27.03.2020
+
  */
 public class LoginControl implements Initializable
 {
@@ -36,14 +30,12 @@ public class LoginControl implements Initializable
     public void setApp(Login login){
         this.login = login;
     }
-    
     /**
      * jump to the forgetpassword panel.
      */
     @FXML void ForgetPass(ActionEvent event){
         login.StartFindPassword();
     }
-    
     /**
      * login the account
      */
@@ -51,7 +43,6 @@ public class LoginControl implements Initializable
     public void Login(ActionEvent event) {
         login.logging(username.getText(), password.getText());
     }
-    
     /**
      * signup the account
      */

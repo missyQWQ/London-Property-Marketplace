@@ -14,9 +14,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 /**
  * This is the controller of Signup.fxml.
- * 
- * @Runlin Zhou, Liangjie Wang, Yichun Zhang, Zejin Deng
- * @27.03.2020
+
  */
 public class SignupControl implements Initializable
 {
@@ -32,6 +30,7 @@ public class SignupControl implements Initializable
     @FXML private  Label Pass;
     @FXML private  Label Mail;
     private Login login;
+    private Validity validity = Validity.getInstance();
 
     public void setApp(Login login){
         this.login = login;
@@ -74,7 +73,7 @@ public class SignupControl implements Initializable
             return;
         }
         else{User.setText("");}
-        if(Validity.CheckSame(username.getText()))
+        if(validity.CheckSame(username.getText()))
         {
             User.setText("Username has been used!");
             User.setTextFill(Color.RED);
@@ -109,7 +108,7 @@ public class SignupControl implements Initializable
             return;
         }
         else{Pass.setText("");}
-        if(Validity.CheckMail(Email.getText()))
+        if(validity.CheckMail(Email.getText()))
         {
             Mail.setText("Email has been used!");
             Mail.setTextFill(Color.RED);

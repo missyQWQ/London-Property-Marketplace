@@ -1,13 +1,10 @@
 import java.util.*;
 import java.io.InputStream;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.*;
-import javafx.stage.StageStyle;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.AnchorPane;
@@ -17,9 +14,6 @@ import java.io.IOException;
 /**
  * This is the login class.
  * End user can signup a account and login to the account. 
- * 
- * @Runlin Zhou, Liangjie Wang, Yichun Zhang, Zejin Deng
- * @27.03.2020
  */
 public class Login extends Application
 {
@@ -28,8 +22,9 @@ public class Login extends Application
     private ForgetControl forget;
     private Stage stage;
     //width and height
-    private final double WIDTH = 380.0;
-    private final double HEIGHT = 400.0;
+    private final double WIDTH = 400.0;
+    private final double HEIGHT = 260.0;
+    private Validity validity = Validity.getInstance();
     public static void main(String[] args) {
         launch(args);
     }
@@ -94,46 +89,10 @@ public class Login extends Application
      * Used when the account has been registered.
      * Back to the log in page.
      */
-    public void Continue(HashMap info)
+    public void Continue(HashMap<String, String> info)
     {
-        boolean success = SendMail.send(signup.getEmail(),"Non-relay","Congratulation!\r\nYou have successfully created an account for London Property Marketplace!\r\n"
-                +"                                        ");
-         if(success){
-            Validity.Store_Info(info);
-            Alert alert = new Alert(AlertType.INFORMATION);
-            alert.titleProperty().set("INFORMATION");
-            alert.headerTextProperty().set("An email has been sent to your address!\r\n"+"If you didn't receive the email.\r\n"
-                +"The system might considers it as a spam.\r\n"+"Please check your filter!");
-            alert.showAndWait();
-            Startlogin();}
-        else if(!success){
-            Alert alert = new Alert(AlertType.ERROR);
-            alert.titleProperty().set("ERROR");
-            alert.headerTextProperty().set("No Internet Connection!");
-            alert.showAndWait();
-        }
-             
-
-    }
-
-    /**
-     * Send the finding password email.
-     */
-    public void Sendpassword(String username,String address)
-    {
-        boolean success = SendMail.send(forget.getEmail(),"(PLEASE DO NOT REPLY)","Your Password is:\r\n"+Validity.getPassword(username,address));
-        if(success){
-            Alert alert = new Alert(AlertType.INFORMATION);
-            alert.titleProperty().set("INFORMATION");
-            alert.headerTextProperty().set("Please check your mailbox for password!\r\n"+"If you didn`t receive the email.\r\n"
-                +"The system might considers it as a spam.\r\n"+"Please check your filter!");
-            alert.showAndWait();}
-        else if(!success){
-            Alert alert = new Alert(AlertType.ERROR);
-            alert.titleProperty().set("ERROR");
-            alert.headerTextProperty().set("No Internet Connection!");
-            alert.showAndWait();
-        }
+        validity.Store_Info(info);
+        Startlogin();
     }
 
     /**
@@ -150,8 +109,14 @@ public class Login extends Application
      * Clear the text field if the information is incorrect.
      */
     public void logging(String username,String password){
-        if(Validity.CheckInfo(username,password)){
-        //    gotoApp();
+        if(validity.CheckInfo(username,password)){
+            Start start = new Start();
+            try {
+                start.start(stage);
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
         }
         else
         {
@@ -166,8 +131,7 @@ public class Login extends Application
      * Clear the text field if the information is incorrect.
      */
     public void comparing(String username,String address){
-        if(Validity.CheckForget(username,address)){
-            Sendpassword(username,address);
+        if(validity.CheckForget(username,address)){
             Startlogin();
         }
         else
@@ -201,13 +165,13 @@ public class Login extends Application
             stage.sizeToScene();
         }
         else if(fxml=="./fxml/Forget.fxml"){ 
-            Scene scene = new Scene(Log, 380, 400);
+            Scene scene = new Scene(Log, 490, 210);
             stage.setScene(scene);
             stage.setResizable(false);
             stage.sizeToScene();
         }
         else{
-            Scene scene = new Scene(Log, 380, 400);
+            Scene scene = new Scene(Log, 370, 500);
             stage.setScene(scene);
             stage.setResizable(false);
             stage.sizeToScene();
