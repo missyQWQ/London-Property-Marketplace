@@ -7,10 +7,10 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 /**
- * Write a description of JavaFX class Start here.
+ * The start of the app by opening the welcome fxml.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @Runlin Zhou, Liangjie Wang, Yichun Zhang, Zejin Deng
+ * @27.03.2020
  */
 public class Start extends Application
 {
