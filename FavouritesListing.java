@@ -30,7 +30,7 @@ public class FavouritesListing
     
     /**
      * Get the key set of the hashmap.
-     * @return The key set.
+     * @return Set<String> The key set.
      */
     public static Set<String> getFavList()
     {
@@ -53,7 +53,7 @@ public class FavouritesListing
     /**
      * The boolean to show the property is the favourite or not.
      * @param property The selected property.
-     * @return If true, return true, or false otherwise.
+     * @return Boolean If true, return true, or false otherwise.
      */
     public static boolean isFavourite(AirbnbListing property)
     {
@@ -66,7 +66,7 @@ public class FavouritesListing
     /**
      * Get the property
      * @param propertyName The name of the property.
-     * @return Get the property from favourites.
+     * @return AirbnbListing Get the property from favourites.
      */
     public static AirbnbListing getProperty(String propertyName)
     {

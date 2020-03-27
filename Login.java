@@ -1,4 +1,5 @@
 import java.util.*;
+import java.net.URL;
 import java.io.InputStream;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -12,8 +13,10 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 /**
- * This is the login class.
  * End user can signup a account and login to the account. 
+ * 
+ * @Runlin Zhou, Liangjie Wang, Yichun Zhang, Zejin Deng
+ * @27.03.2020
  */
 public class Login extends Application
 {
@@ -30,7 +33,8 @@ public class Login extends Application
     }
 
     /**
-     * set up the stage.
+     * Set up the stage.
+     * @param mainStage
      */
     @Override
     public void start(Stage mainStage)
@@ -50,7 +54,7 @@ public class Login extends Application
     }
 
     /**
-     * load the fxml file for logging.
+     * Load the fxml file for logging.
      */
     public void Startlogin(){
         try {
@@ -62,7 +66,7 @@ public class Login extends Application
     }
 
     /**
-     * load the fxml file for finding password.
+     * Load the fxml file for finding password.
      */
     public void StartFindPassword(){
         try {
@@ -74,7 +78,7 @@ public class Login extends Application
     }
 
     /**
-     * load the fxml file for signing up.
+     * Load the fxml file for signing up.
      */
     public void Startsignup(){
         try {
@@ -88,6 +92,7 @@ public class Login extends Application
     /**
      * Used when the account has been registered.
      * Back to the log in page.
+     * @param info The hash map used to store the information.
      */
     public void Continue(HashMap<String, String> info)
     {
@@ -107,12 +112,19 @@ public class Login extends Application
     /**
      * Check if the information is correct,
      * Clear the text field if the information is incorrect.
+     * @param username
+     * @param password
      */
     public void logging(String username,String password){
         if(validity.CheckInfo(username,password)){
-            Start start = new Start();
             try {
-                start.start(stage);
+                URL url = getClass().getResource("./fxml/welcome.fxml");
+                Parent root = FXMLLoader.load(url);
+                Scene scene = new Scene(root);
+                stage.setTitle("Welcome");
+                stage.setScene(scene);
+                stage.setResizable(false);
+                stage.show();
             } catch (IOException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
@@ -129,6 +141,8 @@ public class Login extends Application
     /**
      * Check if the address refers to the correct email address,
      * Clear the text field if the information is incorrect.
+     * @param username
+     * @param address
      */
     public void comparing(String username,String address){
         if(validity.CheckForget(username,address)){
@@ -143,7 +157,8 @@ public class Login extends Application
     }
 
     /**
-     * find the fxml file and display it.
+     * Find the fxml file and display it.
+     * @param fxml
      */
     private Initializable initializeScene(String fxml) throws Exception {
         FXMLLoader fxmlloader = new FXMLLoader();
@@ -179,11 +194,4 @@ public class Login extends Application
         return (Initializable) fxmlloader.getController();
     }
 
-    /**
-     * link to the guestpanel;
-     */
-    //public void gotoApp(){
-    //    AppWindow mainWindow = new AppWindow();
-    //    mainWindow.start(stage);
-    //}
 }

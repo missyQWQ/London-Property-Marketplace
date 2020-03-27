@@ -116,7 +116,7 @@ public class MapController extends Controller
     /**
      *  For different boroughs, return different full name.
      *  @param name The abbreviation of selected borough.
-     *  @return The full name of selected borough or null if default.
+     *  @return String The full name of selected borough or null if default.
      */
     private String getFullName(String name)
     {

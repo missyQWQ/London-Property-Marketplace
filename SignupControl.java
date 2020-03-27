@@ -9,12 +9,14 @@ import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
 import java.util.regex.*;
 import java.lang.*;
-
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+
 /**
  * This is the controller of Signup.fxml.
-
+ * 
+ * @Runlin Zhou, Liangjie Wang, Yichun Zhang, Zejin Deng
+ * @27.03.2020
  */
 public class SignupControl implements Initializable
 {
@@ -32,6 +34,10 @@ public class SignupControl implements Initializable
     private Login login;
     private Validity validity = Validity.getInstance();
 
+    /**
+     * To set the airbnb app
+     * @param login
+     */
     public void setApp(Login login){
         this.login = login;
     }
@@ -39,9 +45,10 @@ public class SignupControl implements Initializable
     /**
      * While you creating a new account, it will check if all
      * the information you provide is valid when you click continue button.
+     * @param e The action event.
      */
     @FXML
-    private void Finish(ActionEvent event)
+    private void Finish(ActionEvent e)
     {
         HashMap<String,String> Info = new HashMap<String,String>();
         if(username.getText().length()==0)
@@ -127,21 +134,26 @@ public class SignupControl implements Initializable
         login.Continue(Info);
 
     }
+    
     /**
-     * go back to the login page.
+     * Go back to the login page.
+     * @param e The action event.
      */
     @FXML
-    private void Goback(ActionEvent event)
+    private void Goback(ActionEvent e)
     {
         login.Back();
     }
 
     /**
      * Check if Password is too long/short.
+     * @param password
+     * @return Boolean If valid, then true, or false
+     * otherwise.
      */
-    public boolean If_long_short(String Password) {
+    public boolean If_long_short(String password) {
         boolean valid = false;
-        if(Password.length()>=9&&Password.length()<=16)
+        if(password.length()>=9&&password.length()<=16)
         {
             valid=true;
         }
@@ -150,33 +162,42 @@ public class SignupControl implements Initializable
 
     /**
      * Check if Password has capital letters.
+     * @param password
+     * @return Boolean If there is capital letter, then true,
+     * or false otherwise.
      */
-    public boolean If_Capital(String Password) {
+    public boolean If_Capital(String password) {
         String regex=".*[A-Z]+.*";
-        Matcher m=Pattern.compile(regex).matcher(Password);
+        Matcher m=Pattern.compile(regex).matcher(password);
         return m.matches();
     }
 
     /**
      * Check if Password has letters.
+     * @param password
+     * @return Boolean If there is a letter, then true,
+     * or false otherwise.
      */
-    public boolean If_Has_Word(String Password) {
+    public boolean If_Has_Word(String password) {
         String regex=".*[a-zA-Z]+.*";
-        Matcher m=Pattern.compile(regex).matcher(Password);
+        Matcher m=Pattern.compile(regex).matcher(password);
         return m.matches();
     }
 
     /**
-     * Check if Password has letters.
+     * Check if the email is vaild.
+     * @param email
+     * @return Boolean If it is vaild, or false otherwise
      */
-    public boolean If_is_address(String Email) {
+    public boolean If_is_address(String email) {
         String regex="^([a-z0-9A-Z]+[-|\\.]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\\.)+[a-zA-Z]{2,}$";
-        Matcher m=Pattern.compile(regex).matcher(Email);
+        Matcher m=Pattern.compile(regex).matcher(email);
         return m.matches();
     }
 
     /**
-     * get email address
+     * Get email address
+     * @return String The email address.
      */
     public String getEmail()
     {

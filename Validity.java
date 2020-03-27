@@ -12,7 +12,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.HashMap;
 /**
- * This class is mainly used to check the validity of user account in this software.
+ * This class is mainly used to check the validity of user
+ * account in this software.
+ * 
+ * @Runlin Zhou, Liangjie Wang, Yichun Zhang, Zejin Deng
+ * @27.03.2020
  */
 public class Validity {
     private static List<HashMap> accounts = new ArrayList();
@@ -40,6 +44,10 @@ public class Validity {
 
     }
 
+    /**
+     * Get the instance.
+     * @return instance
+     */
     public static Validity getInstance() {
         if ( instance == null ) {
             instance = new Validity();
@@ -47,6 +55,10 @@ public class Validity {
         return instance;
     }
 
+    /**
+     * Store information of the user into the hashmap
+     * @param info
+     */
     public void Store_Info(HashMap info) {
         accounts.add(info);
 
@@ -79,7 +91,7 @@ public class Validity {
     }
 
     /**
-     * check wheter user's login information is right.
+     * Check whether user's login information is right.
      * @return Boolean If_true.
      */
     public boolean CheckInfo(String username, String password) {
@@ -94,7 +106,7 @@ public class Validity {
     }
 
     /**
-     * check wheter user's address matches its username.
+     * Check wheter user's address matches its username.
      * @return Boolean compare.
      */
     public boolean CheckForget(String username, String Email) {
@@ -109,7 +121,7 @@ public class Validity {
     }
 
     /**
-     * check if the username has been used.
+     * Check if the username has been used.
      * @return Boolean If_true.
      */
     public boolean CheckSame(String username) {
@@ -124,7 +136,7 @@ public class Validity {
     }
 
     /**
-     * check if the address has been used.
+     * Check if the address has been used.
      * @return Boolean If_true.
      */
     public boolean CheckMail(String Email) {
@@ -139,7 +151,7 @@ public class Validity {
     }
 
     /**
-     * get the password for a account.
+     * Get the password for a account.
      * @return String password.
      */
     public String getPassword(String username, String Email) {

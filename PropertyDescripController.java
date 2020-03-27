@@ -79,6 +79,7 @@ public class PropertyDescripController extends Controller
     /**
      * The string on the button will change to 'Cancel Favourite',
      * if the selected property is already the user's favourite.
+     * @return String The string to represent different states.
      */
     private String getIsFavouriteString()
     {

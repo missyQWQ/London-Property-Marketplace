@@ -10,7 +10,9 @@ import javafx.scene.control.Hyperlink;
 
 /**
  * This is the controller of login.fxml.
-
+ * 
+ * @Runlin Zhou, Liangjie Wang, Yichun Zhang, Zejin Deng
+ * @27.03.2020
  */
 public class LoginControl implements Initializable
 {
@@ -22,29 +24,37 @@ public class LoginControl implements Initializable
     @FXML private  Button SIGNUP;
     // Hyperlink.
     private Hyperlink Forget;
-
     private Login login;
+    
     /**
-     * set the login panel to current login panel.
+     * Set the login panel to current login panel.
+     * @param login
      */
     public void setApp(Login login){
         this.login = login;
     }
+    
     /**
-     * jump to the forgetpassword panel.
-     */
-    @FXML void ForgetPass(ActionEvent event){
-        login.StartFindPassword();
-    }
-    /**
-     * login the account
+     * Jump to the forgetpassword panel.
+     * @param e The action event.
      */
     @FXML
-    public void Login(ActionEvent event) {
+    void ForgetPass(ActionEvent e){
+        login.StartFindPassword();
+    }
+    
+    /**
+     * Login the account
+     * @param e The action event.
+     */
+    @FXML
+    public void Login(ActionEvent e) {
         login.logging(username.getText(), password.getText());
     }
+    
     /**
-     * signup the account
+     * Signup the account
+     * @param e The action event.
      */
     @FXML
     private void SignUp(ActionEvent event) {
@@ -52,7 +62,7 @@ public class LoginControl implements Initializable
     }
 
     /**
-     * clear the username and password textfield.
+     * Clear the username and password textfield.
      */
     public void Clear() {
         username.setText(null);
