@@ -11,7 +11,10 @@ import javafx.scene.control.Hyperlink;
 import javafx.scene.paint.Color;
 import javafx.animation.*;
 /**
- * This  is the controller of forgetpassword panel.
+ * This is the controller of forgetpassword panel.
+ * 
+ * @Runlin Zhou, Liangjie Wang, Yichun Zhang, Zejin Deng
+ * @27.03.2020
  */
 public class ForgetControl implements Initializable
 {
@@ -31,6 +34,7 @@ public class ForgetControl implements Initializable
     public void setApp(Login login){
         this.login = login;
     }
+    
     /**
      * Send the the password to the mailbox if the information is correct.
      */
@@ -38,6 +42,7 @@ public class ForgetControl implements Initializable
     private void Find_Password(ActionEvent event){
         login.comparing(username.getText(),Email.getText());
     }
+    
     /**
      * go back to the login panel.
      */
@@ -45,6 +50,7 @@ public class ForgetControl implements Initializable
     private void Goback(ActionEvent event){
         login.Back();
     }
+    
     /**
      * get email address
      */
@@ -52,6 +58,7 @@ public class ForgetControl implements Initializable
     {
         return Email.getText();
     }
+    
     /**
      * clear the username and password textfield.
      */
@@ -59,6 +66,7 @@ public class ForgetControl implements Initializable
         username.setText(null);
         Email.setText(null);
     }
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

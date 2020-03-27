@@ -17,6 +17,9 @@ import java.io.IOException;
 /**
  * This is the login class.
  * End user can signup a account and login to the account. 
+ * 
+ * @Runlin Zhou, Liangjie Wang, Yichun Zhang, Zejin Deng
+ * @27.03.2020
  */
 public class Login extends Application
 {

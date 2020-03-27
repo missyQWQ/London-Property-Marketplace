@@ -13,9 +13,11 @@ import javax.mail.internet.MimeMessage;
 import com.sun.mail.util.MailSSLSocketFactory;
 
 /**
- * 
  * This is the SendMail class.
  * It will send a email to the end user`s address while signing up.
+ * 
+ * @Runlin Zhou, Liangjie Wang, Yichun Zhang, Zejin Deng
+ * @27.03.2020
  */
 public class SendMail
 
