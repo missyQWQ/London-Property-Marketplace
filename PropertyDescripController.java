@@ -7,7 +7,7 @@ import java.awt.Desktop;
 import java.net.URI;
 import java.net.URISyntaxException;
 /**
- * A panel to show all the information of the selected
+ * A window to show all the information of the selected
  * property from the list of properties. It can also show 
  * the map view of the location on painted view or the 
  * real street view, and add to favourites if you like it.

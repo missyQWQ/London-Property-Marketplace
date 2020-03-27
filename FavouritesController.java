@@ -8,10 +8,11 @@ import java.util.ArrayList;
 import javafx.scene.input.MouseEvent;
 
 /**
- * Write a description of class FavouritesController here.
+ * A panel to show the list of favorite properties 
+ * and the related information.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @Runlin Zhou, Liangjie Wang, Yichun Zhang, Zejin Deng
+ * @27.03.2020
  */
 public class FavouritesController extends Controller
 {
@@ -31,6 +32,7 @@ public class FavouritesController extends Controller
     
     /**
      * Click "Back to Statistics" and move to statistics panel.
+     * @param e Action event.
      */
     @FXML
     private void backBtnAction(ActionEvent e) throws IOException
@@ -40,6 +42,7 @@ public class FavouritesController extends Controller
     
     /**
      * Click "Go to Welcome" and move to welcome panel.
+     * @param e Action event.
      */
     @FXML
     private void nextBtnAction(ActionEvent e) throws IOException
@@ -47,12 +50,21 @@ public class FavouritesController extends Controller
         changePanel(e, "./fxml/welcome.fxml", "Welcome");
     }
     
+    /**
+     * Click "Refresh" to clear the information.
+     * @param e Action event.
+     */
     @FXML
     private void refresh(ActionEvent e) throws IOException
     {
         changePanel(e, "./fxml/favourites.fxml", "My Favourites");
     }
     
+    /**
+     * Click a property from the list and display the
+     * related information.
+     * @param e Action event.
+     */
     @FXML
     private void displaySelected(MouseEvent e)
     {
@@ -69,6 +81,11 @@ public class FavouritesController extends Controller
         }
     }
     
+    /**
+     * Click "Detail !" to jump to the description page of 
+     * the chosen property
+     * @param e Action event.
+     */
     @FXML
     private void presentDetailBtn(ActionEvent e) throws IOException
     {
@@ -80,6 +97,9 @@ public class FavouritesController extends Controller
         }
     }
     
+    /**
+     * Show the favorite properties on the list.
+     */
     private void loadFavListView()
     {
         favList = FXCollections.observableArrayList(FavouritesListing.getFavList());

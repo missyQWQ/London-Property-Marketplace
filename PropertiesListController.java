@@ -10,7 +10,7 @@ import java.io.IOException;
 import javafx.scene.input.MouseEvent;
 
 /**
- * A panel to show some information of all the properties 
+ * A window to show some information of all the properties 
  * from the selected borough.
  *
  * @Runlin Zhou, Liangjie Wang, Yichun Zhang, Zejin Deng
