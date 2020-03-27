@@ -305,38 +305,38 @@ public class StatisticsController extends Controller
         ArrayList<Integer> totalPriceOfBorough = new ArrayList<Integer>();
 
         String mostExpensiveBoroughName = "null";
-        int mostExpensiveBoroughPrice = 0;
+        /*int mostExpensiveBoroughPrice = 0;
         int counter = 0;
         int index2 = 0;
         int index = 0;
         int tmp = 0;
-        while(counter == 32){
-
-            for(int index3 = 0; index3 < totalPriceOfBorough.size(); index3++){
-                
+        while(counter == boroughName.size()){
+            for(int index3 = 0; index3 < totalPriceOfBorough.size(); index3++){          
                 if(totalPriceOfBorough.get(index2) > mostExpensiveBoroughPrice) {
                     mostExpensiveBoroughName = boroughName.get(index2);
                     mostExpensiveBoroughPrice = mostExpensiveBoroughPrice + totalPriceOfBorough.get(index2);
-                    
+                    index2++;
                 }
-                index2++;
+                else{
+                    index2++;
+                }
             } 
         }
         for (int i = 0; i < boroughName.size(); i++){
-                
-                for (AirbnbListing property : properties) {
-
-                    if(property.getNeighbourhood() == boroughName.get(i)){
-                        int singleRoomPrice = property.getPrice()*property.getMinimumNights();
-                        tmp = tmp + singleRoomPrice;
-                        totalPriceOfBorough.add(index,tmp);
-                        index++;
-                    }
-
+            for (AirbnbListing property : properties) {
+                if(property.getNeighbourhood() == boroughName.get(i)){
+                    int singleRoomPrice = property.getPrice()*property.getMinimumNights();
+                    tmp = tmp + singleRoomPrice;
+                    totalPriceOfBorough.add(index,tmp);
+                    index++;
                 }
-                counter++;
-             }
-        
+                else{
+                    index++;
+                }
+            }
+            counter++;
+        }
+        */
         return mostExpensiveBoroughName;
     }
 }
