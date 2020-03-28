@@ -98,7 +98,10 @@ public class PropertiesListController extends Controller
     @FXML
     private void showProperty(MouseEvent e) throws IOException
     {
-        setSelectedProperty((AirbnbListing)(propertiesTable.getSelectionModel().getSelectedItem()));
-        newWindow("./fxml/propertyDescrip.fxml", "Property Description");
+        AirbnbListing property = (AirbnbListing)(propertiesTable.getSelectionModel().getSelectedItem());
+        if(property != null) {
+            setSelectedProperty(property);
+            newWindow("./fxml/propertyDescrip.fxml", "Property Description");
+        }
     }
 }
