@@ -28,7 +28,7 @@
                   </Label>
                   <Label fx:id="propertyTitle" alignment="CENTER" layoutX="290.0" layoutY="10.0" prefHeight="43.0" prefWidth="702.0" styleClass="property_name" text="Property Name">
                      <font>
-                        <Font size="24.0" />
+                        <Font name="Comic Sans MS" size="24.0" />
                      </font>
                   </Label>
                   <Label layoutX="32.0" layoutY="79.0" styleClass="description_items" text=" Property Name: ">
@@ -137,7 +137,7 @@
                   </Label>
                   <Button layoutX="177.0" layoutY="456.0" mnemonicParsing="false" onAction="#streetView" prefWidth="146.0" styleClass="buttons" text="Street View !">
                      <font>
-                        <Font size="13.0" />
+                        <Font name="Comic Sans MS" size="13.0" />
                      </font></Button>
                   <ImageView fitHeight="68.0" fitWidth="69.0" layoutX="32.0" layoutY="422.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -171,7 +171,7 @@
                   </Label>
                   <Button fx:id="addToFavBtn" layoutX="176.0" layoutY="542.0" mnemonicParsing="false" onAction="#addToFavourites" prefWidth="146.0" styleClass="buttons" text="Add to Favourties !">
                      <font>
-                        <Font size="13.0" />
+                        <Font name="Comic Sans MS" size="13.0" />
                      </font>
                   </Button>
                </children>

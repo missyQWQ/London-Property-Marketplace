@@ -91,12 +91,12 @@ public class AirbnbDataLoader {
         return data;
     }
     
-    public ArrayList<AirbnbListing> priceRangeAndRoomType_filter(int minPrice, int maxPrice,String key)
+    public ArrayList<AirbnbListing> priceRangeAndRoomType_filter(int minPrice, int maxPrice, String key)
     {
         ArrayList<AirbnbListing> totalData = load();
         ArrayList<AirbnbListing> data = new ArrayList<>();
         for(AirbnbListing list : totalData) {
-            if(list.getPrice() >= minPrice && list.getPrice() <= maxPrice&&list.getRoom_type().equals(key))
+            if(list.getPrice() >= minPrice && list.getPrice() <= maxPrice && list.getRoom_type().equals(key))
                 data.add(list);
         }
         return data;

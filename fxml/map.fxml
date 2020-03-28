@@ -19,7 +19,7 @@
       </ImageView>
       <Label alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="738.0" styleClass="label_title" text="Your price range choice: " textFill="WHITE">
          <font>
-            <Font size="24.0" />
+            <Font name="Comic Sans MS" size="24.0" />
          </font>
          <padding>
             <Insets right="10.0" />
@@ -27,7 +27,7 @@
       </Label>
       <Label fx:id="selectedPriceRange" contentDisplay="RIGHT" layoutX="738.0" prefHeight="50.0" prefWidth="542.0" styleClass="label_title" text="null" textFill="#f3565a">
          <font>
-            <Font size="24.0" />
+            <Font name="Comic Sans MS" size="24.0" />
          </font>
          <padding>
             <Insets left="10.0" />
@@ -338,7 +338,13 @@
             <DropShadow />
          </effect>
       </Label>
-      <Button layoutX="60.0" layoutY="656.0" mnemonicParsing="false" onAction="#backBtnAction" styleClass="backNextButton" text="&lt; Back to Welcome" />
-      <Button layoutX="1010.0" layoutY="656.0" mnemonicParsing="false" onAction="#nextBtnAction" styleClass="backNextButton" text="Go to Statistics &gt;" />
+      <Button layoutX="60.0" layoutY="656.0" mnemonicParsing="false" onAction="#backBtnAction" styleClass="backNextButton" text="&lt; Back to Welcome">
+         <font>
+            <Font name="Comic Sans MS" size="12.0" />
+         </font></Button>
+      <Button layoutX="1010.0" layoutY="656.0" mnemonicParsing="false" onAction="#nextBtnAction" styleClass="backNextButton" text="Go to Statistics &gt;">
+         <font>
+            <Font name="Comic Sans MS" size="12.0" />
+         </font></Button>
    </children>
 </AnchorPane>

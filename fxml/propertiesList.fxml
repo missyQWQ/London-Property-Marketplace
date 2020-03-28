@@ -24,7 +24,7 @@
                <children>
                   <Label fx:id="boroughName" alignment="CENTER" contentDisplay="CENTER" layoutX="304.0" layoutY="5.0" prefHeight="43.0" prefWidth="417.0" styleClass="borough_name" text="borough name" textFill="WHITE">
                      <font>
-                        <Font size="24.0" />
+                        <Font name="Comic Sans MS" size="24.0" />
                      </font>
                      <padding>
                         <Insets left="10.0" />
