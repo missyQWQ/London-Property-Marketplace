@@ -67,9 +67,9 @@ public class StatisticsController extends Controller
         int entiredHome = getNumberOfEntireHome();
         int privateRoom = getNumberOfPrivateRome();
 
-        title[0] = "Number of avalible property";
+        title[0] = "Number of available property";
         title[1] = "Average number of reviews";
-        title[2] = "The number of entire home and apartments";
+        title[2] = "Number of entire home/apartments";
         title[3] = "The most expensive property";
         title[4] = "The number of private room";
         title[5] = "The cheapest property";
