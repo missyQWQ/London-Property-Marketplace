@@ -35,7 +35,6 @@ public class StatisticsControllerTest
     
     @Test
     public void testPrevInfomation() {
-
         StatisticsController test2 = new StatisticsController();
         boolean[] isDisplayed = new boolean[8];
         for (int i = 0; i < 8; i++){
