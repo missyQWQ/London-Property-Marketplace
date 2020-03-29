@@ -97,25 +97,11 @@ public class WelcomeController extends Controller
     }
 
     /**
-     * Click info button to create an info box.
+     * Click and get instructions of how to use this app. 
      */
     @FXML
-    public void infoButtonAction() throws IOException{
-        createInfoBox();
-    }
-
-    /**
-     * The method to get more information of this app 
-     * by showing a new fxml.
-     */
-    private void createInfoBox() throws IOException{
-        Parent root = FXMLLoader.load(getClass().getResource("MsgBox.fxml"));
-        Stage msg = new Stage();
-        msg.setScene(new Scene(root));
-        msg.initModality(Modality.APPLICATION_MODAL);
-        msg.setTitle("About");
-        msg.setResizable(false);   // resize able
-        msg.show();
+    public void showInstruction() throws IOException{
+        newWindow("./fxml/userInstruction.fxml", "Instruction");
     }
 
     /**

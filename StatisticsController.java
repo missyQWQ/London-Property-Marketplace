@@ -67,14 +67,14 @@ public class StatisticsController extends Controller
         int entiredHome = getNumberOfEntireHome();
         int privateRoom = getNumberOfPrivateRome();
 
-        title[0] = "Number of available property";
-        title[1] = "Average number of reviews";
-        title[2] = "Number of entire home/apartments";
-        title[3] = "The most expensive property";
-        title[4] = "The number of private room";
-        title[5] = "The cheapest property";
-        title[6] = "The most expensive borough";
-        title[7] = "The most available room";
+        title[0] = "Total Number of Available Properties";
+        title[1] = "Average Number of Reviews";
+        title[2] = "Number of Entire Home and Apartments";
+        title[3] = "Most Expensive Property";
+        title[4] = "Number of Private Rooms";
+        title[5] = "Cheapest Property";
+        title[6] = "Most Expensive Borough";
+        title[7] = "Most Availability Property";
 
         information[0] = Integer.toString(numberOfPorperty);
         information[1] = getAverageReviews();

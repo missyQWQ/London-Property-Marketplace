@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: rgb(56,95,138);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="132.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Instruction">
+         <font>
+            <Font name="Comic Sans MS" size="30.0" />
+         </font>
+      </Text>
+      <Text fill="#e4e4e4" layoutX="39.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1. Select price range.">
+         <font>
+            <Font name="Comic Sans MS Italic" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#e4e4e4" layoutX="39.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2. Click &quot;confirm&quot; to view the suitable properties.">
+         <font>
+            <Font name="Comic Sans MS Italic" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#e4e4e4" layoutX="39.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1. The size of circle indicates the number of properties in that borough. The larger the circle is, the more properties the borough has." wrappingWidth="454.94628369808197">
+         <font>
+            <Font name="Comic Sans MS Italic" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#e4e4e4" layoutX="39.0" layoutY="344.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2. Hovering on a borough shows the number of properties can be found in this borough." wrappingWidth="434.94628369808197">
+         <font>
+            <Font name="Comic Sans MS Italic" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#e4e4e4" layoutX="39.0" layoutY="393.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3. Click a borough to see a list of all the properties in that borough within the price range." wrappingWidth="434.94628369808197">
+         <font>
+            <Font name="Comic Sans MS Italic" size="18.0" />
+         </font>
+      </Text>
+      <Line endX="-101.0" endY="452.0" layoutX="601.0" layoutY="148.0" startX="-101.0" startY="-148.0" />
+      <Text fill="#e4e4e4" layoutX="39.0" layoutY="499.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1. Select the sorting method you like.">
+         <font>
+            <Font name="Comic Sans MS Italic" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#e4e4e4" layoutX="39.0" layoutY="525.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2. Click a property to see the description of this property." wrappingWidth="445.833984375">
+         <font>
+            <Font name="Comic Sans MS Italic" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#e4e4e4" layoutX="536.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1. Click button &quot;street view&quot; to look this property in google street view." wrappingWidth="434.9462890625">
+         <font>
+            <Font name="Comic Sans MS Italic" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#e4e4e4" layoutX="536.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2. Click button &quot;add to favourites&quot; to add this property to your favourites which will be shown in the favourites panel. You can also click &quot;cancel favourite&quot; to cancel it after adding." wrappingWidth="434.9462890625">
+         <font>
+            <Font name="Comic Sans MS Italic" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#e4e4e4" layoutX="536.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3. Close all extra windows before moving to next panel." wrappingWidth="464.9462890625">
+         <font>
+            <Font name="Comic Sans MS Italic" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#e4e4e4" layoutX="536.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1. Click left and right arrows to see more statistics." wrappingWidth="434.9462890625">
+         <font>
+            <Font name="Comic Sans MS Italic" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#e4e4e4" layoutX="536.0" layoutY="369.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1. Click a property on the left if you have added some properties as your favourites. Then its introduction will be shown on the right." wrappingWidth="445.83397482395867">
+         <font>
+            <Font name="Comic Sans MS Italic" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#e4e4e4" layoutX="536.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2. Click button &quot;detail&quot; to find more information about this property. And you can cancel the favourite if you don't like it anymore." wrappingWidth="434.9462890625">
+         <font>
+            <Font name="Comic Sans MS Italic" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#e4e4e4" layoutX="536.0" layoutY="531.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3. Click button &quot;refresh&quot; to refresh the window after you cancel a favourite." wrappingWidth="434.9462890625">
+         <font>
+            <Font name="Comic Sans MS Italic" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#e4e4e4" layoutX="39.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In Welcome Panel:">
+         <font>
+            <Font name="Comic Sans MS Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#e4e4e4" layoutX="39.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In Map Panel:">
+         <font>
+            <Font name="Comic Sans MS Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#e4e4e4" layoutX="39.0" layoutY="475.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In Property List Window:">
+         <font>
+            <Font name="Comic Sans MS Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#e4e4e4" layoutX="536.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In Property Description Window:">
+         <font>
+            <Font name="Comic Sans MS Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#e4e4e4" layoutX="536.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In Statistics Panel:">
+         <font>
+            <Font name="Comic Sans MS Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#e4e4e4" layoutX="536.0" layoutY="344.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In MyFavourites Panel:">
+         <font>
+            <Font name="Comic Sans MS Bold" size="18.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
