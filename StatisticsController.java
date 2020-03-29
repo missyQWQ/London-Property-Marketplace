@@ -189,8 +189,8 @@ public class StatisticsController extends Controller
      * has been displayed or not.
      * @return statIndex The index of the suitable information.
      */
-    public int getPrevStat(int statBoxNumber, boolean[] isDisplayed){
-        int statIndex = boxIndex[statBoxNumber];
+    public int getPrevStat(int boxNumber, boolean[] isDisplayed){
+        int statIndex = boxIndex[boxNumber];
         isDisplayed[statIndex] = false;
 
         if (statIndex == 0)
@@ -204,7 +204,7 @@ public class StatisticsController extends Controller
             else
                 --statIndex;
         }
-        boxIndex[statBoxNumber] = statIndex;
+        boxIndex[boxNumber] = statIndex;
         isDisplayed[statIndex] = true;
         this.titleIndex = statIndex;
         return statIndex;
