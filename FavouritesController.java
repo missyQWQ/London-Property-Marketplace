@@ -72,7 +72,6 @@ public class FavouritesController extends Controller
         if(selectedFav != null && !selectedFav.isEmpty()) {
             AirbnbListing selectedProperty = FavouritesListing.getProperty(selectedFav);
             if(selectedProperty != null) {
-                System.out.println(selectedProperty);
                 hostName.setText(selectedProperty.getHost_name());
                 neighbourhood.setText(selectedProperty.getNeighbourhood());
                 roomType.setText(selectedProperty.getRoom_type());

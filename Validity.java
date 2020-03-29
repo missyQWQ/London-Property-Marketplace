@@ -19,12 +19,14 @@ import java.util.HashMap;
  * @27.03.2020
  */
 public class Validity {
+    
     private static List<HashMap> accounts = new ArrayList();
-
     private static Validity instance;
 
+    /**
+     * Use file to store users' information (username, password, email) and check the validity of user.
+     */
     private Validity() {
-
         try {
             BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(new File("userinfo.txt")), "UTF-8"));
             String lineTxt = null;
@@ -35,13 +37,11 @@ public class Validity {
                 infoHashMap.put("password", info[1]);
                 infoHashMap.put("email", info[2]);
                 accounts.add(infoHashMap);
-
             }
             br.close();
         } catch (Exception e) {
             System.err.println("read errors :" + e);
         }
-
     }
 
     /**
@@ -87,7 +87,6 @@ public class Validity {
                 e.printStackTrace();
             }
         }
-
     }
 
     /**
@@ -97,10 +96,8 @@ public class Validity {
     public boolean CheckInfo(String username, String password) {
         boolean If_true = false;
         for ( HashMap account : accounts ) {
-            if ( account.get("username").equals(username) && account.get("password").equals(password) ) {
+            if ( account.get("username").equals(username) && account.get("password").equals(password) )
                 If_true = true;
-            }
-
         }
         return If_true;
     }
@@ -112,10 +109,8 @@ public class Validity {
     public boolean CheckForget(String username, String Email) {
         boolean compare = false;
         for ( HashMap account : accounts ) {
-            if ( account.get("username").equals(username) && account.get("email").equals(Email) ) {
+            if ( account.get("username").equals(username) && account.get("email").equals(Email) )
                 compare = true;
-            }
-
         }
         return compare;
     }
@@ -127,10 +122,8 @@ public class Validity {
     public boolean CheckSame(String username) {
         boolean If_true = false;
         for ( HashMap account : accounts ) {
-            if ( account.get("username").equals(username) ) {
+            if ( account.get("username").equals(username) )
                 If_true = true;
-            }
-
         }
         return If_true;
     }
@@ -142,10 +135,8 @@ public class Validity {
     public boolean CheckMail(String Email) {
         boolean If_true = false;
         for ( HashMap account : accounts ) {
-            if ( account.get("email").equals(Email) ) {
+            if ( account.get("email").equals(Email) )
                 If_true = true;
-            }
-
         }
         return If_true;
     }
@@ -157,12 +148,9 @@ public class Validity {
     public String getPassword(String username, String Email) {
         String password;
         for ( HashMap account : accounts ) {
-            if ( account.get("username").equals(username) && account.get("email").equals(Email) ) {
+            if ( account.get("username").equals(username) && account.get("email").equals(Email) )
                 return account.get("password").toString();
-            }
-
         }
         return null;
     }
-
 }

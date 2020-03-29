@@ -35,15 +35,6 @@ public class LoginControl implements Initializable
     }
     
     /**
-     * Jump to the forgetpassword panel.
-     * @param e The action event.
-     */
-    @FXML
-    void ForgetPass(ActionEvent e){
-        login.StartFindPassword();
-    }
-    
-    /**
      * Login the account
      * @param e The action event.
      */

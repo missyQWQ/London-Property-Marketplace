@@ -22,11 +22,7 @@ public class Login extends Application
 {
     private LoginControl login;
     private SignupControl signup;
-    private ForgetControl forget;
     private Stage stage;
-    //width and height
-    private final double WIDTH = 400.0;
-    private final double HEIGHT = 260.0;
     private Validity validity = Validity.getInstance();
     public static void main(String[] args) {
         launch(args);
@@ -43,8 +39,6 @@ public class Login extends Application
             stage = mainStage;
             stage.setOpacity(0.95);
             stage.setTitle("Login");
-            stage.setMinWidth(WIDTH);
-            stage.setMinHeight(HEIGHT);
             Startlogin();
             stage.show();
         }
@@ -60,18 +54,6 @@ public class Login extends Application
         try {
             login = (LoginControl) initializeScene("./fxml/login.fxml");
             login.setApp(this);
-        } catch(Exception ex){
-            System.out.println("Doesn't find the directory and resource");
-        }
-    }
-
-    /**
-     * Load the fxml file for finding password.
-     */
-    public void StartFindPassword(){
-        try {
-            forget = (ForgetControl) initializeScene("./fxml/Forget.fxml");
-            forget.setApp(this);
         } catch(Exception ex){
             System.out.println("Doesn't find the directory and resource");
         }
@@ -126,7 +108,6 @@ public class Login extends Application
                 stage.setResizable(false);
                 stage.show();
             } catch (IOException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
         }
@@ -137,25 +118,7 @@ public class Login extends Application
             login.Clear();
         }
     }
-
-    /**
-     * Check if the address refers to the correct email address,
-     * Clear the text field if the information is incorrect.
-     * @param username
-     * @param address
-     */
-    public void comparing(String username,String address){
-        if(validity.CheckForget(username,address)){
-            Startlogin();
-        }
-        else
-        {
-            Alert alert = new Alert(Alert.AlertType.valueOf("ERROR"),"Incorrect username or address! Please try again.");                       
-            alert.show();
-            forget.Clear();
-        }
-    }
-
+    
     /**
      * Find the fxml file and display it.
      * @param fxml
@@ -174,24 +137,17 @@ public class Login extends Application
         }
 
         if(fxml=="./fxml/login.fxml"){ 
-            Scene scene = new Scene(Log, WIDTH, HEIGHT);
-            stage.setScene(scene);
-            stage.setResizable(false);
-            stage.sizeToScene();
-        }
-        else if(fxml=="./fxml/Forget.fxml"){ 
-            Scene scene = new Scene(Log, 490, 210);
+            Scene scene = new Scene(Log);
             stage.setScene(scene);
             stage.setResizable(false);
             stage.sizeToScene();
         }
         else{
-            Scene scene = new Scene(Log, 370, 500);
+            Scene scene = new Scene(Log);
             stage.setScene(scene);
             stage.setResizable(false);
             stage.sizeToScene();
         }
         return (Initializable) fxmlloader.getController();
     }
-
 }
