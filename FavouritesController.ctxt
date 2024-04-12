@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=FavouritesController
+comment0.text=\r\n\ A\ panel\ to\ show\ the\ list\ of\ favorite\ properties\ \r\n\ and\ the\ related\ information.\r\n\r\n\ @Runlin\ Zhou,\ Liangjie\ Wang,\ Yichun\ Zhang,\ Zejin\ Deng\r\n\ @27.03.2020\r\n
+comment1.params=
+comment1.target=void\ initialize()
+comment2.params=e
+comment2.target=void\ backBtnAction(javafx.event.ActionEvent)
+comment2.text=\r\n\ Click\ "Back\ to\ Statistics"\ and\ move\ to\ statistics\ panel.\r\n\ @param\ e\ Action\ event.\r\n
+comment3.params=e
+comment3.target=void\ nextBtnAction(javafx.event.ActionEvent)
+comment3.text=\r\n\ Click\ "Go\ to\ Welcome"\ and\ move\ to\ welcome\ panel.\r\n\ @param\ e\ Action\ event.\r\n
+comment4.params=e
+comment4.target=void\ refresh(javafx.event.ActionEvent)
+comment4.text=\r\n\ Click\ "Refresh"\ to\ clear\ the\ information.\r\n\ @param\ e\ Action\ event.\r\n
+comment5.params=e
+comment5.target=void\ displaySelected(javafx.scene.input.MouseEvent)
+comment5.text=\r\n\ Click\ a\ property\ from\ the\ list\ and\ display\ the\r\n\ related\ information.\r\n\ @param\ e\ Action\ event.\r\n
+comment6.params=e
+comment6.target=void\ presentDetailBtn(javafx.event.ActionEvent)
+comment6.text=\r\n\ Click\ "Detail\ \!"\ to\ jump\ to\ the\ description\ page\ of\ \r\n\ the\ chosen\ property\r\n\ @param\ e\ Action\ event.\r\n
+comment7.params=
+comment7.target=void\ loadFavListView()
+comment7.text=\r\n\ Show\ the\ favorite\ properties\ on\ the\ list.\r\n
+numComments=8

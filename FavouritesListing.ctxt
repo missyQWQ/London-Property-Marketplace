@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=FavouritesListing
+comment0.text=\r\n\ Show\ the\ list\ of\ favourite\ properties.\r\n\r\n\ @Runlin\ Zhou,\ Liangjie\ Wang,\ Yichun\ Zhang,\ Zejin\ Deng\r\n\ @27.03.2020\r\n
+comment1.params=property
+comment1.target=void\ addToFav(AirbnbListing)
+comment1.text=\r\n\ Put\ the\ related\ property\ into\ the\ hashmap.\r\n\ @param\ property\ The\ selected\ property.\r\n
+comment2.params=property
+comment2.target=void\ removeFromFav(AirbnbListing)
+comment2.text=\r\n\ Remove\ the\ related\ property\ from\ the\ hashmap.\r\n\ @param\ property\ The\ selected\ property.\r\n
+comment3.params=
+comment3.target=java.util.Set\ getFavList()
+comment3.text=\r\n\ Get\ the\ key\ set\ of\ the\ hashmap.\r\n\ @return\ Set<String>\ The\ key\ set.\r\n
+comment4.params=property
+comment4.target=void\ toggleFavourite(AirbnbListing)
+comment4.text=\r\n\ The\ toggle\ for\ the\ property\ that\ remove\ it\ from\ or\ add\ it\ \r\n\ to\ the\ hashmap.\r\n\ @param\ property\ The\ selected\ property.\r\n
+comment5.params=property
+comment5.target=boolean\ isFavourite(AirbnbListing)
+comment5.text=\r\n\ The\ boolean\ to\ show\ the\ property\ is\ the\ favourite\ or\ not.\r\n\ @param\ property\ The\ selected\ property.\r\n\ @return\ Boolean\ If\ true,\ return\ true,\ or\ false\ otherwise.\r\n
+comment6.params=propertyName
+comment6.target=AirbnbListing\ getProperty(java.lang.String)
+comment6.text=\r\n\ Get\ the\ property\r\n\ @param\ propertyName\ The\ name\ of\ the\ property.\r\n\ @return\ AirbnbListing\ Get\ the\ property\ from\ favourites.\r\n
+numComments=7

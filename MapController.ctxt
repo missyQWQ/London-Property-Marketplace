@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=MapController
+comment0.text=\r\n\ The\ map\ panel\ to\ show\ the\ geographical\ view\ of\ boroughs\ \r\n\ and\ the\ number\ of\ matched\ properties\ they\ have\ by\ using\ \r\n\ different\ size\ of\ circles\ over\ the\ boroughs.\r\n\r\n\ @Runlin\ Zhou,\ Liangjie\ Wang,\ Yichun\ Zhang,\ Zejin\ Deng\r\n\ @27.03.2020\r\n
+comment1.params=
+comment1.target=void\ initialize()
+comment2.params=e
+comment2.target=void\ backBtnAction(javafx.event.ActionEvent)
+comment2.text=\r\n\ Click\ "Back\ to\ Welcome"\ and\ move\ to\ welcome\ panel.\r\n\ @param\ e\ Action\ event.\r\n
+comment3.params=e
+comment3.target=void\ nextBtnAction(javafx.event.ActionEvent)
+comment3.text=\r\n\ Click\ "Go\ to\ Statistics"\ and\ move\ to\ statistics\ panel.\r\n\ @param\ e\ Action\ event.\r\n
+comment4.params=e
+comment4.target=void\ presentInfo(javafx.scene.input.MouseEvent)
+comment4.text=\r\n\ \ Click\ borough's\ label\ to\ see\ more\ about\ the\ properties\ in\ \r\n\ \ that\ speci\uFB01c\ borough.\r\n\ \ @param\ e\ Mouse\ event.\r\n
+comment5.params=name
+comment5.target=java.lang.String\ getFullName(java.lang.String)
+comment5.text=\r\n\ \ For\ different\ boroughs,\ return\ different\ full\ name.\r\n\ \ @param\ name\ The\ abbreviation\ of\ selected\ borough.\r\n\ \ @return\ String\ The\ full\ name\ of\ selected\ borough\ or\ null\ if\ default.\r\n
+numComments=6

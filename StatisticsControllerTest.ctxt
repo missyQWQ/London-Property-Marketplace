@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=StatisticsControllerTest
+comment0.text=\r\n\ The\ test\ class\ StatisticsControllerTest.\r\n\r\n\ @Runlin\ Zhou,\ Liangjie\ Wang,\ Yichun\ Zhang,\ Zejin\ Deng\r\n\ @27.03.2020\r\n
+comment1.params=
+comment1.target=StatisticsControllerTest()
+comment1.text=\r\n\ Default\ constructor\ for\ test\ class\ StatisticsControllerTest\r\n
+comment2.params=
+comment2.target=void\ testNextInfomation()
+comment3.params=
+comment3.target=void\ testPrevInfomation()
+comment4.params=
+comment4.target=void\ setUp()
+comment5.params=
+comment5.target=void\ tearDown()
+numComments=6

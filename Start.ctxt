@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=Start
+comment0.text=\r\n\ The\ start\ of\ the\ app\ by\ opening\ the\ welcome\ fxml.\r\n\r\n\ @Runlin\ Zhou,\ Liangjie\ Wang,\ Yichun\ Zhang,\ Zejin\ Deng\r\n\ @27.03.2020\r\n
+comment1.params=stage
+comment1.target=void\ start(javafx.stage.Stage)
+numComments=2

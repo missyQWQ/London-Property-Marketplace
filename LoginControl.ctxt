@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=LoginControl
+comment0.text=\r\n\ This\ is\ the\ controller\ of\ login.fxml.\r\n\ \r\n\ @Runlin\ Zhou,\ Liangjie\ Wang,\ Yichun\ Zhang,\ Zejin\ Deng\r\n\ @27.03.2020\r\n
+comment1.params=login
+comment1.target=void\ setApp(Login)
+comment1.text=\r\n\ Set\ the\ login\ panel\ to\ current\ login\ panel.\r\n\ @param\ login\r\n
+comment2.params=e
+comment2.target=void\ Login(javafx.event.ActionEvent)
+comment2.text=\r\n\ Login\ the\ account\r\n\ @param\ e\ The\ action\ event.\r\n
+comment3.params=event
+comment3.target=void\ SignUp(javafx.event.ActionEvent)
+comment3.text=\r\n\ Signup\ the\ account\r\n\ @param\ e\ The\ action\ event.\r\n
+comment4.params=
+comment4.target=void\ Clear()
+comment4.text=\r\n\ Clear\ the\ username\ and\ password\ textfield.\r\n
+comment5.params=url\ rb
+comment5.target=void\ initialize(java.net.URL,\ java.util.ResourceBundle)
+numComments=6

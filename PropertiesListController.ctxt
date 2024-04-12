@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=PropertiesListController
+comment0.text=\r\n\ A\ window\ to\ show\ some\ information\ of\ all\ the\ properties\ \r\n\ from\ the\ selected\ borough.\r\n\r\n\ @Runlin\ Zhou,\ Liangjie\ Wang,\ Yichun\ Zhang,\ Zejin\ Deng\r\n\ @27.03.2020\r\n
+comment1.params=
+comment1.target=void\ initialize()
+comment2.params=
+comment2.target=void\ sortList()
+comment2.text=\r\n\ \ Sort\ the\ properties\ list\ when\ making\ a\ selection\ from\ the\ choice\ box.\r\n
+comment3.params=e
+comment3.target=void\ showProperty(javafx.scene.input.MouseEvent)
+comment3.text=\r\n\ Showing\ description\ of\ the\ property\ in\ a\ new\ window\ when\ one\ of\ \r\n\ the\ properties\ is\ clicked.\r\n\ @param\ e\ Mouse\ event.\r\n
+numComments=4

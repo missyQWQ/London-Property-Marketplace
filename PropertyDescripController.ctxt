@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=PropertyDescripController
+comment0.text=\r\n\ A\ window\ to\ show\ all\ the\ information\ of\ the\ selected\r\n\ property\ from\ the\ list\ of\ properties.\ It\ can\ also\ show\ \r\n\ the\ map\ view\ of\ the\ location\ on\ painted\ view\ or\ the\ \r\n\ real\ street\ view,\ and\ add\ to\ favourites\ if\ you\ like\ it.\r\n\r\n\ @Runlin\ Zhou,\ Liangjie\ Wang,\ Yichun\ Zhang,\ Zejin\ Deng\r\n\ @27.03.2020\r\n
+comment1.params=
+comment1.target=void\ initialize()
+comment2.params=e
+comment2.target=void\ streetView(javafx.event.ActionEvent)
+comment2.text=\r\n\ Opens\ default\ browser\ to\ show\ the\ street\ view\ of\ current\ location.\r\n\ @param\ e\ Action\ event.\r\n
+comment3.params=e
+comment3.target=void\ addToFavourites(javafx.event.ActionEvent)
+comment3.text=\r\n\ Click\ 'Add\ to\ Favourites\ \!'\ button\ and\ add\ the\ clicked\ \r\n\ property\ to\ the\ facourites\ list.\r\n\ @param\ e\ Action\ event.\r\n
+comment4.params=
+comment4.target=java.lang.String\ getIsFavouriteString()
+comment4.text=\r\n\ The\ string\ on\ the\ button\ will\ change\ to\ 'Cancel\ Favourite',\r\n\ if\ the\ selected\ property\ is\ already\ the\ user's\ favourite.\r\n\ @return\ String\ The\ string\ to\ represent\ different\ states.\r\n
+numComments=5

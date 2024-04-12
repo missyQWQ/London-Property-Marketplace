@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=WelcomeController
+comment0.text=\r\n\ The\ panel\ to\ welcome\ the\ user\ gives\ instructions\ and\ \r\n\ choices.\r\n\r\n\ @Runlin\ Zhou,\ Liangjie\ Wang,\ Yichun\ Zhang,\ Zejin\ Deng\r\n\ @27.03.2020\r\n
+comment1.params=
+comment1.target=void\ initialize()
+comment2.params=
+comment2.target=void\ checkIfDisable()
+comment2.text=\r\n\ Enable\ the\ buttons\ when\ price\ range\ has\ been\ selected.\r\n
+comment3.params=e
+comment3.target=void\ backBtnAction(javafx.event.ActionEvent)
+comment3.text=\r\n\ Click\ "Back\ to\ My\ Favourites"\ and\ move\ to\ favourites\ panel.\r\n\ Alert\ user\ if\ the\ price\ range\ they\ selected\ is\ invalid.\r\n\ @param\ e\ Action\ event.\r\n
+comment4.params=e
+comment4.target=void\ nextBtnAction(javafx.event.ActionEvent)
+comment4.text=\r\n\ Click\ "Confrim"\ and\ move\ to\ map\ panel.\r\n\ Alert\ user\ if\ the\ price\ range\ they\ selected\ is\ invalid.\r\n\ @param\ e\ Action\ event.\r\n
+comment5.params=
+comment5.target=void\ showInstruction()
+comment5.text=\r\n\ Click\ and\ get\ instructions\ of\ how\ to\ use\ this\ app.\ \r\n
+comment6.params=
+comment6.target=void\ alertWarning()
+comment6.text=\r\n\ Pop\ up\ a\ warning\ window.\r\n
+numComments=7

@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=Login
+comment0.text=\r\n\ End\ user\ can\ signup\ a\ account\ and\ login\ to\ the\ account.\ \r\n\ \r\n\ @Runlin\ Zhou,\ Liangjie\ Wang,\ Yichun\ Zhang,\ Zejin\ Deng\r\n\ @27.03.2020\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=mainStage
+comment2.target=void\ start(javafx.stage.Stage)
+comment2.text=\r\n\ Set\ up\ the\ stage.\r\n\ @param\ mainStage\r\n
+comment3.params=
+comment3.target=void\ Startlogin()
+comment3.text=\r\n\ Load\ the\ fxml\ file\ for\ logging.\r\n
+comment4.params=
+comment4.target=void\ Startsignup()
+comment4.text=\r\n\ Load\ the\ fxml\ file\ for\ signing\ up.\r\n
+comment5.params=info
+comment5.target=void\ Continue(java.util.HashMap)
+comment5.text=\r\n\ Used\ when\ the\ account\ has\ been\ registered.\r\n\ Back\ to\ the\ log\ in\ page.\r\n\ @param\ info\ The\ hash\ map\ used\ to\ store\ the\ information.\r\n
+comment6.params=
+comment6.target=void\ Back()
+comment6.text=\r\n\ Used\ when\ the\ end\ user\ clicks\ "back"\ button.\r\n\ Back\ to\ the\ log\ in\ page.\r\n
+comment7.params=username\ password
+comment7.target=void\ logging(java.lang.String,\ java.lang.String)
+comment7.text=\r\n\ Check\ if\ the\ information\ is\ correct,\r\n\ Clear\ the\ text\ field\ if\ the\ information\ is\ incorrect.\r\n\ @param\ username\r\n\ @param\ password\r\n
+comment8.params=fxml
+comment8.target=javafx.fxml.Initializable\ initializeScene(java.lang.String)
+comment8.text=\r\n\ Find\ the\ fxml\ file\ and\ display\ it.\r\n\ @param\ fxml\r\n
+numComments=9

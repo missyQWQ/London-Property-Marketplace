@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=BoroughInfo
+comment0.text=\r\n\ Show\ the\ information\ of\ boroughs.\r\n\r\n\ @Runlin\ Zhou,\ Liangjie\ Wang,\ Yichun\ Zhang,\ Zejin\ Deng\r\n\ @27.03.2020\r\n
+comment1.params=circle\ label
+comment1.target=BoroughInfo(javafx.scene.shape.Circle,\ javafx.scene.control.Label)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ BoroughInfo\r\n
+comment2.params=
+comment2.target=java.lang.String\ getCircleName()
+comment2.text=\r\n\ Get\ the\ name\ of\ circle.\r\n\ @return\ circleName\r\n
+comment3.params=
+comment3.target=int\ getPropertyNum()
+comment3.text=\r\n\ Get\ the\ number\ of\ property.\r\n\ @return\ propertyNumber\r\n
+comment4.params=
+comment4.target=void\ incPropertyNum()
+comment4.text=\r\n\ Increment\ the\ number\ of\ properties.\r\n
+comment5.params=
+comment5.target=javafx.scene.shape.Circle\ getCircle()
+comment5.text=\r\n\ Get\ the\ circle.\r\n\ @return\ circle\r\n
+comment6.params=
+comment6.target=javafx.scene.control.Label\ getLabel()
+comment6.text=\r\n\ Get\ the\ label.\r\n\ @return\ label\r\n
+numComments=7
